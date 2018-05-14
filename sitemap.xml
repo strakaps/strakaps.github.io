@@ -187,7 +187,7 @@
     
     <url>
     
-      <loc>/categories/anomalous-diffusion/</loc>
+      <loc>/tags/anomalous-diffusion/</loc>
       <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -197,7 +197,7 @@
     
     <url>
     
-      <loc>/tags/anomalous-diffusion/</loc>
+      <loc>/categories/anomalous-diffusion/</loc>
       <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -257,7 +257,7 @@
     
     <url>
     
-      <loc>/categories/probability/</loc>
+      <loc>/tags/probability/</loc>
       <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -267,7 +267,7 @@
     
     <url>
     
-      <loc>/tags/probability/</loc>
+      <loc>/categories/probability/</loc>
       <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -297,7 +297,7 @@
     
     <url>
     
-      <loc>/categories/publication/</loc>
+      <loc>/tags/publication/</loc>
       <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -307,7 +307,7 @@
     
     <url>
     
-      <loc>/tags/publication/</loc>
+      <loc>/categories/publication/</loc>
       <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -337,8 +337,8 @@
     
     <url>
     
-      <loc>/categories/r/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <loc>/tags/r/</loc>
+      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -347,8 +347,8 @@
     
     <url>
     
-      <loc>/tags/r/</loc>
-      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
+      <loc>/categories/r/</loc>
+      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -367,6 +367,16 @@
     
     <url>
     
+      <loc>/tags/software/</loc>
+      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/categories/software/</loc>
       <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
@@ -377,7 +387,7 @@
     
     <url>
     
-      <loc>/tags/software/</loc>
+      <loc>/tags/statistical-physics/</loc>
       <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -398,16 +408,6 @@
     <url>
     
       <loc>/tags/statistical-physics/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/statistical-physics/</loc>
       <lastmod>2018-05-14T16:44:32+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -417,7 +417,7 @@
     
     <url>
     
-      <loc>/categories/statistics/</loc>
+      <loc>/tags/statistics/</loc>
       <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
     </url>
@@ -427,7 +427,7 @@
     
     <url>
     
-      <loc>/tags/statistics/</loc>
+      <loc>/categories/statistics/</loc>
       <lastmod>2018-05-14T17:36:12+08:00</lastmod>
       <priority>0</priority>
     </url>
