@@ -1,14 +1,468 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic on Academic</title>
+    <title>Peter Straka on Peter Straka</title>
     <link>/</link>
-    <description>Recent content in Academic on Academic</description>
+    <description>Recent content in Peter Straka on Peter Straka</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Networks of Health Providers</title>
+      <link>/project/gp-networks/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/project/gp-networks/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;What is the network structure of healthcare providers and their
+practices/clinics?&lt;/li&gt;
+&lt;li&gt;What is their patient sharing pattern?&lt;/li&gt;
+&lt;li&gt;Does sharing of patient information between providers lead to better health
+outcomes?&lt;/li&gt;
+&lt;li&gt;Do practice size and patient sharing behaviour influence the quality of
+healthcare?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Australian Medicare claims data contains
+data&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; on tens of thousands of healthcare providers and millions of
+patients, such as patient characteristics
+(age, sex, &amp;hellip;)
+and provider characteristics
+(specialty, type and frequency of services delivered, bulk-billing behaviour,&lt;br /&gt;
+&amp;hellip;).&lt;/p&gt;
+
+&lt;p&gt;The natural structure of these data is a network, where
+providers &amp;amp; patients are connected whenever a service is provided.
+The structure of this network contains crucial information on the flow of
+information and the variation of healthcare quality, and thus allows to
+tackle questions of national importance such as the above.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;de-identified, of course.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R package CTRE</title>
+      <link>/project/ctre/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/project/ctre/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R package CTRE: thresholding bursty time series</title>
+      <link>/post/ctre-extremes-of-bursty-time-series/</link>
+      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ctre-extremes-of-bursty-time-series/</guid>
+      <description>&lt;p&gt;The new &lt;a href=&#34;https://strakaps.github.io/CTRE/&#34;&gt;R package &lt;code&gt;CTRE&lt;/code&gt;&lt;/a&gt; is now
+available on CRAN. “CTRE” means “Continuous Time Random Exceedances”,
+which is a model for extreme values of bursty time series.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(CTRE)
+flares_ctre &amp;lt;- ctre(flares)
+plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/ctre-package_files/figure-html/data-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The above time series are measurements of solar flare magnitudes by NASA&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.
+Which observations are considered extreme is defined by a variable threshold &lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt;
+(dashed line, &lt;span class=&#34;math inline&#34;&gt;\(&amp;lt; 5\%\)&lt;/span&gt; of observations).
+The exceedances of this threshold (red) follow (asymptotically for high &lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt;)
+a Generalized Pareto distribution
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Generalized_Pareto_distribution&#34;&gt;Generalized Pareto distribution&lt;/a&gt;.
+This type of modelling of extremes is standard in Extreme Value Theory,
+and known as the
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Extreme_value_theory#Data_analysis&#34;&gt;Peaks Over Threshold&lt;/a&gt;
+(POT) method.
+To date,
+&lt;a href=&#34;https://cran.r-project.org/web/views/ExtremeValue.html&#34;&gt;&lt;em&gt;18 R packages&lt;/em&gt;&lt;/a&gt;
+have been developed for POT!&lt;/p&gt;
+&lt;div id=&#34;whats-new-about-ctre&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What’s new about &lt;code&gt;CTRE&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;CTRE&lt;/code&gt; provides a new way to model the &lt;em&gt;bursty timing&lt;/em&gt; of the threshold
+crossings. In complex systems, &lt;em&gt;inter-event times&lt;/em&gt; are typically
+heavy-tailed&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, and thus highly heterogeneous
+(think income distributions).
+The bulk of inter-event times is short, corresponding to bursts of events.
+A few very long inter-event times represent quiet periods.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://strakaps.github.io/MittagLeffleR/&#34;&gt;Mittag-Leffler distribution&lt;/a&gt;
+is universal for times between threshold crossings, see the
+&lt;a href=&#34;https://strakaps.github.io/bursty-POT/&#34;&gt;companion paper&lt;/a&gt;.
+&lt;code&gt;CTRE&lt;/code&gt; fits a Mittag-Leffler distribution to a range of threshold values:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flares_ctre &amp;lt;- thin(flares_ctre, k = 700)
+par(mfrow = c(1,2))
+MLestimates(flares_ctre, tail = 0.9, scale = 3E7)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/ctre-package_files/figure-html/stability-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Above, the threshold is varied from the 5th to the 700th largest magnitude
+(x-axis), and the parameters estimates are plotted on the y-axis.
+To the left, few data are available (high variance).
+To the right, we are less confident about the fit of the Mittag-Leffler
+distribution (high bias).&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Important:&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;The scale parameter decreases proportionally to &lt;span class=&#34;math inline&#34;&gt;\(k^{1/\beta}\)&lt;/span&gt; with &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;.
+The parameter &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; is hence used to rescale the y-values of the
+right-hand plot, and needs to estimated from the left hand plot first.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ctre-applied-to-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;code&gt;CTRE&lt;/code&gt; applied to data&lt;/h2&gt;
+&lt;p&gt;For the solar flare data, we read off
+&lt;span class=&#34;math display&#34;&gt;\[
+\beta \approx 0.9, \quad \sigma \approx 3 \times 10^7.
+\]&lt;/span&gt;
+This means that the inter-arrival time &lt;span class=&#34;math inline&#34;&gt;\(T(k)\)&lt;/span&gt; for magnitudes as high as the
+&lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-th magnitude is distributed as
+&lt;span class=&#34;math display&#34;&gt;\[
+T(k) \sim {\rm ML}\left(0.9, \frac{3 \times 10^7 {\rm sec}}{k^{1/0.9}} \right).
+\]&lt;/span&gt;
+For example, let’s assume the magnitude (peak rate) &lt;span class=&#34;math inline&#34;&gt;\(10,000\)&lt;/span&gt;. How many
+magnitudes exceed it?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magrittr)
+(flares_ctre %&amp;gt;% magnitudes() %&amp;gt;% sort(decreasing=TRUE) &amp;gt; 10000) %&amp;gt;% sum()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 24&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So &lt;span class=&#34;math inline&#34;&gt;\(k = 24\)&lt;/span&gt;. The model thus predicts inter-arrival times drawn from the
+distribution
+&lt;span class=&#34;math display&#34;&gt;\[
+{\rm ML}\left(0.9, 8.8\times 10^{5} {\rm sec} \right)
+= {\rm ML}\left(0.9, 10 {\rm days} \right).
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here’s the plot of this distribution:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/ctre-package_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Compared to the Exponential distribution, the Mittag-Leffler distribution
+puts more probability mass on both tiny values (bursts) and
+values in the tails (quiet periods).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;shiny-app&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Shiny app&lt;/h2&gt;
+&lt;p&gt;Running&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;CTRE::runCTREshiny()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;opens a Shiny app that that lets you do the above manipulations via sliders.
+It is / should be loading below:&lt;/p&gt;
+&lt;iframe src=&#34;https://strakaps.shinyapps.io/ctre-app/&#34; style=&#34;border: none; width: 800px; height: 900px&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The &lt;a href=&#34;https://ntrs.nasa.gov/search.jsp?R=19920006736&#34;&gt;“complete Hard X Ray Burst Spectrometer event list”&lt;/a&gt;
+is a comprehensive reference for all measurements of the Hard X
+Ray Burst Spectrometer on NASA’s Solar Maximum Mission from the time of
+launch on Feb 14, 1980 to the end of the mission in Dec 1989. 12,776
+events were detected, with the “vast
+majority being solar flares”. The list includes the start time, peak time,
+duration, and peak rate of each event. We have used “start time” as the
+variable for event times, and “peak rate” as the variable for event
+magnitudes.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;See the Introduction of
+&lt;a href=&#34;http://iopscience.iop.org/article/10.1088/1367-2630/15/10/103023&#34;&gt;“Modelling bursty time series”&lt;/a&gt; by Vajna, Tóth &amp;amp; Kertész, for a list of complex systems with heavy-tailed
+inter-event times.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fractional Diffusion where &#34;fractional&#34; varies in space</title>
+      <link>/post/voffpe/</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/voffpe/</guid>
+      <description>&lt;p&gt;My new paper
+(&lt;a href=&#34;http://arxiv.org/abs/1712.06767&#34;&gt;arxiv.org/abs/1712.06767&lt;/a&gt;)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Variable Order Fractional Fokker-Planck
+Equations derived from Continuous Time Random Walks&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;is currently under review.&lt;/p&gt;
+&lt;p&gt;The variable order fractional
+Fokker-Planck equation (VOFFPE),
+in simple form&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, is
+&lt;span class=&#34;math display&#34;&gt;\[\frac{\partial}{\partial t} p(x,t) = \frac{\partial^2}{\partial x^2} 
+\underbrace{D_t^{1-\beta(x)}}_{\text{fractional derivative}}
+p(x,t).\]&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The part without the fractional derivative operator is the
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation&#34;&gt;&lt;strong&gt;Fokker-Planck equation&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;(FPE)&lt;/strong&gt;.
+It describes the spreading of probability via a random walk:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/images/spreading.gif&#34; alt=&#34;spreading&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;spreading&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Adding in the
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Fractional_calculus&#34;&gt;fractional derivative&lt;/a&gt;
+&lt;span class=&#34;math display&#34;&gt;\[D_t^{1-\beta} p(x,t) = \int_0^t p(x,t-s) \frac{s^{-\beta}}{\Gamma(1-\beta)}\,ds\]&lt;/span&gt;
+results in the “&lt;strong&gt;fractional FPE&lt;/strong&gt;”. The fractional derivative
+corresponds to longs rests of a walker, and slows down the spreading (making the
+dynamics “sub”diffusive).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Here the order &lt;span class=&#34;math inline&#34;&gt;\(1-\beta\)&lt;/span&gt; of the fractional derivative varies with the
+location &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; of the walker, hence the name VOFFPE
+(&lt;strong&gt;variable order fractional FPE&lt;/strong&gt;).
+In some regions, e.g. where the intracellular matrix of a cell is dense&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;,
+the trappingness can be stronger, which is modelled by a smaller &lt;span class=&#34;math inline&#34;&gt;\(\beta(x)\)&lt;/span&gt;
+in that region.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The paper shows that the equation has a unique solution &lt;span class=&#34;math inline&#34;&gt;\(p(x,t)\)&lt;/span&gt;, and that
+this solution is the probability distribution of a Continuous Time
+Random Walk (CTRW)&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.
+CTRWs are random walks with random waiting times between
+jumps:&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/images/CTRW.png&#34; alt=&#34;CTRW&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;CTRW&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The fractional derivative in time is tightly linked with
+&lt;a href=&#34;/post/mittag-leffler/&#34;&gt;Mittag-Leffler distributed&lt;/a&gt; waiting times.&lt;/p&gt;
+&lt;p&gt;Of course CTRWs can be simulated, and &lt;span class=&#34;math inline&#34;&gt;\(p(x,t)\)&lt;/span&gt; may be computed via
+Monte Carlo simulations (or
+“&lt;a href=&#34;https://en.wikipedia.org/wiki/Single-particle_tracking&#34;&gt;particle tracking&lt;/a&gt;”).
+Thus a consequence of
+the paper is the mathematical certainty that the variable order FFPE
+(VOFFPE) can be solved by simulations.&lt;/p&gt;
+&lt;p&gt;The variable order FFPE can also be solved directly, via clever numerical
+algorithms. The CTRW interpretation of the VOFFPE can be leveraged for
+such a clever numerical algorithm, as our friends over in applied maths
+have done with their
+&lt;a href=&#34;http://dx.doi.org/10.1016/j.jcp.2014.08.003&#34;&gt;Discrete Time Random Walk algorithm&lt;/a&gt;.
+This approach has several great benefits&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, and now we know how to
+extend these benefits to the variable order setting (to be continued).&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Drift and diffusivity are left out here, but they may be any
+(Lipschitz-) continuous functions.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Wong et. al, &lt;a href=&#34;http://www.physics.emory.edu/faculty/weeks/lab/papers/Wong_04.pdf&#34;&gt;PRL 2004&lt;/a&gt;&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Strictly speaking, a scaling limit of a CTRW.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;E.g. conservation of mass and non-negative solutions.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Shiny app to explore bursty extremes</title>
+      <link>/post/shiny-bursty-extremes/</link>
+      <pubDate>Sun, 23 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/shiny-bursty-extremes/</guid>
+      <description>&lt;p&gt;Suppose you want to model time series data with irregularly spaced events, and suppose your main focus is the &lt;em&gt;timing&lt;/em&gt; and the &lt;em&gt;size of the extreme events&lt;/em&gt;. The &lt;strong&gt;max-renewal process&lt;/strong&gt; is a conceptually easy model that does this… and now there’s an app that can fit it to data:&lt;/p&gt;
+&lt;iframe src=&#34;https://strakaps.shinyapps.io/ctre-app/&#34; style=&#34;border: none; width: 800px; height: 900px&#34;&gt;
+&lt;/iframe&gt;
+&lt;div id=&#34;irregular-spacing&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Irregular spacing&lt;/h2&gt;
+&lt;p&gt;The renewal process does simple i.i.d. draws &lt;span class=&#34;math inline&#34;&gt;\(W_i\)&lt;/span&gt; from a distribution, and uses these as waiting times between events.
+Distributions with light tails (e.g. exponential distribution) don’t produce high irregularity…&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/images/light-tailed-rp.png&#34; alt=&#34;(A light-tailed renewal process.)&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;(A light-tailed renewal process.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;…but distributions with heavy tails do:&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/images/heavy-tailed-rp.png&#34; alt=&#34;(A heavy-tailed renewal process.)&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;(A heavy-tailed renewal process.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;max-renewal-process&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Max-renewal process&lt;/h2&gt;
+&lt;p&gt;The max-renewal process then simply draws i.i.d. magnitudes from another (arbitrary) distribution, and assigns these magnitudes to these events. Since we try to model the size of the &lt;em&gt;extreme&lt;/em&gt; events only, we only consider data above some high variable threshold, and a &lt;a href=&#34;https://en.wikipedia.org/wiki/Generalized_extreme_value_distribution&#34;&gt;GEV&lt;/a&gt; (Generalized Extreme Value distribution) is fitted to the exceedances (red):&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/images/exceedances.png&#34; alt=&#34;(An exceedance plot.)&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;(An exceedance plot.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Since the GEV are &lt;em&gt;limit&lt;/em&gt; distributions (for very high thresholds), one needs a high threshold to avoid bias; but then there are few data points left to fit (high variance). This is another example of the famous bias-variance trade-off in statistics. The GP distribution is fitted under the “Exceedances” tab of the app.&lt;/p&gt;
+&lt;p&gt;Because the model is so simple, the distribution of the times between the threshold crossings (blue crosses) is “just” a Mittag-Leffler distribution… for which I happen to know a good &lt;a href=&#34;https://strakaps.github.io/2017/06/26/mittagleffler/&#34;&gt;R package&lt;/a&gt;! Indeed, for a threshold which is so high that (on average) only once every &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; observations there is a crossing, the times between threshold crossings are Mittag-Leffler distributed with a shape parameter &lt;span class=&#34;math inline&#34;&gt;\(0 &amp;lt; \beta \le 1\)&lt;/span&gt; and a positive scale parameter &lt;span class=&#34;math inline&#34;&gt;\(\sigma n^{1/\beta}\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; can be fitted in the app. (See the “Exceedance Times” tab.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;but-why-dont-the-simulated-data-look-like-the-empirical-datasets&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;But why don’t the simulated data look like the empirical datasets?&lt;/h2&gt;
+&lt;p&gt;Well… that’s a fair point, the simulated data sometimes have &lt;em&gt;no&lt;/em&gt; events for long time periods, whereas events are coming in continually in the empirical datasets. But hey, this is a model for the exceedances, and those get reproduced nicely!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Acknowledgements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SmarakNayak&#34;&gt;Smarak Nayak&lt;/a&gt; co-wrote the app (code on &lt;a href=&#34;https://github.com/strakaps/CTRMapp&#34;&gt;GitHub&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;The estimation of the Mittag-Leffler distribution is based on the paper [1] by &lt;a href=&#34;https://scholar.google.com/citations?hl=en&amp;amp;user=se9ADB4AAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&#34;&gt;Dexter Cahoy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Calculating the QQ plots was made possible by &lt;a href=&#34;https://twitter.com/rgarrappa&#34;&gt;Roberto Garrappa&lt;/a&gt;’s Laplace inversion algorithm in [2], adopted in MittagLeffleR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Estimation of Mittag-Leffler parameters. Communications in Statistics-Simulation and Computation, 42(2), 303-315, 2013&lt;/li&gt;
+&lt;li&gt;Numerical evaluation of two and three parameter Mittag-Leffler functions, R Garrappa, SIAM Journal on Numerical Analysis 53 (3), 1350–1369&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
+      <link>/post/mittag-leffler/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/mittag-leffler/</guid>
+      <description>&lt;p&gt;My PhD student Ricky Gill and I have created the R package MittagLeffleR,
+documented at
+&lt;a href=&#34;../../MittagLeffleR/index.html&#34;&gt;strakaps.github.io/MittagLeffleR/&lt;/a&gt;.
+It is available on &lt;a href=&#34;https://cran.r-project.org/web/packages/MittagLeffleR/index.html&#34;&gt;CRAN&lt;/a&gt; (and the latest development version on &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR&#34;&gt;GitHub&lt;/a&gt;).
+MittagLeffleR calculates both Mittag-Leffler
+distributions; i.e. probability density, cumulative distribution function,
+quantile function and fast random variate generation.
+It was made possible by the &lt;a href=&#34;https://au.mathworks.com/matlabcentral/fileexchange/48154-the-mittag-leffler-function&#34;&gt;Laplace inversion algorithm&lt;/a&gt; for the
+Mittag-Leffler function by
+&lt;a href=&#34;https://twitter.com/rgarrappa&#34;&gt;Roberto Garrappa&lt;/a&gt;.
+Install it via&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;MittagLeffleR&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;the-two-mittag-leffler-distributions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Two Mittag-Leffler distributions&lt;/h2&gt;
+&lt;p&gt;Various journal articles (including my own) write about “the” Mittag-Leffler
+distribution, but actually there are
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Mittag-Leffler_distribution&#34;&gt;&lt;em&gt;two&lt;/em&gt; such families of distributions&lt;/a&gt;.
+Both have a shape parameter (&lt;code&gt;tail&lt;/code&gt;) taken from the interval
+&lt;span class=&#34;math inline&#34;&gt;\((0,1]\)&lt;/span&gt;, but the first distribution is &lt;em&gt;very heavy-tailed&lt;/em&gt; with infinite
+mean if &lt;code&gt;tail&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\in (0,1)\)&lt;/span&gt;
+(it is equal to the exponential distribution if &lt;code&gt;tail&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(=1\)&lt;/span&gt;)
+whereas the second distribution is light-tailed (has finite moments
+of all orders). The boolean variable &lt;code&gt;second.type&lt;/code&gt; switches between
+these two distributions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;examples&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Examples&lt;/h2&gt;
+&lt;div id=&#34;first-type-waiting-times-between-events&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;First type = waiting times between events&lt;/h3&gt;
+&lt;p&gt;The first type Mittag-Leffler distribution commonly occurs for the
+&lt;strong&gt;inter-arrival times between events in complex systems&lt;/strong&gt; (e.g. earthquakes, see future post).
+Suppose that for an event to happen, several “tries” are needed,
+and that each try has a duration.
+The number &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; of tries until a success is geometrically distributed,
+and the &lt;em&gt;sum&lt;/em&gt; of &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; durations is well approximated by a Mittag-Leffler (type I) distribution (this is the &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR&#34;&gt;geometric stable&lt;/a&gt; property).&lt;/p&gt;
+&lt;p&gt;As an example, we simulate &lt;code&gt;n=100&lt;/code&gt; Mittag-Leffler (type I) random
+variables,
+and estimate their tail and scale parameters via maximum likelihood:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(MittagLeffleR)
+y = rml(n = 100, tail = 0.9, scale = 2)
+mlml &amp;lt;- function(X) {
+  log_l &amp;lt;- function(theta) {
+    #transform parameters so can do optimization unconstrained
+    theta[1] &amp;lt;- 1/(1+exp(-theta[1]))
+    theta[2] &amp;lt;- exp(theta[2])
+    -sum(log(dml(X,theta[1],theta[2])))
+  }
+  ml_theta &amp;lt;- stats::optim(c(0.5,0.5), fn=log_l)$par
+  #transform back
+  ml_a &amp;lt;- 1/(1 + exp(-ml_theta[1]))
+  ml_d &amp;lt;- exp(ml_theta[2])
+  return(list(&amp;quot;tail&amp;quot; = ml_a, &amp;quot;scale&amp;quot; = ml_d))
+}
+mlml(y)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## $tail
+## [1] 0.9182776
+## 
+## $scale
+## [1] 2.342377&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;second-type-number-of-events&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Second type = number of events&lt;/h3&gt;
+&lt;p&gt;The second type Mittag-Leffler distribution typically occurs for the
+random &lt;strong&gt;number of events in complex systems&lt;/strong&gt;.
+For instance, assume a random walk with heavy-tailed waiting times;
+this has become a widely adopted model for
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Anomalous_diffusion&#34;&gt;anomalous diffusion&lt;/a&gt;.
+For late times, its number of steps
+&lt;a href=&#34;https://doi.org/10.1017/S002190020002043X&#34;&gt;can be well approximated by a Mittag-Leffler (type II) distribution&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The time-change of a random walk by the random number of steps is called
+&lt;em&gt;subordination&lt;/em&gt;; the random number of steps is approximated by the
+&lt;a href=&#34;https://stt.msu.edu/users/mcubed/hittingTime.pdf&#34;&gt;inverse stable subordinator&lt;/a&gt;.
+Below we calculate the probability density of a random walker with
+step size &lt;code&gt;dx=0.01&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the number of steps up to time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; is stored in the vector &lt;span class=&#34;math inline&#34;&gt;\(h\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;the matrix &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; stores the probability distribution at the lattice
+sites at consecutive times&lt;/li&gt;
+&lt;li&gt;the “subordination” happens in the matrix product &lt;code&gt;N %*% h&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(MittagLeffleR)
+tail &amp;lt;- 0.65
+dx &amp;lt;- 0.01
+x &amp;lt;- seq(-2,5,dx)
+umax &amp;lt;- qml(p=0.99, tail=tail, scale=1, second.type=TRUE)
+u &amp;lt;- seq(0.01,umax,dx)
+h &amp;lt;- dml(x=u, tail=tail, scale=1, second.type=TRUE)
+N &amp;lt;- outer(x,u,function(x,u){dnorm(x=x, mean=u, sd=sqrt(u))})
+p &amp;lt;- N %*% h * dx
+plot(x,p, type=&amp;#39;l&amp;#39;, main=&amp;quot;Fractional diffusion with drift at t=1&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/MittagLeffleR_files/figure-html/scary-shark-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bugs-and-issues&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Bugs and Issues&lt;/h2&gt;
+&lt;p&gt;Should you run into any bugs or issues, please
+&lt;a href=&#34;https://github.com/strakaps/MittagLeffleR/issues&#34;&gt;let us know&lt;/a&gt;.
+Thanks!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Prestigious Scientia PhD Scholarship available</title>
+      <link>/post/scientia-phd/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
+      
+      <guid>/post/scientia-phd/</guid>
+      <description>
+
+&lt;p&gt;It is my pleasure to announce that applications for the prestigious UNSW Scientia Ph.D. Scholarship Scheme on the project &amp;ldquo;Using Big Data to Redesign the Health System&amp;rdquo; are now open.&lt;/p&gt;
+
+&lt;p&gt;The UNSW Scientia Ph.D. Scholarship Scheme is the most prestigious and generous scholarship scheme at UNSW and it aims to attract the best and brightest people into strategic research areas. Awardees receive a &lt;code&gt;$&lt;/code&gt;50,000 scholarship package for four years, comprising a &lt;code&gt;$&lt;/code&gt;40,000 per
+annum tax-free stipend and a travel and development support package of up to &lt;code&gt;$&lt;/code&gt;10,000 per annum. International students also receive a tuition fee scholarship.&lt;/p&gt;
+
+&lt;p&gt;In addition to this scholarship package, scholars are provided with access to a range of development opportunities across research, teaching and learning and leadership and engagement.&lt;/p&gt;
+
+&lt;p&gt;Applicants should submit their expression of interest at&lt;br /&gt;
+&lt;a href=&#34;http://www.2025.unsw.edu.au/apply/scientia-phd-scholarships/using-big-data-redesign-health-system&#34; target=&#34;_blank&#34;&gt;http://www.2025.unsw.edu.au/apply/scientia-phd-scholarships/using-big-data-redesign-health-system&lt;/a&gt;&lt;br /&gt;
+by 21st July 2017 but are encouraged to do so as early as possible.&lt;/p&gt;
+
+&lt;p&gt;More information on the UNSW Scientia PhD Scholarship Scheme:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;General info: &lt;a href=&#34;http://www.2025.unsw.edu.au/apply/&#34; target=&#34;_blank&#34;&gt;http://www.2025.unsw.edu.au/apply/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Guidelines: &lt;a href=&#34;http://www.2025.unsw.edu.au/apply/node/69/&#34; target=&#34;_blank&#34;&gt;http://www.2025.unsw.edu.au/apply/node/69/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;FAQs: &lt;a href=&#34;http://www.2025.unsw.edu.au/apply/unsw-scientia-phd-scholarships-faqs&#34; target=&#34;_blank&#34;&gt;http://www.2025.unsw.edu.au/apply/unsw-scientia-phd-scholarships-faqs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;the-project&#34;&gt;The Project:&lt;/h4&gt;
+
+&lt;p&gt;Health services are working to develop new models for care that keep people out of hospital, such as community outreach, daily outpatient assessment and hospital in the home. Identifying patient subgroups (&amp;lsquo;phenotypes&amp;rsquo;) with distinct characteristics that are predictive of their subsequent outcomes (e.g. admission, complications) is key to designing these new models. Machine learning (ML) techniques are data-driven approaches that can discover statistical patterns in
+high-dimensional, multivariate data sets. This project will apply ML techniques to health &amp;lsquo;big data&amp;rsquo; to identify patient phenotypes that will support the design and implementation of new tailored care
+pathways for patients with chronic disease.&lt;/p&gt;
+
+&lt;h4 id=&#34;supervisory-team&#34;&gt;Supervisory Team&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://cbdrh.med.unsw.edu.au/people/professor-louisa-jorm&#34; target=&#34;_blank&#34;&gt;Prof Louisa Jorm&lt;/a&gt; (Director, Centre for Big Data Research in Health)
+and myself.
+Please contact either of us for more details.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R package MittagLeffleR</title>
+      <link>/project/mittagleffler/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0800</pubDate>
+      
+      <guid>/project/mittagleffler/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Example Talk</title>
@@ -21,217 +475,95 @@
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>/project/deep-learning/</link>
+      <title>Continuous Time Random Walks</title>
+      <link>/project/anomalous-diffusion/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
-      <guid>/project/deep-learning/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+      <guid>/project/anomalous-diffusion/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Diffusion&lt;/strong&gt; is the net movement of molecules or atoms from a region of high
+concentration to a region of low concentration
+as a result of &lt;em&gt;random motion&lt;/em&gt; of the molecules or atoms
+(&lt;a href=&#34;https://en.wikipedia.org/wiki/Diffusion&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Due to a discovery by
+&lt;a href=&#34;https://doi.org/10.1002/andp.19053220806&#34; target=&#34;_blank&#34;&gt;Einstein (1905)&lt;/a&gt;,
+a universal model for the &lt;em&gt;random motion&lt;/em&gt; of microscopic particles
+is Brownian motion, whose
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Mean_squared_displacement&#34; target=&#34;_blank&#34;&gt;mean-squared displacement&lt;/a&gt;
+increases linearly with time.&lt;/p&gt;
 
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;In many system with particles more complex than tiny molecules which interact
+with their environment
+(e.g. proteins, self-propelled bacteria or cells, stock market prices, &amp;hellip;)
+the growth of the mean-squared displacement is no longer linear:&lt;/p&gt;
 
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/e/e6/Msd_anomalous_diffusion.svg&#34; alt=&#34;anomalous-MSD&#34; /&gt; (Image credit Wikipedia).&lt;/p&gt;
 
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Continuous Time Random Walk (CTRW)&lt;/strong&gt; is a model for anomalous diffusion:
+it can model subdiffusion with long (heavy-tailed) waiting times between
+steps, and superdiffusion with long (heavy-tailed) steps, and even a
+mixture of both.&lt;/p&gt;
+
+&lt;p&gt;Scientists are interested in extending the CTRW model to allow for interactions
+between walkers, and need tools for the computation of concentrations of
+random walkers. Since the beginning of the century,
+there has been a fruitful exchange
+between statistical physics, experimental physics, pure mathematics and
+computational mathematics, which has significantly advanced biophysics,
+among other fields.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>External Project</title>
-      <link>/project/example-external-project/</link>
+      <title>Extremes of Bursty Time Series</title>
+      <link>/project/bursts/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
-      <guid>/project/example-external-project/</guid>
-      <description></description>
+      <guid>/project/bursts/</guid>
+      <description>&lt;p&gt;Extreme value theory is concerned with the modelling and prediction of extremes in a series of observations.
+Accurate estimates of probabilities for the exceedence of extreme levels of temperature, financial loss, the
+number of defective nodes in a network etc. are crucial for the control of risk in a great number of societal
+systems.
+&amp;ldquo;Mainstream&amp;rdquo; extreme value theory assumes that events happen uniformly, e.g. yearly, daily, or every second,
+or that events occur at a certain rate (Poisson process). In fact, however, a great number of systems violates this
+assumption: Events occur in bursts, intermittent with quiescent periods drawn from a heavy-tailed distribution.
+This phenomenon is ubiquitous for human-created events, and is deemed to occur for any type of action
+resulting from a dynamic list of priorities.&lt;/p&gt;
+
+&lt;p&gt;Often a magnitude, or mark can be assigned to each event in the renewal
+process, such as for earthquakes, solar flares, neuron voltages etc. The
+Peaks-Over-Threshold model (POT, see e.g. Coles 2001) applies a threshold to
+the magnitudes, and fits a Generalized Pareto distribution to the threshold
+exceedances. The timing of the threshold exceedances fits well with a
+&amp;ldquo;Poisson process&amp;rdquo;, i.e. the threshold crossing times are distributed
+completely randomly on the given time interval.&lt;/p&gt;
+
+&lt;p&gt;For bursty data, the Poisson process representation is no long valid, but a
+fractional Poisson process representation holds. This project derives the
+theoretical model behind the timings of bursty threshold crossings,
+statistical methods for the fitting of the model, and R software packages for
+applications to data.&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>Academic: the website designer for Hugo</title>
-      <link>/post/getting-started/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
+      <title>Identifying antidepressant users with depression</title>
+      <link>/project/antidepressants/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
-      <guid>/post/getting-started/</guid>
-      <description>
+      <guid>/project/antidepressants/</guid>
+      <description>&lt;p&gt;Records of antidepressant dispensings are often used in public health research
+as a surrogate measure of depression.  In &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; to &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; of cases however,
+antidepressants are prescribed for indications other than depression,
+which results in misclassification.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Academic&lt;/strong&gt; is a framework to help you create a beautiful website quickly. Perfect for personal sites, blogs, or business/project sites. &lt;a href=&#34;https://themes.gohugo.io/theme/academic/&#34; target=&#34;_blank&#34;&gt;Check out the latest demo&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes. Then head on over to the &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Quick Start guide&lt;/a&gt; or take a look at the &lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34; target=&#34;_blank&#34;&gt;Release Notes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Medicare Benefits Schedule (MBS) data contain the dispensings of antidepressants
+and other pharmaceuticals, and data from the 45 and Up Study provide a gold
+standard response variable
+(a yes/no answer to &amp;ldquo;Have you been treated for depression?&amp;rdquo;).&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Key features:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Easily manage various content including homepage, blog posts, publications, talks, and projects&lt;/li&gt;
-&lt;li&gt;Extensible via &lt;strong&gt;color themes&lt;/strong&gt; and &lt;strong&gt;widgets/plugins&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Write in &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt; for easy formatting and code highlighting, with &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt; for mathematical expressions&lt;/li&gt;
-&lt;li&gt;Social/academic network linking, &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt;, and &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; comments&lt;/li&gt;
-&lt;li&gt;Responsive and mobile friendly&lt;/li&gt;
-&lt;li&gt;Simple and refreshing one page design&lt;/li&gt;
-&lt;li&gt;Multilingual and easy to customize&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;color-themes&#34;&gt;Color Themes&lt;/h2&gt;
-
-&lt;p&gt;Academic is available in different color themes and font themes.&lt;/p&gt;
-
-
-
-&lt;div class=&#34;gallery&#34;&gt;
-  
-  
-  
-  
-    
-  
-  &lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;Default&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-default.png&#34;&gt;
-    &lt;img alt=&#34;&#34; src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-default.png&#34;&gt;
-  &lt;/a&gt;
-  
-  
-  
-  
-    
-  
-  &lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;Ocean&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-ocean.png&#34;&gt;
-    &lt;img alt=&#34;&#34; src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-ocean.png&#34;&gt;
-  &lt;/a&gt;
-  
-  
-  
-  
-    
-  
-  &lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;Dark&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png&#34;&gt;
-    &lt;img alt=&#34;&#34; src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png&#34;&gt;
-  &lt;/a&gt;
-  
-  
-  
-  
-    
-  
-  &lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;Default&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-forest.png&#34;&gt;
-    &lt;img alt=&#34;&#34; src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-forest.png&#34;&gt;
-  &lt;/a&gt;
-  
-  
-  
-  
-    
-  
-  &lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;Coffee theme with Playfair font&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-coffee-playfair.png&#34;&gt;
-    &lt;img alt=&#34;&#34; src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-coffee-playfair.png&#34;&gt;
-  &lt;/a&gt;
-  
-  
-  
-  
-    
-  
-  &lt;a data-fancybox=&#34;gallery-1&#34; data-caption=&#34;1950s&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-1950s.png&#34;&gt;
-    &lt;img alt=&#34;&#34; src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-1950s.png&#34;&gt;
-  &lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
-
-&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;one-click install using your web browser (recommended)&lt;/li&gt;
-&lt;li&gt;install on your computer using Git with the Command Prompt/Terminal app&lt;/li&gt;
-&lt;li&gt;install on your computer by downloading the ZIP files&lt;/li&gt;
-&lt;li&gt;install on your computer with RStudio&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;quick-install-using-your-web-browser&#34;&gt;Quick install using your web browser&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart&#34; target=&#34;_blank&#34;&gt;Install Academic with Netlify&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Netlify will provide you with a customizable URL to access your new site&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;On GitHub, go to your newly created &lt;code&gt;academic-kickstart&lt;/code&gt; repository and edit &lt;code&gt;config.toml&lt;/code&gt; to personalize your site. Shortly after saving the file, your site will automatically update&lt;/li&gt;
-&lt;li&gt;Read the &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Quick Start Guide&lt;/a&gt; to learn how to add Markdown content. For inspiration, refer to the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite&#34; target=&#34;_blank&#34;&gt;Markdown content&lt;/a&gt; which powers the &lt;a href=&#34;https://themes.gohugo.io/theme/academic/&#34; target=&#34;_blank&#34;&gt;Demo&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;install-with-git&#34;&gt;Install with Git&lt;/h3&gt;
-
-&lt;p&gt;Prerequisites:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://git-scm.com/downloads&#34; target=&#34;_blank&#34;&gt;Download and install Git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gohugo.io/getting-started/installing/#quick-install&#34; target=&#34;_blank&#34;&gt;Download and install Hugo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart#fork-destination-box&#34; target=&#34;_blank&#34;&gt;Fork&lt;/a&gt; the &lt;em&gt;Academic Kickstart&lt;/em&gt; repository and clone your fork with Git:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;Note that if you forked Academic Kickstart, the above command should be edited to clone your fork, i.e. replace &lt;code&gt;sourcethemes&lt;/code&gt; with your GitHub username.&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Initialize the theme:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd My_Website
-git submodule update --init --recursive
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;install-with-zip&#34;&gt;Install with ZIP&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart/archive/master.zip&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt; and extract &lt;em&gt;Academic Kickstart&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gcushen/hugo-academic/archive/master.zip&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt; and extract the &lt;em&gt;Academic theme&lt;/em&gt; to the &lt;code&gt;themes/academic/&lt;/code&gt; folder from the above step&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;install-with-rstudio&#34;&gt;Install with RStudio&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34;&gt;View the guide to installing Academic with RStudio&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;If you installed on your computer, view your new website by running the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;hugo server
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now visit &lt;a href=&#34;http://localhost:1313&#34; target=&#34;_blank&#34;&gt;localhost:1313&lt;/a&gt; and your new Academic powered website will appear. Otherwise, if using Netlify, they will provide you with your URL.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Read the &lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Quick Start Guide&lt;/a&gt; to learn how to add Markdown content, customize your site, and deploy it. For inspiration, refer to the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite&#34; target=&#34;_blank&#34;&gt;Markdown content&lt;/a&gt; which powers the &lt;a href=&#34;https://themes.gohugo.io/theme/academic/&#34; target=&#34;_blank&#34;&gt;Demo&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Build your site by running the &lt;code&gt;hugo&lt;/code&gt; command. Then &lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/&#34; target=&#34;_blank&#34;&gt;host it for free using Github Pages&lt;/a&gt; or Netlify (refer to the first installation method). Alternatively, copy the generated &lt;code&gt;public/&lt;/code&gt; directory (by FTP, Rsync, etc.) to your production web server (such as a university&amp;rsquo;s hosting service).&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
-
-&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on &lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt; to help keep track of updates and check out the &lt;a href=&#34;https://sourcethemes.com/academic/updates&#34; target=&#34;_blank&#34;&gt;release notes&lt;/a&gt; prior to updating your site.&lt;/p&gt;
-
-&lt;p&gt;Before updating the framework, it is recommended to make a backup of your entire website directory (or at least your &lt;code&gt;themes/academic&lt;/code&gt; directory) and record your current version number.&lt;/p&gt;
-
-&lt;p&gt;By default, Academic is installed as a Git submodule which can be updated by running the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git submodule update --remote --merge
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34;&gt;Check out the update guide&lt;/a&gt; for full instructions and alternative methods.&lt;/p&gt;
-
-&lt;h2 id=&#34;feedback-contributing&#34;&gt;Feedback &amp;amp; Contributing&lt;/h2&gt;
-
-&lt;p&gt;Please use the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34;&gt;issue tracker&lt;/a&gt; to let me know about any bugs or feature requests, or alternatively make a pull request.&lt;/p&gt;
-
-&lt;p&gt;For support, head over to the &lt;a href=&#34;http://discuss.gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo discussion forum&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+&lt;p&gt;How can these data be used to design a predictive algorithm identifying
+antidepressant users &lt;em&gt;with&lt;/em&gt; depression?&lt;/p&gt;
 </description>
     </item>
     
@@ -242,54 +574,6 @@ git submodule update --init --recursive
       
       <guid>/publication/person-re-identification/</guid>
       <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &amp;lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Including Plots&lt;/h1&gt;
-&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
-  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
-  init.angle = -50, border = NA
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: A fancy pie chart.
-&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 </description>
     </item>
     

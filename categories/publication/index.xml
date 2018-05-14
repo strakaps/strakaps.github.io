@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publication on Peter Straka</title>
+    <link>/categories/publication/</link>
+    <description>Recent content in Publication on Peter Straka</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 18 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fractional Diffusion where &#34;fractional&#34; varies in space</title>
+      <link>/post/voffpe/</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/voffpe/</guid>
+      <description>My new paper (arxiv.org/abs/1712.06767)
+ Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks
+ is currently under review.
+The variable order fractional Fokker-Planck equation (VOFFPE), in simple form1, is \[\frac{\partial}{\partial t} p(x,t) = \frac{\partial^2}{\partial x^2} \underbrace{D_t^{1-\beta(x)}}_{\text{fractional derivative}} p(x,t).\]
+ The part without the fractional derivative operator is the Fokker-Planck equation (FPE). It describes the spreading of probability via a random walk:  spreading
+  Adding in the fractional derivative \[D_t^{1-\beta} p(x,t) = \int_0^t p(x,t-s) \frac{s^{-\beta}}{\Gamma(1-\beta)}\,ds\] results in the “fractional FPE”.</description>
+    </item>
+    
+  </channel>
+</rss>

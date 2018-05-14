@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.40.3" />
+  <meta name="author" content="Peter Straka">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="Suppose you want to model time series data with irregularly spaced events, and suppose your main focus is the timing and the size of the extreme events. The max-renewal process is a conceptually easy model that does this… and now there’s an app that can fit it to data:
+ Irregular spacing The renewal process does simple i.i.d. draws \(W_i\) from a distribution, and uses these as waiting times between events.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/shiny-bursty-extremes/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Peter Straka">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Peter Straka">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/shiny-bursty-extremes/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@strakaps">
+  <meta property="twitter:creator" content="@strakaps">
+  
+  <meta property="og:site_name" content="Peter Straka">
+  <meta property="og:url" content="/post/shiny-bursty-extremes/">
+  <meta property="og:title" content="A Shiny app to explore bursty extremes | Peter Straka">
+  <meta property="og:description" content="Suppose you want to model time series data with irregularly spaced events, and suppose your main focus is the timing and the size of the extreme events. The max-renewal process is a conceptually easy model that does this… and now there’s an app that can fit it to data:
+ Irregular spacing The renewal process does simple i.i.d. draws \(W_i\) from a distribution, and uses these as waiting times between events.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2017-07-23T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-05-14T17:36:12&#43;08:00">
+  
+
+  
+  
+
+  <title>A Shiny app to explore bursty extremes | Peter Straka</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Peter Straka</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">A Shiny app to explore bursty extremes</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+        Last updated on
+    
+    <time datetime="2017-07-23 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      May 14, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Peter Straka">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/shiny-bursty-extremes/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/probability/">probability</a
+    >, 
+    
+    <a href="/categories/r/">R</a
+    >, 
+    
+    <a href="/categories/statistics/">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=A%20Shiny%20app%20to%20explore%20bursty%20extremes&amp;url=%2fpost%2fshiny-bursty-extremes%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fshiny-bursty-extremes%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fshiny-bursty-extremes%2f&amp;title=A%20Shiny%20app%20to%20explore%20bursty%20extremes"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fshiny-bursty-extremes%2f&amp;title=A%20Shiny%20app%20to%20explore%20bursty%20extremes"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=A%20Shiny%20app%20to%20explore%20bursty%20extremes&amp;body=%2fpost%2fshiny-bursty-extremes%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <p>Suppose you want to model time series data with irregularly spaced events, and suppose your main focus is the <em>timing</em> and the <em>size of the extreme events</em>. The <strong>max-renewal process</strong> is a conceptually easy model that does this… and now there’s an app that can fit it to data:</p>
+<iframe src="https://strakaps.shinyapps.io/ctre-app/" style="border: none; width: 800px; height: 900px">
+</iframe>
+<div id="irregular-spacing" class="section level2">
+<h2>Irregular spacing</h2>
+<p>The renewal process does simple i.i.d. draws <span class="math inline">\(W_i\)</span> from a distribution, and uses these as waiting times between events.
+Distributions with light tails (e.g. exponential distribution) don’t produce high irregularity…</p>
+<div class="figure">
+<img src="/images/light-tailed-rp.png" alt="(A light-tailed renewal process.)" />
+<p class="caption">(A light-tailed renewal process.)</p>
+</div>
+<p>…but distributions with heavy tails do:</p>
+<div class="figure">
+<img src="/images/heavy-tailed-rp.png" alt="(A heavy-tailed renewal process.)" />
+<p class="caption">(A heavy-tailed renewal process.)</p>
+</div>
+</div>
+<div id="max-renewal-process" class="section level2">
+<h2>Max-renewal process</h2>
+<p>The max-renewal process then simply draws i.i.d. magnitudes from another (arbitrary) distribution, and assigns these magnitudes to these events. Since we try to model the size of the <em>extreme</em> events only, we only consider data above some high variable threshold, and a <a href="https://en.wikipedia.org/wiki/Generalized_extreme_value_distribution">GEV</a> (Generalized Extreme Value distribution) is fitted to the exceedances (red):</p>
+<div class="figure">
+<img src="/images/exceedances.png" alt="(An exceedance plot.)" />
+<p class="caption">(An exceedance plot.)</p>
+</div>
+<p>Since the GEV are <em>limit</em> distributions (for very high thresholds), one needs a high threshold to avoid bias; but then there are few data points left to fit (high variance). This is another example of the famous bias-variance trade-off in statistics. The GP distribution is fitted under the “Exceedances” tab of the app.</p>
+<p>Because the model is so simple, the distribution of the times between the threshold crossings (blue crosses) is “just” a Mittag-Leffler distribution… for which I happen to know a good <a href="https://strakaps.github.io/2017/06/26/mittagleffler/">R package</a>! Indeed, for a threshold which is so high that (on average) only once every <span class="math inline">\(n\)</span> observations there is a crossing, the times between threshold crossings are Mittag-Leffler distributed with a shape parameter <span class="math inline">\(0 &lt; \beta \le 1\)</span> and a positive scale parameter <span class="math inline">\(\sigma n^{1/\beta}\)</span>, where <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(\beta\)</span> can be fitted in the app. (See the “Exceedance Times” tab.)</p>
+</div>
+<div id="but-why-dont-the-simulated-data-look-like-the-empirical-datasets" class="section level2">
+<h2>But why don’t the simulated data look like the empirical datasets?</h2>
+<p>Well… that’s a fair point, the simulated data sometimes have <em>no</em> events for long time periods, whereas events are coming in continually in the empirical datasets. But hey, this is a model for the exceedances, and those get reproduced nicely!</p>
+</div>
+<div id="acknowledgements" class="section level2">
+<h2>Acknowledgements</h2>
+<ul>
+<li><a href="https://github.com/SmarakNayak">Smarak Nayak</a> co-wrote the app (code on <a href="https://github.com/strakaps/CTRMapp">GitHub</a>)</li>
+<li>The estimation of the Mittag-Leffler distribution is based on the paper [1] by <a href="https://scholar.google.com/citations?hl=en&amp;user=se9ADB4AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Dexter Cahoy</a></li>
+<li>Calculating the QQ plots was made possible by <a href="https://twitter.com/rgarrappa">Roberto Garrappa</a>’s Laplace inversion algorithm in [2], adopted in MittagLeffleR</li>
+</ul>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<ol style="list-style-type: decimal">
+<li>Estimation of Mittag-Leffler parameters. Communications in Statistics-Simulation and Computation, 42(2), 303-315, 2013</li>
+<li>Numerical evaluation of two and three parameter Mittag-Leffler functions, R Garrappa, SIAM Journal on Numerical Analysis 53 (3), 1350–1369</li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/heavy-tails/">heavy tails</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/extremes/">extremes</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/bursts/">bursts</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/project/bursts/">Extremes of Bursty Time Series</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "strakaps" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//strakaps.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

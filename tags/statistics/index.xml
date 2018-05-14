@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistics on Peter Straka</title>
+    <link>/tags/statistics/</link>
+    <description>Recent content in Statistics on Peter Straka</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Fri, 11 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R package CTRE: thresholding bursty time series</title>
+      <link>/post/ctre-extremes-of-bursty-time-series/</link>
+      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ctre-extremes-of-bursty-time-series/</guid>
+      <description>The new R package CTRE is now available on CRAN. “CTRE” means “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series.
+library(CTRE) flares_ctre &amp;lt;- ctre(flares) plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&amp;lt; 5\%\) of observations). The exceedances of this threshold (red) follow (asymptotically for high \(u\)) a Generalized Pareto distribution Generalized Pareto distribution.</description>
+    </item>
+    
+    <item>
+      <title>MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
+      <link>/post/mittag-leffler/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/mittag-leffler/</guid>
+      <description>My PhD student Ricky Gill and I have created the R package MittagLeffleR, documented at strakaps.github.io/MittagLeffleR/. It is available on CRAN (and the latest development version on GitHub). MittagLeffleR calculates both Mittag-Leffler distributions; i.e. probability density, cumulative distribution function, quantile function and fast random variate generation. It was made possible by the Laplace inversion algorithm for the Mittag-Leffler function by Roberto Garrappa. Install it via
+install.packages(&amp;quot;MittagLeffleR&amp;quot;) The Two Mittag-Leffler distributions Various journal articles (including my own) write about “the” Mittag-Leffler distribution, but actually there are two such families of distributions.</description>
+    </item>
+    
+    <item>
+      <title>Extremes of Bursty Time Series</title>
+      <link>/project/bursts/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>/project/bursts/</guid>
+      <description>Extreme value theory is concerned with the modelling and prediction of extremes in a series of observations. Accurate estimates of probabilities for the exceedence of extreme levels of temperature, financial loss, the number of defective nodes in a network etc. are crucial for the control of risk in a great number of societal systems. &amp;ldquo;Mainstream&amp;rdquo; extreme value theory assumes that events happen uniformly, e.g. yearly, daily, or every second, or that events occur at a certain rate (Poisson process).</description>
+    </item>
+    
+    <item>
+      <title>Identifying antidepressant users with depression</title>
+      <link>/project/antidepressants/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>/project/antidepressants/</guid>
+      <description>Records of antidepressant dispensings are often used in public health research as a surrogate measure of depression. In 1&amp;frasl;3 to 1&amp;frasl;2 of cases however, antidepressants are prescribed for indications other than depression, which results in misclassification.
+Medicare Benefits Schedule (MBS) data contain the dispensings of antidepressants and other pharmaceuticals, and data from the 45 and Up Study provide a gold standard response variable (a yes/no answer to &amp;ldquo;Have you been treated for depression?</description>
+    </item>
+    
+  </channel>
+</rss>
