@@ -17,8 +17,8 @@
       
     
   
-  <meta name="description" content="The new R package CTRE is now available on CRAN. “CTRE” means “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series.
-library(CTRE) flares_ctre &lt;- ctre(flares) plot(flares_ctre, log = &quot;y&quot;, main = &quot;Solar Flares&quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&lt; 5\%\) of observations). The exceedances of this threshold (red) follow (asymptotically for high \(u\)) a Generalized Pareto distribution Generalized Pareto distribution.">
+  <meta name="description" content="The new R package CTRE is now available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series. The theory is desribed in another paper (html|pdf).
+library(CTRE) flares_ctre &lt;- ctre(flares) plot(flares_ctre, log = &quot;y&quot;, main = &quot;Solar Flares&quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&lt; 5\%\) of observations).">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/ctre-package/">
@@ -80,8 +80,8 @@ library(CTRE) flares_ctre &lt;- ctre(flares) plot(flares_ctre, log = &quot;y&quo
   <meta property="og:site_name" content="Peter Straka">
   <meta property="og:url" content="/post/ctre-package/">
   <meta property="og:title" content="R package CTRE: thresholding bursty time series | Peter Straka">
-  <meta property="og:description" content="The new R package CTRE is now available on CRAN. “CTRE” means “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series.
-library(CTRE) flares_ctre &lt;- ctre(flares) plot(flares_ctre, log = &quot;y&quot;, main = &quot;Solar Flares&quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&lt; 5\%\) of observations). The exceedances of this threshold (red) follow (asymptotically for high \(u\)) a Generalized Pareto distribution Generalized Pareto distribution.">
+  <meta property="og:description" content="The new R package CTRE is now available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series. The theory is desribed in another paper (html|pdf).
+library(CTRE) flares_ctre &lt;- ctre(flares) plot(flares_ctre, log = &quot;y&quot;, main = &quot;Solar Flares&quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&lt; 5\%\) of observations).">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2018-05-11T00:00:00&#43;00:00">
@@ -234,7 +234,7 @@ library(CTRE) flares_ctre &lt;- ctre(flares) plot(flares_ctre, log = &quot;y&quo
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -307,8 +307,10 @@ library(CTRE) flares_ctre &lt;- ctre(flares) plot(flares_ctre, log = &quot;y&quo
 
     <div class="article-style" itemprop="articleBody">
       <p>The new <a href="https://strakaps.github.io/CTRE/">R package <code>CTRE</code></a> is now
-available on CRAN. “CTRE” means “Continuous Time Random Exceedances”,
-which is a model for extreme values of bursty time series.</p>
+available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”,
+which is a model for extreme values of bursty time series.
+The theory is desribed in another paper
+(<a href="https://strakaps.github.io/bursty-POT/">html</a>|<a href="https://arxiv.org/pdf/1802.05218.pdf">pdf</a>).</p>
 <pre class="r"><code>library(CTRE)
 flares_ctre &lt;- ctre(flares)
 plot(flares_ctre, log = &quot;y&quot;, main = &quot;Solar Flares&quot;)</code></pre>
@@ -317,7 +319,7 @@ plot(flares_ctre, log = &quot;y&quot;, main = &quot;Solar Flares&quot;)</code></
 Which observations are considered extreme is defined by a variable threshold <span class="math inline">\(u\)</span>
 (dashed line, <span class="math inline">\(&lt; 5\%\)</span> of observations).
 The exceedances of this threshold (red) follow (asymptotically for high <span class="math inline">\(u\)</span>)
-a Generalized Pareto distribution
+a
 <a href="https://en.wikipedia.org/wiki/Generalized_Pareto_distribution">Generalized Pareto distribution</a>.
 This type of modelling of extremes is standard in Extreme Value Theory,
 and known as the
@@ -328,7 +330,7 @@ To date,
 have been developed for POT!</p>
 <div id="whats-new-about-ctre" class="section level2">
 <h2>What’s new about <code>CTRE</code>?</h2>
-<p><code>CTRE</code> provides a new way to model the <em>bursty timing</em> of the threshold
+<p><code>CTRE</code> provides a new way to model the <strong>bursty timing</strong> of the threshold
 crossings. In complex systems, <em>inter-event times</em> are typically
 heavy-tailed<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, and thus highly heterogeneous
 (think income distributions).
@@ -343,15 +345,20 @@ par(mfrow = c(1,2))
 MLestimates(flares_ctre, tail = 0.9, scale = 3E7)</code></pre>
 <p><img src="/post/ctre-package_files/figure-html/stability-plot-1.png" width="672" /></p>
 <p>Above, the threshold is varied from the 5th to the 700th largest magnitude
-(x-axis), and the parameters estimates are plotted on the y-axis.
-To the left, few data are available (high variance).
-To the right, we are less confident about the fit of the Mittag-Leffler
-distribution (high bias).</p>
+(as you move right along the x-axes)
+and the parameters estimates are plotted on the y-axis.
+For both panels, towards the left (exceedances=5), only few data are available,
+and the estimate has a high variance.
+Towards the right (exceedances = 700), the threshold is low, and the
+Mittag-Leffler fit degrades (high bias).
+In between is where we want to read off our (hopefully stable) parameter
+estimates. The above plots are hence called “stability plots”.</p>
 <dl>
 <dt>Important:</dt>
-<dd><p>The scale parameter decreases proportionally to <span class="math inline">\(k^{1/\beta}\)</span> with <span class="math inline">\(k\)</span>.
+<dd><p>The scale parameter is proportional to <span class="math inline">\(k^{-1/\beta}\)</span>.
 The parameter <span class="math inline">\(\beta\)</span> is hence used to rescale the y-values of the
-right-hand plot, and needs to estimated from the left hand plot first.</p>
+right-hand plot, in order to make the estimates constant, and needs to
+estimated from the left-hand plot first.</p>
 </dd>
 </dl>
 </div>
@@ -371,13 +378,13 @@ magnitudes exceed it?</p>
 <pre class="r"><code>library(magrittr)
 (flares_ctre %&gt;% magnitudes() %&gt;% sort(decreasing=TRUE) &gt; 10000) %&gt;% sum()</code></pre>
 <pre><code>## [1] 24</code></pre>
-<p>So <span class="math inline">\(k = 24\)</span>. The model thus predicts inter-arrival times drawn from the
+<p>So substitute <span class="math inline">\(k = 24\)</span>. The model thus predicts inter-arrival times drawn from the
 distribution
 <span class="math display">\[
 {\rm ML}\left(0.9, 8.8\times 10^{5} {\rm sec} \right)
 = {\rm ML}\left(0.9, 10 {\rm days} \right).
 \]</span></p>
-<p>Here’s the plot of this distribution:</p>
+<p>Here’s the plot of this distribution, on a logarithmic scale:</p>
 <p><img src="/post/ctre-package_files/figure-html/unnamed-chunk-2-1.png" width="480" /></p>
 <p>Compared to the Exponential distribution, the Mittag-Leffler distribution
 puts more probability mass on both tiny values (bursts) and
@@ -391,6 +398,22 @@ values in the tails (quiet periods).</p>
 It is / should be loading below:</p>
 <iframe src="https://strakaps.shinyapps.io/ctre-app/" style="border: none; width: 800px; height: 900px">
 </iframe>
+</div>
+<div id="what-about-clustering-of-extremes" class="section level2">
+<h2>What about “clustering of extremes”?</h2>
+<p>The main other appraoch in Extreme Value Theory which addresses irregular
+(non-Poissonian) threshold crossing times goes under the name
+“clustering of extremes”.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> It assumes that the underlying
+process is stationary, and conflates each excursion of the process
+above the threshold as one cluster of events.</p>
+<p>CTREs and clustering of extremes both generalize the standard
+assumption of independent events, but in
+different directions. They are hence complementary, and it needs to be
+investigated how they should be compared meaningfully.</p>
+</div>
+<div id="feedback" class="section level2">
+<h2>Feedback</h2>
+<p>Do you think CTREs are a useful model? Please comment below.</p>
 </div>
 <div class="footnotes">
 <hr />
@@ -407,6 +430,9 @@ magnitudes.<a href="#fnref1" class="footnote-back">↩</a></p></li>
 <li id="fn2"><p>See the Introduction of
 <a href="http://iopscience.iop.org/article/10.1088/1367-2630/15/10/103023">“Modelling bursty time series”</a> by Vajna, Tóth &amp; Kertész, for a list of complex systems with heavy-tailed
 inter-event times.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>See e.g. Chapter 3 in the textbook
+<a href="https://books.google.com.ph/books/about/Extremes_and_Related_Properties_of_Rando.html?id=-ofTBwAAQBAJ&amp;redir_esc=y"><em>Extremes and Related Properties of Random Sequences and Processes</em></a>
+by Leadbetter, Lindgren &amp; Rootzén.<a href="#fnref3" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 
@@ -447,9 +473,9 @@ inter-event times.<a href="#fnref2" class="footnote-back">↩</a></p></li>
         
         <li><a href="/project/mittagleffler/">R package MittagLeffleR</a></li>
         
-        <li><a href="/project/antidepressants/">Identifying antidepressant users with depression</a></li>
-        
         <li><a href="/project/bursts/">Extremes of Bursty Time Series</a></li>
+        
+        <li><a href="/project/antidepressants/">Identifying antidepressant users with depression</a></li>
         
       </ul>
     </div>

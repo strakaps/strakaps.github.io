@@ -67,8 +67,10 @@ tackle questions of national importance such as the above.&lt;/p&gt;
       
       <guid>/post/ctre-package/</guid>
       <description>&lt;p&gt;The new &lt;a href=&#34;https://strakaps.github.io/CTRE/&#34;&gt;R package &lt;code&gt;CTRE&lt;/code&gt;&lt;/a&gt; is now
-available on CRAN. “CTRE” means “Continuous Time Random Exceedances”,
-which is a model for extreme values of bursty time series.&lt;/p&gt;
+available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”,
+which is a model for extreme values of bursty time series.
+The theory is desribed in another paper
+(&lt;a href=&#34;https://strakaps.github.io/bursty-POT/&#34;&gt;html&lt;/a&gt;|&lt;a href=&#34;https://arxiv.org/pdf/1802.05218.pdf&#34;&gt;pdf&lt;/a&gt;).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(CTRE)
 flares_ctre &amp;lt;- ctre(flares)
 plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -77,7 +79,7 @@ plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp
 Which observations are considered extreme is defined by a variable threshold &lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt;
 (dashed line, &lt;span class=&#34;math inline&#34;&gt;\(&amp;lt; 5\%\)&lt;/span&gt; of observations).
 The exceedances of this threshold (red) follow (asymptotically for high &lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt;)
-a Generalized Pareto distribution
+a
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Generalized_Pareto_distribution&#34;&gt;Generalized Pareto distribution&lt;/a&gt;.
 This type of modelling of extremes is standard in Extreme Value Theory,
 and known as the
@@ -88,7 +90,7 @@ To date,
 have been developed for POT!&lt;/p&gt;
 &lt;div id=&#34;whats-new-about-ctre&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;What’s new about &lt;code&gt;CTRE&lt;/code&gt;?&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;CTRE&lt;/code&gt; provides a new way to model the &lt;em&gt;bursty timing&lt;/em&gt; of the threshold
+&lt;p&gt;&lt;code&gt;CTRE&lt;/code&gt; provides a new way to model the &lt;strong&gt;bursty timing&lt;/strong&gt; of the threshold
 crossings. In complex systems, &lt;em&gt;inter-event times&lt;/em&gt; are typically
 heavy-tailed&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, and thus highly heterogeneous
 (think income distributions).
@@ -103,15 +105,20 @@ par(mfrow = c(1,2))
 MLestimates(flares_ctre, tail = 0.9, scale = 3E7)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/ctre-package_files/figure-html/stability-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Above, the threshold is varied from the 5th to the 700th largest magnitude
-(x-axis), and the parameters estimates are plotted on the y-axis.
-To the left, few data are available (high variance).
-To the right, we are less confident about the fit of the Mittag-Leffler
-distribution (high bias).&lt;/p&gt;
+(as you move right along the x-axes)
+and the parameters estimates are plotted on the y-axis.
+For both panels, towards the left (exceedances=5), only few data are available,
+and the estimate has a high variance.
+Towards the right (exceedances = 700), the threshold is low, and the
+Mittag-Leffler fit degrades (high bias).
+In between is where we want to read off our (hopefully stable) parameter
+estimates. The above plots are hence called “stability plots”.&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;Important:&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;The scale parameter decreases proportionally to &lt;span class=&#34;math inline&#34;&gt;\(k^{1/\beta}\)&lt;/span&gt; with &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;.
+&lt;dd&gt;&lt;p&gt;The scale parameter is proportional to &lt;span class=&#34;math inline&#34;&gt;\(k^{-1/\beta}\)&lt;/span&gt;.
 The parameter &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; is hence used to rescale the y-values of the
-right-hand plot, and needs to estimated from the left hand plot first.&lt;/p&gt;
+right-hand plot, in order to make the estimates constant, and needs to
+estimated from the left-hand plot first.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
@@ -131,13 +138,13 @@ magnitudes exceed it?&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magrittr)
 (flares_ctre %&amp;gt;% magnitudes() %&amp;gt;% sort(decreasing=TRUE) &amp;gt; 10000) %&amp;gt;% sum()&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 24&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;So &lt;span class=&#34;math inline&#34;&gt;\(k = 24\)&lt;/span&gt;. The model thus predicts inter-arrival times drawn from the
+&lt;p&gt;So substitute &lt;span class=&#34;math inline&#34;&gt;\(k = 24\)&lt;/span&gt;. The model thus predicts inter-arrival times drawn from the
 distribution
 &lt;span class=&#34;math display&#34;&gt;\[
 {\rm ML}\left(0.9, 8.8\times 10^{5} {\rm sec} \right)
 = {\rm ML}\left(0.9, 10 {\rm days} \right).
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Here’s the plot of this distribution:&lt;/p&gt;
+&lt;p&gt;Here’s the plot of this distribution, on a logarithmic scale:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/ctre-package_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Compared to the Exponential distribution, the Mittag-Leffler distribution
 puts more probability mass on both tiny values (bursts) and
@@ -151,6 +158,22 @@ values in the tails (quiet periods).&lt;/p&gt;
 It is / should be loading below:&lt;/p&gt;
 &lt;iframe src=&#34;https://strakaps.shinyapps.io/ctre-app/&#34; style=&#34;border: none; width: 800px; height: 900px&#34;&gt;
 &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-about-clustering-of-extremes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What about “clustering of extremes”?&lt;/h2&gt;
+&lt;p&gt;The main other appraoch in Extreme Value Theory which addresses irregular
+(non-Poissonian) threshold crossing times goes under the name
+“clustering of extremes”.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; It assumes that the underlying
+process is stationary, and conflates each excursion of the process
+above the threshold as one cluster of events.&lt;/p&gt;
+&lt;p&gt;CTREs and clustering of extremes both generalize the standard
+assumption of independent events, but in
+different directions. They are hence complementary, and it needs to be
+investigated how they should be compared meaningfully.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feedback&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Feedback&lt;/h2&gt;
+&lt;p&gt;Do you think CTREs are a useful model? Please comment below.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
@@ -167,6 +190,9 @@ magnitudes.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;
 &lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;See the Introduction of
 &lt;a href=&#34;http://iopscience.iop.org/article/10.1088/1367-2630/15/10/103023&#34;&gt;“Modelling bursty time series”&lt;/a&gt; by Vajna, Tóth &amp;amp; Kertész, for a list of complex systems with heavy-tailed
 inter-event times.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;See e.g. Chapter 3 in the textbook
+&lt;a href=&#34;https://books.google.com.ph/books/about/Extremes_and_Related_Properties_of_Rando.html?id=-ofTBwAAQBAJ&amp;amp;redir_esc=y&#34;&gt;&lt;em&gt;Extremes and Related Properties of Random Sequences and Processes&lt;/em&gt;&lt;/a&gt;
+by Leadbetter, Lindgren &amp;amp; Rootzén.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

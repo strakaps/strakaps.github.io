@@ -18,8 +18,8 @@
       <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/ctre-package/</guid>
-      <description>The new R package CTRE is now available on CRAN. “CTRE” means “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series.
-library(CTRE) flares_ctre &amp;lt;- ctre(flares) plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&amp;lt; 5\%\) of observations). The exceedances of this threshold (red) follow (asymptotically for high \(u\)) a Generalized Pareto distribution Generalized Pareto distribution.</description>
+      <description>The new R package CTRE is now available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series. The theory is desribed in another paper (html|pdf).
+library(CTRE) flares_ctre &amp;lt;- ctre(flares) plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&amp;lt; 5\%\) of observations).</description>
     </item>
     
     <item>
