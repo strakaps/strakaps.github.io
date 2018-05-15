@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.40.3" />
+  <meta name="author" content="Peter Straka">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="The new R package CTRE is now available on CRAN. “CTRE” means “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series.
+library(CTRE) flares_ctre &lt;- ctre(flares) plot(flares_ctre, log = &quot;y&quot;, main = &quot;Solar Flares&quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&lt; 5\%\) of observations). The exceedances of this threshold (red) follow (asymptotically for high \(u\)) a Generalized Pareto distribution Generalized Pareto distribution.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/ctre-package/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Peter Straka">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Peter Straka">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/ctre-package/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@strakaps">
+  <meta property="twitter:creator" content="@strakaps">
+  
+  <meta property="og:site_name" content="Peter Straka">
+  <meta property="og:url" content="/post/ctre-package/">
+  <meta property="og:title" content="R package CTRE: thresholding bursty time series | Peter Straka">
+  <meta property="og:description" content="The new R package CTRE is now available on CRAN. “CTRE” means “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series.
+library(CTRE) flares_ctre &lt;- ctre(flares) plot(flares_ctre, log = &quot;y&quot;, main = &quot;Solar Flares&quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&lt; 5\%\) of observations). The exceedances of this threshold (red) follow (asymptotically for high \(u\)) a Generalized Pareto distribution Generalized Pareto distribution.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-05-11T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-05-15T10:53:07&#43;08:00">
+  
+
+  
+  
+
+  <title>R package CTRE: thresholding bursty time series | Peter Straka</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Peter Straka</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">R package CTRE: thresholding bursty time series</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+        Last updated on
+    
+    <time datetime="2018-05-11 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      May 15, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Peter Straka">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/ctre-package/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/software/">software</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=R%20package%20CTRE%3a%20thresholding%20bursty%20time%20series&amp;url=%2fpost%2fctre-package%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fctre-package%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fctre-package%2f&amp;title=R%20package%20CTRE%3a%20thresholding%20bursty%20time%20series"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fctre-package%2f&amp;title=R%20package%20CTRE%3a%20thresholding%20bursty%20time%20series"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=R%20package%20CTRE%3a%20thresholding%20bursty%20time%20series&amp;body=%2fpost%2fctre-package%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <p>The new <a href="https://strakaps.github.io/CTRE/">R package <code>CTRE</code></a> is now
+available on CRAN. “CTRE” means “Continuous Time Random Exceedances”,
+which is a model for extreme values of bursty time series.</p>
+<pre class="r"><code>library(CTRE)
+flares_ctre &lt;- ctre(flares)
+plot(flares_ctre, log = &quot;y&quot;, main = &quot;Solar Flares&quot;)</code></pre>
+<p><img src="/post/ctre-package_files/figure-html/data-plot-1.png" width="672" /></p>
+<p>The above time series are measurements of solar flare magnitudes by NASA<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.
+Which observations are considered extreme is defined by a variable threshold <span class="math inline">\(u\)</span>
+(dashed line, <span class="math inline">\(&lt; 5\%\)</span> of observations).
+The exceedances of this threshold (red) follow (asymptotically for high <span class="math inline">\(u\)</span>)
+a Generalized Pareto distribution
+<a href="https://en.wikipedia.org/wiki/Generalized_Pareto_distribution">Generalized Pareto distribution</a>.
+This type of modelling of extremes is standard in Extreme Value Theory,
+and known as the
+<a href="https://en.wikipedia.org/wiki/Extreme_value_theory#Data_analysis">Peaks Over Threshold</a>
+(POT) method.
+To date,
+<a href="https://cran.r-project.org/web/views/ExtremeValue.html"><em>18 R packages</em></a>
+have been developed for POT!</p>
+<div id="whats-new-about-ctre" class="section level2">
+<h2>What’s new about <code>CTRE</code>?</h2>
+<p><code>CTRE</code> provides a new way to model the <em>bursty timing</em> of the threshold
+crossings. In complex systems, <em>inter-event times</em> are typically
+heavy-tailed<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, and thus highly heterogeneous
+(think income distributions).
+The bulk of inter-event times is short, corresponding to bursts of events.
+A few very long inter-event times represent quiet periods.</p>
+<p>The <a href="https://strakaps.github.io/MittagLeffleR/">Mittag-Leffler distribution</a>
+is universal for times between threshold crossings, see the
+<a href="https://strakaps.github.io/bursty-POT/">companion paper</a>.
+<code>CTRE</code> fits a Mittag-Leffler distribution to a range of threshold values:</p>
+<pre class="r"><code>flares_ctre &lt;- thin(flares_ctre, k = 700)
+par(mfrow = c(1,2))
+MLestimates(flares_ctre, tail = 0.9, scale = 3E7)</code></pre>
+<p><img src="/post/ctre-package_files/figure-html/stability-plot-1.png" width="672" /></p>
+<p>Above, the threshold is varied from the 5th to the 700th largest magnitude
+(x-axis), and the parameters estimates are plotted on the y-axis.
+To the left, few data are available (high variance).
+To the right, we are less confident about the fit of the Mittag-Leffler
+distribution (high bias).</p>
+<dl>
+<dt>Important:</dt>
+<dd><p>The scale parameter decreases proportionally to <span class="math inline">\(k^{1/\beta}\)</span> with <span class="math inline">\(k\)</span>.
+The parameter <span class="math inline">\(\beta\)</span> is hence used to rescale the y-values of the
+right-hand plot, and needs to estimated from the left hand plot first.</p>
+</dd>
+</dl>
+</div>
+<div id="ctre-applied-to-data" class="section level2">
+<h2><code>CTRE</code> applied to data</h2>
+<p>For the solar flare data, we read off
+<span class="math display">\[
+\beta \approx 0.9, \quad \sigma \approx 3 \times 10^7.
+\]</span>
+This means that the inter-arrival time <span class="math inline">\(T(k)\)</span> for magnitudes as high as the
+<span class="math inline">\(k\)</span>-th magnitude is distributed as
+<span class="math display">\[
+T(k) \sim {\rm ML}\left(0.9, \frac{3 \times 10^7 {\rm sec}}{k^{1/0.9}} \right).
+\]</span>
+For example, let’s assume the magnitude (peak rate) <span class="math inline">\(10,000\)</span>. How many
+magnitudes exceed it?</p>
+<pre class="r"><code>library(magrittr)
+(flares_ctre %&gt;% magnitudes() %&gt;% sort(decreasing=TRUE) &gt; 10000) %&gt;% sum()</code></pre>
+<pre><code>## [1] 24</code></pre>
+<p>So <span class="math inline">\(k = 24\)</span>. The model thus predicts inter-arrival times drawn from the
+distribution
+<span class="math display">\[
+{\rm ML}\left(0.9, 8.8\times 10^{5} {\rm sec} \right)
+= {\rm ML}\left(0.9, 10 {\rm days} \right).
+\]</span></p>
+<p>Here’s the plot of this distribution:</p>
+<p><img src="/post/ctre-package_files/figure-html/unnamed-chunk-2-1.png" width="480" /></p>
+<p>Compared to the Exponential distribution, the Mittag-Leffler distribution
+puts more probability mass on both tiny values (bursts) and
+values in the tails (quiet periods).</p>
+</div>
+<div id="shiny-app" class="section level2">
+<h2>Shiny app</h2>
+<p>Running</p>
+<pre class="r"><code>CTRE::runCTREshiny()</code></pre>
+<p>opens a Shiny app that that lets you do the above manipulations via sliders.
+It is / should be loading below:</p>
+<iframe src="https://strakaps.shinyapps.io/ctre-app/" style="border: none; width: 800px; height: 900px">
+</iframe>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The <a href="https://ntrs.nasa.gov/search.jsp?R=19920006736">“complete Hard X Ray Burst Spectrometer event list”</a>
+is a comprehensive reference for all measurements of the Hard X
+Ray Burst Spectrometer on NASA’s Solar Maximum Mission from the time of
+launch on Feb 14, 1980 to the end of the mission in Dec 1989. 12,776
+events were detected, with the “vast
+majority being solar flares”. The list includes the start time, peak time,
+duration, and peak rate of each event. We have used “start time” as the
+variable for event times, and “peak rate” as the variable for event
+magnitudes.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>See the Introduction of
+<a href="http://iopscience.iop.org/article/10.1088/1367-2630/15/10/103023">“Modelling bursty time series”</a> by Vajna, Tóth &amp; Kertész, for a list of complex systems with heavy-tailed
+inter-event times.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/software/">software</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/bursts/">bursts</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/extremes/">extremes</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/heavy-tails/">heavy-tails</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/r/">R</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/r-package/">R-package</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/mittag-leffler/">R package MittagLeffleR: Using the Mittag-Leffler distributions in R</a></li>
+        
+        <li><a href="/post/shiny-bursty-extremes/">A Shiny app to explore bursty extremes</a></li>
+        
+        <li><a href="/project/mittagleffler/">R package MittagLeffleR</a></li>
+        
+        <li><a href="/project/antidepressants/">Identifying antidepressant users with depression</a></li>
+        
+        <li><a href="/project/bursts/">Extremes of Bursty Time Series</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "strakaps-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//strakaps-github-io.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

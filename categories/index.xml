@@ -7,71 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 18 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Jun 2017 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Anomalous diffusion</title>
-      <link>/categories/anomalous-diffusion/</link>
-      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      <title>Announcements</title>
+      <link>/categories/announcements/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
       
-      <guid>/categories/anomalous-diffusion/</guid>
+      <guid>/categories/announcements/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Probability</title>
-      <link>/categories/probability/</link>
-      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      <title>Public-health</title>
+      <link>/categories/public-health/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
-      <guid>/categories/probability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Publication</title>
-      <link>/categories/publication/</link>
-      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/publication/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/categories/r/</link>
-      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/r/</guid>
+      <guid>/categories/public-health/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Software</title>
       <link>/categories/software/</link>
-      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/categories/software/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Statistical physics</title>
+      <title>Statistical-physics</title>
       <link>/categories/statistical-physics/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/categories/statistical-physics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Statistics</title>
-      <link>/categories/statistics/</link>
-      <pubDate>Sun, 23 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/statistics/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,7 @@
     <url>
     
       <loc>/project/gp-networks/</loc>
-      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
     
   
@@ -15,7 +15,7 @@
     <url>
     
       <loc>/project/ctre/</loc>
-      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
     
   
@@ -23,8 +23,8 @@
     
     <url>
     
-      <loc>/post/ctre-extremes-of-bursty-time-series/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <loc>/post/ctre-package/</loc>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
     
   
@@ -33,7 +33,7 @@
     <url>
     
       <loc>/post/voffpe/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
     
   
@@ -42,7 +42,7 @@
     <url>
     
       <loc>/post/shiny-bursty-extremes/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
     
   
@@ -51,7 +51,7 @@
     <url>
     
       <loc>/post/mittag-leffler/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
     
   
@@ -60,7 +60,7 @@
     <url>
     
       <loc>/post/scientia-phd/</loc>
-      <lastmod>2018-05-14T06:57:27+08:00</lastmod>
+      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
     </url>
     
   
@@ -69,7 +69,7 @@
     <url>
     
       <loc>/project/mittagleffler/</loc>
-      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
     
   
@@ -123,7 +123,7 @@
     <url>
     
       <loc>/project/anomalous-diffusion/</loc>
-      <lastmod>2018-05-14T16:44:32+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
     
   
@@ -132,7 +132,7 @@
     <url>
     
       <loc>/project/bursts/</loc>
-      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
     
   
@@ -141,7 +141,7 @@
     <url>
     
       <loc>/project/antidepressants/</loc>
-      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
     
   
@@ -187,8 +187,8 @@
     
     <url>
     
-      <loc>/tags/anomalous-diffusion/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <loc>/tags/announcement/</loc>
+      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -197,8 +197,28 @@
     
     <url>
     
-      <loc>/categories/anomalous-diffusion/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <loc>/categories/announcements/</loc>
+      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/anomalous-diffusion/</loc>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/big-data/</loc>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -208,7 +228,7 @@
     <url>
     
       <loc>/tags/bursts/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -218,7 +238,7 @@
     <url>
     
       <loc>/categories/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -228,7 +248,7 @@
     <url>
     
       <loc>/tags/extremes/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -238,7 +258,17 @@
     <url>
     
       <loc>/tags/heavy-tails/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/networks/</loc>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -257,8 +287,8 @@
     
     <url>
     
-      <loc>/tags/probability/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <loc>/tags/phd/</loc>
+      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -267,8 +297,8 @@
     
     <url>
     
-      <loc>/categories/probability/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <loc>/tags/probability/</loc>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -278,7 +308,7 @@
     <url>
     
       <loc>/project/</loc>
-      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -288,7 +318,17 @@
     <url>
     
       <loc>/tags/public-health/</loc>
-      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/public-health/</loc>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -298,17 +338,7 @@
     <url>
     
       <loc>/tags/publication/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/categories/publication/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -328,7 +358,7 @@
     <url>
     
       <loc>/tags/python/</loc>
-      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -338,7 +368,7 @@
     <url>
     
       <loc>/tags/r/</loc>
-      <lastmod>2018-05-14T18:01:35+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -347,8 +377,8 @@
     
     <url>
     
-      <loc>/categories/r/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <loc>/tags/r-package/</loc>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -357,8 +387,18 @@
     
     <url>
     
-      <loc>/tags/recruitment/</loc>
-      <lastmod>2018-05-14T06:57:27+08:00</lastmod>
+      <loc>/tags/scholarship/</loc>
+      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/shiny/</loc>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -368,7 +408,7 @@
     <url>
     
       <loc>/tags/software/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -378,7 +418,7 @@
     <url>
     
       <loc>/categories/software/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -388,7 +428,7 @@
     <url>
     
       <loc>/tags/statistical-physics/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -398,17 +438,7 @@
     <url>
     
       <loc>/categories/statistical-physics/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>/tags/statistical-physics/</loc>
-      <lastmod>2018-05-14T16:44:32+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -418,7 +448,7 @@
     <url>
     
       <loc>/tags/statistics/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -427,8 +457,8 @@
     
     <url>
     
-      <loc>/categories/statistics/</loc>
-      <lastmod>2018-05-14T17:36:12+08:00</lastmod>
+      <loc>/tags/stochastic-processes/</loc>
+      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
       <priority>0</priority>
     </url>
     

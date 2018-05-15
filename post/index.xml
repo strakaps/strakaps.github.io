@@ -14,10 +14,10 @@
     
     <item>
       <title>R package CTRE: thresholding bursty time series</title>
-      <link>/post/ctre-extremes-of-bursty-time-series/</link>
+      <link>/post/ctre-package/</link>
       <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/ctre-extremes-of-bursty-time-series/</guid>
+      <guid>/post/ctre-package/</guid>
       <description>The new R package CTRE is now available on CRAN. “CTRE” means “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series.
 library(CTRE) flares_ctre &amp;lt;- ctre(flares) plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&amp;lt; 5\%\) of observations). The exceedances of this threshold (red) follow (asymptotically for high \(u\)) a Generalized Pareto distribution Generalized Pareto distribution.</description>
     </item>
@@ -47,7 +47,7 @@ The variable order fractional Fokker-Planck equation (VOFFPE), in simple form1, 
     </item>
     
     <item>
-      <title>MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
+      <title>R package MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
       <link>/post/mittag-leffler/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       

@@ -62,10 +62,10 @@ tackle questions of national importance such as the above.&lt;/p&gt;
     
     <item>
       <title>R package CTRE: thresholding bursty time series</title>
-      <link>/post/ctre-extremes-of-bursty-time-series/</link>
+      <link>/post/ctre-package/</link>
       <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/ctre-extremes-of-bursty-time-series/</guid>
+      <guid>/post/ctre-package/</guid>
       <description>&lt;p&gt;The new &lt;a href=&#34;https://strakaps.github.io/CTRE/&#34;&gt;R package &lt;code&gt;CTRE&lt;/code&gt;&lt;/a&gt; is now
 available on CRAN. “CTRE” means “Continuous Time Random Exceedances”,
 which is a model for extreme values of bursty time series.&lt;/p&gt;
@@ -282,7 +282,7 @@ Distributions with light tails (e.g. exponential distribution) don’t produce 
 &lt;p class=&#34;caption&#34;&gt;(An exceedance plot.)&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Since the GEV are &lt;em&gt;limit&lt;/em&gt; distributions (for very high thresholds), one needs a high threshold to avoid bias; but then there are few data points left to fit (high variance). This is another example of the famous bias-variance trade-off in statistics. The GP distribution is fitted under the “Exceedances” tab of the app.&lt;/p&gt;
-&lt;p&gt;Because the model is so simple, the distribution of the times between the threshold crossings (blue crosses) is “just” a Mittag-Leffler distribution… for which I happen to know a good &lt;a href=&#34;https://strakaps.github.io/2017/06/26/mittagleffler/&#34;&gt;R package&lt;/a&gt;! Indeed, for a threshold which is so high that (on average) only once every &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; observations there is a crossing, the times between threshold crossings are Mittag-Leffler distributed with a shape parameter &lt;span class=&#34;math inline&#34;&gt;\(0 &amp;lt; \beta \le 1\)&lt;/span&gt; and a positive scale parameter &lt;span class=&#34;math inline&#34;&gt;\(\sigma n^{1/\beta}\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; can be fitted in the app. (See the “Exceedance Times” tab.)&lt;/p&gt;
+&lt;p&gt;Because the model is so simple, the distribution of the times between the threshold crossings (blue crosses) is “just” a Mittag-Leffler distribution… for which I happen to know a good &lt;a href=&#34;https://strakaps.github.io/2017/06/26/mittagleffler/&#34;&gt;R package&lt;/a&gt;. Indeed, for a threshold which is so high that (on average) only once every &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; observations there is a crossing, the times between threshold crossings are Mittag-Leffler distributed with a shape parameter &lt;span class=&#34;math inline&#34;&gt;\(0 &amp;lt; \beta \le 1\)&lt;/span&gt; and a positive scale parameter &lt;span class=&#34;math inline&#34;&gt;\(\sigma n^{1/\beta}\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; can be fitted in the app. (See the “Exceedance Times” tab.)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;but-why-dont-the-simulated-data-look-like-the-empirical-datasets&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;But why don’t the simulated data look like the empirical datasets?&lt;/h2&gt;
@@ -307,7 +307,7 @@ Distributions with light tails (e.g. exponential distribution) don’t produce 
     </item>
     
     <item>
-      <title>MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
+      <title>R package MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
       <link>/post/mittag-leffler/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
@@ -367,10 +367,10 @@ mlml &amp;lt;- function(X) {
 }
 mlml(y)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## $tail
-## [1] 0.9182776
+## [1] 0.9520683
 ## 
 ## $scale
-## [1] 2.342377&lt;/code&gt;&lt;/pre&gt;
+## [1] 2.005426&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;second-type-number-of-events&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Second type = number of events&lt;/h3&gt;
