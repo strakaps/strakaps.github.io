@@ -13,21 +13,84 @@
     
     
     <item>
-      <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>/publication/person-re-identification/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0800</pubDate>
+      <title>Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks</title>
+      <link>/publication/voffpe/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0800</pubDate>
       
-      <guid>/publication/person-re-identification/</guid>
-      <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
+      <guid>/publication/voffpe/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Mobile visual clothing search</title>
-      <link>/publication/clothing-search/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0800</pubDate>
+      <title>Peaks Over Threshold for Bursty Time Series</title>
+      <link>/publication/bursty-pot/</link>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +0800</pubDate>
       
-      <guid>/publication/clothing-search/</guid>
-      <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
+      <guid>/publication/bursty-pot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A semi-markov algorithm for continuous time random walk limit distributions</title>
+      <link>/publication/semi-markov-algo/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/semi-markov-algo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fokker–Planck and Kolmogorov backward equations for continuous time random walk scaling limits</title>
+      <link>/publication/forward-backward-ffpe/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/forward-backward-ffpe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reflected spectrally negative stable processes and their governing equations</title>
+      <link>/publication/reflected-stable/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/reflected-stable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Limit theorems and governing equations for Lévy walks</title>
+      <link>/publication/levy-walk/</link>
+      <pubDate>Sun, 01 Nov 2015 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/levy-walk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estimation of fractal dimension and fractal curvatures from digital images</title>
+      <link>/publication/frac-curv/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/frac-curv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transport equations for subdiffusion with nonlinear particle interaction</title>
+      <link>/publication/subdiffusion-interaction/</link>
+      <pubDate>Sat, 07 Feb 2015 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/subdiffusion-interaction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generalized Continuous Time Random Walks, Master Equations, and Fractional Fokker--Planck Equations</title>
+      <link>/publication/ctrw-timing/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/ctrw-timing/</guid>
+      <description></description>
     </item>
     
   </channel>

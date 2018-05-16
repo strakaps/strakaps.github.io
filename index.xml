@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks</title>
+      <link>/publication/voffpe/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/voffpe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Networks of Health Providers</title>
       <link>/project/gp-networks/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
@@ -196,6 +205,15 @@ by Leadbetter, Lindgren &amp;amp; Rootzén.&lt;a href=&#34;#fnref3&#34; class=&#
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Peaks Over Threshold for Bursty Time Series</title>
+      <link>/publication/bursty-pot/</link>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/bursty-pot/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -430,6 +448,15 @@ Please contact either of us for more details.&lt;/p&gt;
     </item>
     
     <item>
+      <title>A semi-markov algorithm for continuous time random walk limit distributions</title>
+      <link>/publication/semi-markov-algo/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/semi-markov-algo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Example Talk</title>
       <link>/talk/example-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
@@ -437,6 +464,15 @@ Please contact either of us for more details.&lt;/p&gt;
       <guid>/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Fokker–Planck and Kolmogorov backward equations for continuous time random walk scaling limits</title>
+      <link>/publication/forward-backward-ffpe/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/forward-backward-ffpe/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -529,26 +565,6 @@ standard response variable
 
 &lt;p&gt;How can these data be used to design a predictive algorithm identifying
 antidepressant users &lt;em&gt;with&lt;/em&gt; depression?&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>/publication/person-re-identification/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0800</pubDate>
-      
-      <guid>/publication/person-re-identification/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mobile visual clothing search</title>
-      <link>/publication/clothing-search/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0800</pubDate>
-      
-      <guid>/publication/clothing-search/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     

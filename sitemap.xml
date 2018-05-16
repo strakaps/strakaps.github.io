@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/publication/voffpe/</loc>
+      <lastmod>2018-08-01T00:00:00+08:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/project/gp-networks/</loc>
       <lastmod>2018-05-15T10:53:07+08:00</lastmod>
     </url>
@@ -32,8 +41,17 @@
     
     <url>
     
+      <loc>/publication/bursty-pot/</loc>
+      <lastmod>2018-04-28T00:00:00+08:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/voffpe/</loc>
-      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
     </url>
     
   
@@ -42,7 +60,7 @@
     <url>
     
       <loc>/post/mittag-leffler/</loc>
-      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
     </url>
     
   
@@ -51,7 +69,7 @@
     <url>
     
       <loc>/post/scientia-phd/</loc>
-      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
     </url>
     
   
@@ -61,6 +79,15 @@
     
       <loc>/project/mittagleffler/</loc>
       <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/semi-markov-algo/</loc>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -79,6 +106,15 @@
     
       <loc>/talk/example-talk/</loc>
       <lastmod>2018-05-14T06:51:09+08:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/forward-backward-ffpe/</loc>
+      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -140,8 +176,8 @@
     
     <url>
     
-      <loc>/publication/person-re-identification/</loc>
-      <lastmod>2018-05-14T06:51:09+08:00</lastmod>
+      <loc>/publication/reflected-stable/</loc>
+      <lastmod>2016-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -149,8 +185,8 @@
     
     <url>
     
-      <loc>/publication/clothing-search/</loc>
-      <lastmod>2018-05-14T06:51:09+08:00</lastmod>
+      <loc>/publication/levy-walk/</loc>
+      <lastmod>2015-11-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -158,9 +194,26 @@
     
     <url>
     
-      <loc>/publication_types/1/</loc>
-      <lastmod>2018-05-14T06:51:09+08:00</lastmod>
-      <priority>0</priority>
+      <loc>/publication/frac-curv/</loc>
+      <lastmod>2015-06-01T00:00:00+08:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/subdiffusion-interaction/</loc>
+      <lastmod>2015-02-07T00:00:00+08:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/ctrw-timing/</loc>
+      <lastmod>2015-01-01T00:00:00+08:00</lastmod>
     </url>
     
   
@@ -169,7 +222,7 @@
     <url>
     
       <loc>/publication_types/2/</loc>
-      <lastmod>2018-05-14T06:51:09+08:00</lastmod>
+      <lastmod>2018-08-01T00:00:00+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -179,7 +232,7 @@
     <url>
     
       <loc>/tags/announcement/</loc>
-      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -189,7 +242,7 @@
     <url>
     
       <loc>/categories/announcements/</loc>
-      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -199,7 +252,7 @@
     <url>
     
       <loc>/tags/anomalous-diffusion/</loc>
-      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -229,7 +282,7 @@
     <url>
     
       <loc>/categories/</loc>
-      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -279,7 +332,7 @@
     <url>
     
       <loc>/tags/phd/</loc>
-      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -289,7 +342,7 @@
     <url>
     
       <loc>/tags/probability/</loc>
-      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -329,7 +382,7 @@
     <url>
     
       <loc>/tags/publication/</loc>
-      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -339,7 +392,7 @@
     <url>
     
       <loc>/publication_types/</loc>
-      <lastmod>2018-05-14T06:51:09+08:00</lastmod>
+      <lastmod>2018-08-01T00:00:00+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -379,7 +432,7 @@
     <url>
     
       <loc>/tags/scholarship/</loc>
-      <lastmod>2018-05-15T10:31:23+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -409,7 +462,7 @@
     <url>
     
       <loc>/tags/statistical-physics/</loc>
-      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -419,7 +472,7 @@
     <url>
     
       <loc>/categories/statistical-physics/</loc>
-      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -439,7 +492,7 @@
     <url>
     
       <loc>/tags/stochastic-processes/</loc>
-      <lastmod>2018-05-15T10:53:07+08:00</lastmod>
+      <lastmod>2018-05-16T16:31:27+08:00</lastmod>
       <priority>0</priority>
     </url>
     
