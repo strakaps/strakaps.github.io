@@ -22,15 +22,5 @@
 library(CTRE) flares_ctre &amp;lt;- ctre(flares) plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&amp;lt; 5\%\) of observations).</description>
     </item>
     
-    <item>
-      <title>A Shiny app to explore bursty extremes</title>
-      <link>/post/shiny-bursty-extremes/</link>
-      <pubDate>Sun, 23 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/shiny-bursty-extremes/</guid>
-      <description>Suppose you want to model time series data with irregularly spaced events, and suppose your main focus is the timing and the size of the extreme events. The max-renewal process is a conceptually easy model that does this… and now there’s an app that can fit it to data:
- Irregular spacing The renewal process does simple i.i.d. draws \(W_i\) from a distribution, and uses these as waiting times between events.</description>
-    </item>
-    
   </channel>
 </rss>

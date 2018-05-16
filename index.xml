@@ -204,7 +204,7 @@ by Leadbetter, Lindgren &amp;amp; Rootzén.&lt;a href=&#34;#fnref3&#34; class=&#
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/post/voffpe/</guid>
-      <description>&lt;p&gt;My new paper
+      <description>&lt;p&gt;The new paper
 (&lt;a href=&#34;http://arxiv.org/abs/1712.06767&#34;&gt;arxiv.org/abs/1712.06767&lt;/a&gt;)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Variable Order Fractional Fokker-Planck
@@ -218,14 +218,11 @@ in simple form&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnr
 \underbrace{D_t^{1-\beta(x)}}_{\text{fractional derivative}}
 p(x,t).\]&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The part without the fractional derivative operator is the
+&lt;li&gt;If you take out the fractional derivative operator, you get the
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation&#34;&gt;&lt;strong&gt;Fokker-Planck equation&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;(FPE)&lt;/strong&gt;.
 It describes the spreading of probability via a random walk:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/images/spreading.gif&#34; alt=&#34;spreading&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;spreading&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;/img/spreading.gif&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Adding in the
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Fractional_calculus&#34;&gt;fractional derivative&lt;/a&gt;
@@ -245,10 +242,7 @@ this solution is the probability distribution of a Continuous Time
 Random Walk (CTRW)&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.
 CTRWs are random walks with random waiting times between
 jumps:&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/images/CTRW.png&#34; alt=&#34;CTRW&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;CTRW&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;/img/CTRW.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The fractional derivative in time is tightly linked with
 &lt;a href=&#34;/post/mittag-leffler/&#34;&gt;Mittag-Leffler distributed&lt;/a&gt; waiting times.&lt;/p&gt;
 &lt;p&gt;Of course CTRWs can be simulated, and &lt;span class=&#34;math inline&#34;&gt;\(p(x,t)\)&lt;/span&gt; may be computed via
@@ -278,67 +272,12 @@ extend these benefits to the variable order setting (to be continued).&lt;/p&gt;
     </item>
     
     <item>
-      <title>A Shiny app to explore bursty extremes</title>
-      <link>/post/shiny-bursty-extremes/</link>
-      <pubDate>Sun, 23 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/shiny-bursty-extremes/</guid>
-      <description>&lt;p&gt;Suppose you want to model time series data with irregularly spaced events, and suppose your main focus is the &lt;em&gt;timing&lt;/em&gt; and the &lt;em&gt;size of the extreme events&lt;/em&gt;. The &lt;strong&gt;max-renewal process&lt;/strong&gt; is a conceptually easy model that does this… and now there’s an app that can fit it to data:&lt;/p&gt;
-&lt;iframe src=&#34;https://strakaps.shinyapps.io/ctre-app/&#34; style=&#34;border: none; width: 800px; height: 900px&#34;&gt;
-&lt;/iframe&gt;
-&lt;div id=&#34;irregular-spacing&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Irregular spacing&lt;/h2&gt;
-&lt;p&gt;The renewal process does simple i.i.d. draws &lt;span class=&#34;math inline&#34;&gt;\(W_i\)&lt;/span&gt; from a distribution, and uses these as waiting times between events.
-Distributions with light tails (e.g. exponential distribution) don’t produce high irregularity…&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/images/light-tailed-rp.png&#34; alt=&#34;(A light-tailed renewal process.)&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;(A light-tailed renewal process.)&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;…but distributions with heavy tails do:&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/images/heavy-tailed-rp.png&#34; alt=&#34;(A heavy-tailed renewal process.)&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;(A heavy-tailed renewal process.)&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;max-renewal-process&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Max-renewal process&lt;/h2&gt;
-&lt;p&gt;The max-renewal process then simply draws i.i.d. magnitudes from another (arbitrary) distribution, and assigns these magnitudes to these events. Since we try to model the size of the &lt;em&gt;extreme&lt;/em&gt; events only, we only consider data above some high variable threshold, and a &lt;a href=&#34;https://en.wikipedia.org/wiki/Generalized_extreme_value_distribution&#34;&gt;GEV&lt;/a&gt; (Generalized Extreme Value distribution) is fitted to the exceedances (red):&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/images/exceedances.png&#34; alt=&#34;(An exceedance plot.)&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;(An exceedance plot.)&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Since the GEV are &lt;em&gt;limit&lt;/em&gt; distributions (for very high thresholds), one needs a high threshold to avoid bias; but then there are few data points left to fit (high variance). This is another example of the famous bias-variance trade-off in statistics. The GP distribution is fitted under the “Exceedances” tab of the app.&lt;/p&gt;
-&lt;p&gt;Because the model is so simple, the distribution of the times between the threshold crossings (blue crosses) is “just” a Mittag-Leffler distribution… for which I happen to know a good &lt;a href=&#34;https://strakaps.github.io/2017/06/26/mittagleffler/&#34;&gt;R package&lt;/a&gt;. Indeed, for a threshold which is so high that (on average) only once every &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; observations there is a crossing, the times between threshold crossings are Mittag-Leffler distributed with a shape parameter &lt;span class=&#34;math inline&#34;&gt;\(0 &amp;lt; \beta \le 1\)&lt;/span&gt; and a positive scale parameter &lt;span class=&#34;math inline&#34;&gt;\(\sigma n^{1/\beta}\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; can be fitted in the app. (See the “Exceedance Times” tab.)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;but-why-dont-the-simulated-data-look-like-the-empirical-datasets&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;But why don’t the simulated data look like the empirical datasets?&lt;/h2&gt;
-&lt;p&gt;Well… that’s a fair point, the simulated data sometimes have &lt;em&gt;no&lt;/em&gt; events for long time periods, whereas events are coming in continually in the empirical datasets. But hey, this is a model for the exceedances, and those get reproduced nicely!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;acknowledgements&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Acknowledgements&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/SmarakNayak&#34;&gt;Smarak Nayak&lt;/a&gt; co-wrote the app (code on &lt;a href=&#34;https://github.com/strakaps/CTRMapp&#34;&gt;GitHub&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;The estimation of the Mittag-Leffler distribution is based on the paper [1] by &lt;a href=&#34;https://scholar.google.com/citations?hl=en&amp;amp;user=se9ADB4AAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&#34;&gt;Dexter Cahoy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Calculating the QQ plots was made possible by &lt;a href=&#34;https://twitter.com/rgarrappa&#34;&gt;Roberto Garrappa&lt;/a&gt;’s Laplace inversion algorithm in [2], adopted in MittagLeffleR&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;References&lt;/h2&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Estimation of Mittag-Leffler parameters. Communications in Statistics-Simulation and Computation, 42(2), 303-315, 2013&lt;/li&gt;
-&lt;li&gt;Numerical evaluation of two and three parameter Mittag-Leffler functions, R Garrappa, SIAM Journal on Numerical Analysis 53 (3), 1350–1369&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>R package MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
       <link>/post/mittag-leffler/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/post/mittag-leffler/</guid>
-      <description>&lt;p&gt;My PhD student Ricky Gill and I have created the R package MittagLeffleR,
+      <description>&lt;p&gt;Ricky Gill and I have created the R package MittagLeffleR,
 documented at
 &lt;a href=&#34;../../MittagLeffleR/index.html&#34;&gt;strakaps.github.io/MittagLeffleR/&lt;/a&gt;.
 It is available on &lt;a href=&#34;https://cran.r-project.org/web/packages/MittagLeffleR/index.html&#34;&gt;CRAN&lt;/a&gt; (and the latest development version on &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR&#34;&gt;GitHub&lt;/a&gt;).
@@ -393,10 +332,10 @@ mlml &amp;lt;- function(X) {
 }
 mlml(y)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## $tail
-## [1] 0.9520683
+## [1] 0.9391701
 ## 
 ## $scale
-## [1] 2.005426&lt;/code&gt;&lt;/pre&gt;
+## [1] 1.935684&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;second-type-number-of-events&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Second type = number of events&lt;/h3&gt;
