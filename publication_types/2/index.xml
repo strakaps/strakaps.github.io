@@ -93,5 +93,68 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Semi-Markov approach to continuous time random walk limit processes</title>
+      <link>/publication/semi-markov-ctrw/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/semi-markov-ctrw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inverse stable subordinators</title>
+      <link>/publication/inv-stable-subord/</link>
+      <pubDate>Wed, 24 Apr 2013 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/inv-stable-subord/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fractional wave equations with attenuation</title>
+      <link>/publication/wave-attenuation/</link>
+      <pubDate>Fri, 01 Mar 2013 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/wave-attenuation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fractional Dynamics at Multiple Times</title>
+      <link>/publication/ctrw-fdd/</link>
+      <pubDate>Thu, 01 Nov 2012 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/ctrw-fdd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stochastic solution to a time-fractional attenuated wave equation</title>
+      <link>/publication/frac-wave/</link>
+      <pubDate>Mon, 01 Oct 2012 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/frac-wave/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fractional Fokker-Planck Equations for Subdiffusion with Space- and Time-Dependent Forces</title>
+      <link>/publication/hls-prl/</link>
+      <pubDate>Tue, 01 Feb 2011 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/hls-prl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lagging and leading coupled continuous time random walks, renewal times and their joint limits</title>
+      <link>/publication/lagging-leading-ctrw/</link>
+      <pubDate>Tue, 01 Feb 2011 00:00:00 +0800</pubDate>
+      
+      <guid>/publication/lagging-leading-ctrw/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
