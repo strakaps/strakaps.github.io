@@ -350,10 +350,10 @@ mlml &amp;lt;- function(X) {
 }
 mlml(y)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## $tail
-## [1] 0.9391701
+## [1] 0.9349602
 ## 
 ## $scale
-## [1] 1.935684&lt;/code&gt;&lt;/pre&gt;
+## [1] 2.044665&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;second-type-number-of-events&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Second type = number of events&lt;/h3&gt;
