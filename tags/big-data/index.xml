@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 14 May 2018 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 May 2018 00:00:00 +1000</lastBuildDate>
     
 	<atom:link href="/tags/big-data/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Networks of Health Providers</title>
       <link>/project/gp-networks/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>/project/gp-networks/</guid>
       <description>What is the network structure of healthcare providers and their practices/clinics? What is their patient sharing pattern? Does sharing of patient information between providers lead to better health outcomes? Do practice size and patient sharing behaviour influence the quality of healthcare?  Australian Medicare claims data contains data1 on tens of thousands of healthcare providers and millions of patients, such as patient characteristics (age, sex, &amp;hellip;) and provider characteristics (specialty, type and frequency of services delivered, bulk-billing behaviour,</description>

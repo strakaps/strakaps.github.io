@@ -7,22 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +1100</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks</title>
       <link>/publication/voffpe/</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +1000</pubDate>
       
       <guid>/publication/voffpe/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>PhD internship in Machine Learning</title>
+      <link>/post/phd-internship-in-machine-learning/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/phd-internship-in-machine-learning/</guid>
+      <description>&lt;p&gt;In the internship, you&amp;rsquo;ll explore the latest machine learning methods such as
+tree ensemble methods, graphical models and neural networks and compare their
+performance to what is the current industry standard. A great opportunity to
+improve your machine learning skills and create valuable insights for the
+credit risk industry.&lt;/p&gt;
+
+&lt;p&gt;Applications close 3 June, 2018.&lt;/p&gt;
+
+&lt;p&gt;Apply here: &lt;a href=&#34;https://aprintern.org.au/2018/05/21/int-0431/&#34; target=&#34;_blank&#34;&gt;https://aprintern.org.au/2018/05/21/int-0431/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Networks of Health Providers</title>
       <link>/project/gp-networks/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>/project/gp-networks/</guid>
       <description>&lt;ul&gt;
@@ -63,7 +81,7 @@ tackle questions of national importance such as the above.&lt;/p&gt;
     <item>
       <title>R package CTRE</title>
       <link>/project/ctre/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>/project/ctre/</guid>
       <description></description>
@@ -210,7 +228,7 @@ by Leadbetter, Lindgren &amp;amp; Rootzén.&lt;a href=&#34;#fnref3&#34; class=&#
     <item>
       <title>Peaks Over Threshold for Bursty Time Series</title>
       <link>/publication/bursty-pot/</link>
-      <pubDate>Sat, 28 Apr 2018 00:00:00 +0800</pubDate>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +1000</pubDate>
       
       <guid>/publication/bursty-pot/</guid>
       <description></description>
@@ -400,7 +418,7 @@ Thanks!&lt;/p&gt;
     <item>
       <title>Prestigious Scientia PhD Scholarship available</title>
       <link>/post/scientia-phd/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +1000</pubDate>
       
       <guid>/post/scientia-phd/</guid>
       <description>
@@ -441,7 +459,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>R package MittagLeffleR</title>
       <link>/project/mittagleffler/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +1000</pubDate>
       
       <guid>/project/mittagleffler/</guid>
       <description></description>
@@ -450,7 +468,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>A semi-markov algorithm for continuous time random walk limit distributions</title>
       <link>/publication/semi-markov-algo/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/publication/semi-markov-algo/</guid>
       <description></description>
@@ -459,7 +477,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>Example Talk</title>
       <link>/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
@@ -469,7 +487,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>Fokker–Planck and Kolmogorov backward equations for continuous time random walk scaling limits</title>
       <link>/publication/forward-backward-ffpe/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>/publication/forward-backward-ffpe/</guid>
       <description></description>
@@ -478,7 +496,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>Continuous Time Random Walks</title>
       <link>/project/anomalous-diffusion/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
       
       <guid>/project/anomalous-diffusion/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Diffusion&lt;/strong&gt; is the net movement of molecules or atoms from a region of high
@@ -518,7 +536,7 @@ among other fields.&lt;/p&gt;
     <item>
       <title>Extremes of Bursty Time Series</title>
       <link>/project/bursts/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
       
       <guid>/project/bursts/</guid>
       <description>&lt;p&gt;Extreme value theory is concerned with the modelling and prediction of extremes in a series of observations.
@@ -544,27 +562,6 @@ fractional Poisson process representation holds. This project derives the
 theoretical model behind the timings of bursty threshold crossings,
 statistical methods for the fitting of the model, and R software packages for
 applications to data.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Identifying antidepressant users with depression</title>
-      <link>/project/antidepressants/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
-      
-      <guid>/project/antidepressants/</guid>
-      <description>&lt;p&gt;Records of antidepressant dispensings are often used in public health research
-as a surrogate measure of depression.  In &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; to &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; of cases however,
-antidepressants are prescribed for indications other than depression,
-which results in misclassification.&lt;/p&gt;
-
-&lt;p&gt;Medicare Benefits Schedule (MBS) data contain the dispensings of antidepressants
-and other pharmaceuticals, and data from the 45 and Up Study provide a gold
-standard response variable
-(a yes/no answer to &amp;ldquo;Have you been treated for depression?&amp;rdquo;).&lt;/p&gt;
-
-&lt;p&gt;How can these data be used to design a predictive algorithm identifying
-antidepressant users &lt;em&gt;with&lt;/em&gt; depression?&lt;/p&gt;
 </description>
     </item>
     
