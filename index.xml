@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +1100</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks</title>
       <link>/publication/voffpe/</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +1000</pubDate>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0800</pubDate>
       
       <guid>/publication/voffpe/</guid>
       <description></description>
@@ -31,7 +31,7 @@ performance to what is the current industry standard. A great opportunity to
 improve your machine learning skills and create valuable insights for the
 credit risk industry.&lt;/p&gt;
 
-&lt;p&gt;Applications close 3 June, 2018.&lt;/p&gt;
+&lt;p&gt;Applications close 20 June, 2018.&lt;/p&gt;
 
 &lt;p&gt;Apply here: &lt;a href=&#34;https://aprintern.org.au/2018/05/21/int-0431/&#34; target=&#34;_blank&#34;&gt;https://aprintern.org.au/2018/05/21/int-0431/&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -40,7 +40,7 @@ credit risk industry.&lt;/p&gt;
     <item>
       <title>Networks of Health Providers</title>
       <link>/project/gp-networks/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/project/gp-networks/</guid>
       <description>&lt;ul&gt;
@@ -81,7 +81,7 @@ tackle questions of national importance such as the above.&lt;/p&gt;
     <item>
       <title>R package CTRE</title>
       <link>/project/ctre/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/project/ctre/</guid>
       <description></description>
@@ -228,7 +228,7 @@ by Leadbetter, Lindgren &amp;amp; Rootzén.&lt;a href=&#34;#fnref3&#34; class=&#
     <item>
       <title>Peaks Over Threshold for Bursty Time Series</title>
       <link>/publication/bursty-pot/</link>
-      <pubDate>Sat, 28 Apr 2018 00:00:00 +1000</pubDate>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +0800</pubDate>
       
       <guid>/publication/bursty-pot/</guid>
       <description></description>
@@ -418,7 +418,7 @@ Thanks!&lt;/p&gt;
     <item>
       <title>Prestigious Scientia PhD Scholarship available</title>
       <link>/post/scientia-phd/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
       
       <guid>/post/scientia-phd/</guid>
       <description>
@@ -459,7 +459,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>R package MittagLeffleR</title>
       <link>/project/mittagleffler/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +1000</pubDate>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0800</pubDate>
       
       <guid>/project/mittagleffler/</guid>
       <description></description>
@@ -468,7 +468,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>A semi-markov algorithm for continuous time random walk limit distributions</title>
       <link>/publication/semi-markov-algo/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
       <guid>/publication/semi-markov-algo/</guid>
       <description></description>
@@ -477,7 +477,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>Example Talk</title>
       <link>/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
       <guid>/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
@@ -487,7 +487,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>Fokker–Planck and Kolmogorov backward equations for continuous time random walk scaling limits</title>
       <link>/publication/forward-backward-ffpe/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
       <guid>/publication/forward-backward-ffpe/</guid>
       <description></description>
@@ -496,7 +496,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>Continuous Time Random Walks</title>
       <link>/project/anomalous-diffusion/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
       <guid>/project/anomalous-diffusion/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Diffusion&lt;/strong&gt; is the net movement of molecules or atoms from a region of high
@@ -536,7 +536,7 @@ among other fields.&lt;/p&gt;
     <item>
       <title>Extremes of Bursty Time Series</title>
       <link>/project/bursts/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
       <guid>/project/bursts/</guid>
       <description>&lt;p&gt;Extreme value theory is concerned with the modelling and prediction of extremes in a series of observations.

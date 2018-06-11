@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 14 May 2018 00:00:00 +1000</lastBuildDate>
+    <lastBuildDate>Mon, 14 May 2018 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>R package CTRE</title>
       <link>/project/ctre/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/project/ctre/</guid>
       <description></description>
@@ -44,7 +44,7 @@ install.packages(&amp;quot;MittagLeffleR&amp;quot;) The Two Mittag-Leffler distr
     <item>
       <title>R package MittagLeffleR</title>
       <link>/project/mittagleffler/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +1000</pubDate>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0800</pubDate>
       
       <guid>/project/mittagleffler/</guid>
       <description></description>
@@ -53,7 +53,7 @@ install.packages(&amp;quot;MittagLeffleR&amp;quot;) The Two Mittag-Leffler distr
     <item>
       <title>Identifying antidepressant users with depression</title>
       <link>/project/antidepressants/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
       <guid>/project/antidepressants/</guid>
       <description>Records of antidepressant dispensings are often used in public health research as a surrogate measure of depression. In 1&amp;frasl;3 to 1&amp;frasl;2 of cases however, antidepressants are prescribed for indications other than depression, which results in misclassification.

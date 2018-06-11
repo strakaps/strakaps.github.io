@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +1100</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
       <link>/tags/academic/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
       <guid>/tags/academic/</guid>
       <description>Here is a list of all the content that has been tagged as academic.</description>
@@ -24,7 +24,7 @@
     <item>
       <title>Announcement</title>
       <link>/tags/announcement/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
       
       <guid>/tags/announcement/</guid>
       <description></description>
@@ -51,7 +51,7 @@
     <item>
       <title>Big data</title>
       <link>/tags/big-data/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/tags/big-data/</guid>
       <description></description>
@@ -114,7 +114,7 @@
     <item>
       <title>Networks</title>
       <link>/tags/networks/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/tags/networks/</guid>
       <description></description>
@@ -123,7 +123,7 @@
     <item>
       <title>PhD</title>
       <link>/tags/phd/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
       
       <guid>/tags/phd/</guid>
       <description></description>
@@ -141,7 +141,7 @@
     <item>
       <title>Public-health</title>
       <link>/tags/public-health/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/tags/public-health/</guid>
       <description></description>
@@ -159,7 +159,7 @@
     <item>
       <title>Python</title>
       <link>/tags/python/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/tags/python/</guid>
       <description></description>
@@ -168,7 +168,7 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
@@ -177,7 +177,7 @@
     <item>
       <title>R-package</title>
       <link>/tags/r-package/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/tags/r-package/</guid>
       <description></description>
@@ -186,7 +186,7 @@
     <item>
       <title>Scholarship</title>
       <link>/tags/scholarship/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
       
       <guid>/tags/scholarship/</guid>
       <description></description>
@@ -195,7 +195,7 @@
     <item>
       <title>Software</title>
       <link>/tags/software/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
       <guid>/tags/software/</guid>
       <description></description>
@@ -213,7 +213,7 @@
     <item>
       <title>Statistics</title>
       <link>/tags/statistics/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
       <guid>/tags/statistics/</guid>
       <description></description>

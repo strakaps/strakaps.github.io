@@ -35,7 +35,7 @@ install.packages(&amp;quot;MittagLeffleR&amp;quot;) The Two Mittag-Leffler distr
     <item>
       <title>Extremes of Bursty Time Series</title>
       <link>/project/bursts/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
       <guid>/project/bursts/</guid>
       <description>Extreme value theory is concerned with the modelling and prediction of extremes in a series of observations. Accurate estimates of probabilities for the exceedence of extreme levels of temperature, financial loss, the number of defective nodes in a network etc. are crucial for the control of risk in a great number of societal systems. &amp;ldquo;Mainstream&amp;rdquo; extreme value theory assumes that events happen uniformly, e.g. yearly, daily, or every second, or that events occur at a certain rate (Poisson process).</description>
