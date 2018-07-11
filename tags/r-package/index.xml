@@ -1,52 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R-package on Peter Straka</title>
-    <link>/tags/r-package/</link>
-    <description>Recent content in R-package on Peter Straka</description>
+    <title>R-package on Peter&#39;s Homepage</title>
+    <link>https://strakaps.github.io/tags/r-package/</link>
+    <description>Recent content in R-package on Peter&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Mon, 14 May 2018 00:00:00 +0800</lastBuildDate>
     
-	<atom:link href="/tags/r-package/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://strakaps.github.io/tags/r-package/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R package CTRE</title>
-      <link>/project/ctre/</link>
+      <link>https://strakaps.github.io/project/ctre/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
-      <guid>/project/ctre/</guid>
+      <guid>https://strakaps.github.io/project/ctre/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R package CTRE: thresholding bursty time series</title>
-      <link>/post/ctre-package/</link>
-      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/ctre-package/</guid>
-      <description>The new R package CTRE is now available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series. The theory is desribed in another paper (html|pdf).
-library(CTRE) flares_ctre &amp;lt;- ctre(flares) plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&amp;lt; 5\%\) of observations).</description>
-    </item>
-    
-    <item>
       <title>R package MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
-      <link>/post/mittag-leffler/</link>
+      <link>https://strakaps.github.io/post/mittag-leffler/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/mittag-leffler/</guid>
+      <guid>https://strakaps.github.io/post/mittag-leffler/</guid>
       <description>Ricky Gill and I have created the R package MittagLeffleR, documented at strakaps.github.io/MittagLeffleR/. It is available on CRAN (and the latest development version on GitHub). MittagLeffleR calculates both Mittag-Leffler distributions; i.e. probability density, cumulative distribution function, quantile function and fast random variate generation. It was made possible by the Laplace inversion algorithm for the Mittag-Leffler function by Roberto Garrappa. Install it via
 install.packages(&amp;quot;MittagLeffleR&amp;quot;) The Two Mittag-Leffler distributions Various journal articles (including my own) write about “the” Mittag-Leffler distribution, but actually there are two such families of distributions.</description>
     </item>
     
     <item>
       <title>R package MittagLeffleR</title>
-      <link>/project/mittagleffler/</link>
+      <link>https://strakaps.github.io/project/mittagleffler/</link>
       <pubDate>Thu, 27 Apr 2017 00:00:00 +0800</pubDate>
       
-      <guid>/project/mittagleffler/</guid>
+      <guid>https://strakaps.github.io/project/mittagleffler/</guid>
       <description></description>
     </item>
     

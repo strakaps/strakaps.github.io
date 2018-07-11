@@ -1,49 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Peter Straka</title>
-    <link>/categories/</link>
-    <description>Recent content in Categories on Peter Straka</description>
+    <title>Categories on Peter&#39;s Homepage</title>
+    <link>https://strakaps.github.io/categories/</link>
+    <description>Recent content in Categories on Peter&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://strakaps.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Conferences</title>
+      <link>https://strakaps.github.io/categories/conferences/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/categories/conferences/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Public-health</title>
-      <link>/categories/public-health/</link>
+      <link>https://strakaps.github.io/categories/public-health/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
-      <guid>/categories/public-health/</guid>
+      <guid>https://strakaps.github.io/categories/public-health/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recruitment</title>
-      <link>/categories/recruitment/</link>
+      <link>https://strakaps.github.io/categories/recruitment/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/recruitment/</guid>
+      <guid>https://strakaps.github.io/categories/recruitment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Software</title>
-      <link>/categories/software/</link>
+      <link>https://strakaps.github.io/categories/software/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
-      <guid>/categories/software/</guid>
+      <guid>https://strakaps.github.io/categories/software/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistical-physics</title>
-      <link>/categories/statistical-physics/</link>
+      <link>https://strakaps.github.io/categories/statistical-physics/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/statistical-physics/</guid>
+      <guid>https://strakaps.github.io/categories/statistical-physics/</guid>
       <description></description>
     </item>
     

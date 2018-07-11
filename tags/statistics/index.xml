@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Statistics on Peter Straka</title>
-    <link>/tags/statistics/</link>
-    <description>Recent content in Statistics on Peter Straka</description>
+    <title>Statistics on Peter&#39;s Homepage</title>
+    <link>https://strakaps.github.io/tags/statistics/</link>
+    <description>Recent content in Statistics on Peter&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0800</lastBuildDate>
     
-	<atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://strakaps.github.io/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Extremes of Bursty Time Series</title>
-      <link>/project/bursts/</link>
+      <link>https://strakaps.github.io/project/bursts/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
-      <guid>/project/bursts/</guid>
+      <guid>https://strakaps.github.io/project/bursts/</guid>
       <description>Extreme value theory is concerned with the modelling and prediction of extremes in a series of observations. Accurate estimates of probabilities for the exceedence of extreme levels of temperature, financial loss, the number of defective nodes in a network etc. are crucial for the control of risk in a great number of societal systems. &amp;ldquo;Mainstream&amp;rdquo; extreme value theory assumes that events happen uniformly, e.g. yearly, daily, or every second, or that events occur at a certain rate (Poisson process).</description>
     </item>
     
     <item>
       <title>Identifying antidepressant users with depression</title>
-      <link>/project/antidepressants/</link>
+      <link>https://strakaps.github.io/project/antidepressants/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
-      <guid>/project/antidepressants/</guid>
+      <guid>https://strakaps.github.io/project/antidepressants/</guid>
       <description>Records of antidepressant dispensings are often used in public health research as a surrogate measure of depression. In 1&amp;frasl;3 to 1&amp;frasl;2 of cases however, antidepressants are prescribed for indications other than depression, which results in misclassification.
 Medicare Benefits Schedule (MBS) data contain the dispensings of antidepressants and other pharmaceuticals, and data from the 45 and Up Study provide a gold standard response variable (a yes/no answer to &amp;ldquo;Have you been treated for depression?</description>
     </item>

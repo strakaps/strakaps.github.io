@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Anomalous-diffusion on Peter Straka</title>
-    <link>/tags/anomalous-diffusion/</link>
-    <description>Recent content in Anomalous-diffusion on Peter Straka</description>
+    <title>Anomalous-diffusion on Peter&#39;s Homepage</title>
+    <link>https://strakaps.github.io/tags/anomalous-diffusion/</link>
+    <description>Recent content in Anomalous-diffusion on Peter&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Mon, 18 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/anomalous-diffusion/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://strakaps.github.io/tags/anomalous-diffusion/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fractional Diffusion where &#34;fractional&#34; varies in space</title>
-      <link>/post/voffpe/</link>
+      <link>https://strakaps.github.io/post/voffpe/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/voffpe/</guid>
+      <guid>https://strakaps.github.io/post/voffpe/</guid>
       <description>The new paper (arxiv.org/abs/1712.06767)
  Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks
  is currently under review.

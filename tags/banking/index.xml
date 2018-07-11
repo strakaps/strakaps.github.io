@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Banking on Peter Straka</title>
-    <link>/tags/banking/</link>
-    <description>Recent content in Banking on Peter Straka</description>
+    <title>Banking on Peter&#39;s Homepage</title>
+    <link>https://strakaps.github.io/tags/banking/</link>
+    <description>Recent content in Banking on Peter&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/banking/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://strakaps.github.io/tags/banking/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>PhD internship in Machine Learning</title>
-      <link>/post/phd-internship-in-machine-learning/</link>
+      <link>https://strakaps.github.io/post/phd-internship-in-machine-learning/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/phd-internship-in-machine-learning/</guid>
+      <guid>https://strakaps.github.io/post/phd-internship-in-machine-learning/</guid>
       <description>In the internship, you&amp;rsquo;ll explore the latest machine learning methods such as tree ensemble methods, graphical models and neural networks and compare their performance to what is the current industry standard. A great opportunity to improve your machine learning skills and create valuable insights for the credit risk industry.
 Applications close 20 June, 2018.
 Apply here: https://aprintern.org.au/2018/05/21/int-0431/</description>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Peter Straka on Peter Straka</title>
-    <link>/</link>
-    <description>Recent content in Peter Straka on Peter Straka</description>
+    <title>Peter&#39;s Homepage on Peter&#39;s Homepage</title>
+    <link>https://strakaps.github.io/</link>
+    <description>Recent content in Peter&#39;s Homepage on Peter&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
@@ -11,20 +11,151 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks</title>
-      <link>/publication/voffpe/</link>
-      <pubDate>Wed, 01 Aug 2018 00:00:00 +0800</pubDate>
+      <title>NUS-MIT Datathon</title>
+      <link>https://strakaps.github.io/post/nus-mit-datathon/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/voffpe/</guid>
-      <description></description>
+      <guid>https://strakaps.github.io/post/nus-mit-datathon/</guid>
+      <description>
+
+&lt;p&gt;Last week I had the privilege to participate in the
+&lt;a href=&#34;http://www.nus-datathon.com/&#34; target=&#34;_blank&#34;&gt;NUS-NUH-MIT DATATHON&lt;/a&gt;
+and Workshop on applications of AI in healthcare with the
+&lt;a href=&#34;https://cbdrh.med.unsw.edu.au/&#34; target=&#34;_blank&#34;&gt;UNSW Centre for Big Data Research in Health (CBDRH)&lt;/a&gt;
+team (Tim Churches, Mark Hanly, Oisin Fitzgerald and Oluwadamisola Sotade).&lt;/p&gt;
+
+&lt;h1 id=&#34;thu-fri-workshop-talks&#34;&gt;Thu &amp;amp; Fri: Workshop &amp;amp; Talks&lt;/h1&gt;
+
+&lt;p&gt;In the workshop
+&amp;ldquo;Deploying AI Solutions in Real Clinical Practices&amp;rdquo; by
+Dr Ngiam Kee Yuan (CTO, NUHS)
+we discussed&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The large NUHS (National University Health System) databases and their storage structure&lt;/li&gt;
+&lt;li&gt;Data security and ownership&lt;/li&gt;
+&lt;li&gt;Applications for access to data&lt;/li&gt;
+&lt;li&gt;The always changing standards of diagnosis codes (ICD9, ICD10, SNOMED, &amp;hellip;)
+and the problem of matching doctors diagnoses to these codes. In another talk,
+Hector Yee
+(&lt;a href=&#34;https://twitter.com/eigenhector&#34; target=&#34;_blank&#34;&gt;@eigenhector&lt;/a&gt;)
+shared some vice ideas on how to use word embeddings as a
+tool for matching hand-typed diagnoses to ICD10 codes.&lt;/li&gt;
+&lt;li&gt;The importance of getting doctors to trust AI algorithms.
+Hector presented an interesting approach which iterates between an AI
+algorithm proposing codes and a doctor validating these.
+The goal is of course to &lt;em&gt;augment&lt;/em&gt; the doctors, not to &lt;em&gt;replace&lt;/em&gt; them.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;fri-sun-datathon&#34;&gt;Fri - Sun: Datathon&lt;/h1&gt;
+
+&lt;h2 id=&#34;friday-6pm-pitching-topics-forming-teams&#34;&gt;Friday 6pm: Pitching Topics &amp;amp; Forming Teams&lt;/h2&gt;
+
+&lt;p&gt;23 clinicians pitch topics. We were most interested in a topic presented by
+Dr Lui Pak Ling (Hematology) and Dr Stella Ang (Anesthesiology) at NUH:&lt;/p&gt;
+
+&lt;p&gt;Currently-used statistical models predicting the mortality risk of Intensive Care Unit (ICU)
+patients assume that the importance of prognostic factors does not vary&lt;/p&gt;
+
+&lt;p&gt;Research Database, a large multi-centre critical care database made available by Philips Healthcare in partnership with the MIT Laboratory for Computational Physiology, they investigated whether the importance of prognostic factors varied in the course of each patient’s stay in ICU. Currently-used predictive models assume that they don’t vary.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Currently, the mortality risk of ICU (intensive care unit) patients is assessed
+based on a collection of variables at the time they are presented to the ICU
+(the so-called
+&lt;a href=&#34;https://en.wikipedia.org/wiki/APACHE_II&#34; target=&#34;_blank&#34;&gt;Apache score&lt;/a&gt;). This score is assumed
+to be the same &lt;em&gt;during the whole course of stay&lt;/em&gt; in the ICU.
+Is this assumption appropriate, or does the importance of some prognostic variables
+in fact change over time?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We joined forces with &lt;a href=&#34;https://www.mornin-feng.com/siqi&#34; target=&#34;_blank&#34;&gt;Siqi Liu&lt;/a&gt;,
+a PhD student at Saw Swee Hock School of Public Health and
+a member of the organising team for the Datathon who represented our team,
+and &lt;a href=&#34;https://www.linkedin.com/in/peng-shen-137568154/&#34; target=&#34;_blank&#34;&gt;Peng Shen&lt;/a&gt;
+(MOH Holdings Pte Ltd).&lt;/p&gt;
+
+&lt;h2 id=&#34;all-of-saturday-extracting-data&#34;&gt;All of Saturday: Extracting Data&lt;/h2&gt;
+
+&lt;p&gt;We used the
+&lt;a href=&#34;https://eicu-crd.mit.edu/about/eicu/&#34; target=&#34;_blank&#34;&gt;eICU Collaborative Research Database&lt;/a&gt;.
+The organisers have made the data available via Google&amp;rsquo;s BigQuery, which was
+very quick and (almost) 100% reliable.
+Working in pairs we extracted and cleaned various tables of variables
+that we used as predictors:
+comorbidity history, lab results, vitalperiodic and vitalaperiodic, coma score,
+infusion drugs, dialysis, blood culture, mechanical ventilation, &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;We queried the database using&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;the &lt;a href=&#34;https://cloud.google.com/bigquery/quickstart-web-ui&#34; target=&#34;_blank&#34;&gt;BigQuery&lt;/a&gt; web interface,&lt;/li&gt;
+&lt;li&gt;the &lt;a href=&#34;https://pandas-gbq.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34;&gt;Python API&lt;/a&gt; and colab notebooks, or&lt;/li&gt;
+&lt;li&gt;the &lt;a href=&#34;https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html&#34; target=&#34;_blank&#34;&gt;dbplyr&lt;/a&gt; package in R.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;sunday-morning-more-wrangling&#34;&gt;Sunday morning: More wrangling&lt;/h2&gt;
+
+&lt;p&gt;Joining all the extracted tables into one big table.
+The final SQL query was 306 lines long and extracted
+of 161,988 rows (a cohort of sepsis patients)
+and 93 transformed and cleaned variables (categorical and continuous)
+from tables with 224 million rows with 4-51 columns.&lt;/p&gt;
+
+&lt;h2 id=&#34;sunday-12pm-3pm&#34;&gt;Sunday 12pm-3pm:&lt;/h2&gt;
+
+&lt;h4 id=&#34;model-fitting&#34;&gt;Model fitting&lt;/h4&gt;
+
+&lt;p&gt;As a baseline, we used logistic regression, with L1 penalty for variable
+selection (using &lt;a href=&#34;https://web.stanford.edu/~hastie/glmnet/glmnet_alpha.html&#34; target=&#34;_blank&#34;&gt;glmnet&lt;/a&gt;
+in R). Virtually all rows had missing data,
+so we need to impute by median.
+This didn&amp;rsquo;t seem to work out very well, as e.g. the variables picked at after
+2 days in ICU had almost nothing in common with the variables picked for
+3 or 4 days in ICU.&lt;/p&gt;
+
+&lt;p&gt;Gradient Boosting (using &lt;a href=&#34;https://tech.yandex.com/catboost/&#34; target=&#34;_blank&#34;&gt;catboost&lt;/a&gt;
+ in R) seemed to work stably with the
+irregularly spaced, high-dimensional data with many missing values.
+In our preliminary analysis, it seems that &amp;ldquo;age&amp;rdquo; may increase in importance
+and &amp;ldquo;SaO2&amp;rdquo; (oxygen saturation) may decrease in importance.&lt;/p&gt;
+
+&lt;h4 id=&#34;presentation-writing&#34;&gt;Presentation writing:&lt;/h4&gt;
+
+&lt;p&gt;Teams were judged on a three minute presentation only, and the time limit
+was strictly enforced (our MC made the audience start clapping after
+exactly 180 seconds). So the presentation had to be practiced to near
+perfection, which Dami and Siqi succeeded in doing:
+The judges placed us first in the track &amp;ldquo;AI for critical care&amp;rdquo; 🎉🎉🎉&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/img/datathon2.jpg&#34; alt=&#34;grinners&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;work-to-be-continued&#34;&gt;Work to be continued&lt;/h1&gt;
+
+&lt;p&gt;So far, we have fitted individual models to each point in time
+(day1, day2, &amp;hellip;, day5). This is of course not the ideal way to deal with
+a longitudinal signal. One ought to try&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/survival/vignettes/timedep.pdf&#34; target=&#34;_blank&#34;&gt;Survival analysis with time-dependent coefficients&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rd.springer.com/article/10.1007/s10994-016-5597-1&#34; target=&#34;_blank&#34;&gt;Boosted multivariate trees for longitudinal data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;the-takeaway&#34;&gt;The takeaway&lt;/h1&gt;
+
+&lt;p&gt;Our team is walking away with a preliminary analysis on a cleaned dataset which is
+likely to result in a publication, and 2 domain experts and 1 other data
+scientist who are invested in continuing our work. I would say these two
+days were incredibly well spent!&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>PhD internship in Machine Learning</title>
-      <link>/post/phd-internship-in-machine-learning/</link>
+      <link>https://strakaps.github.io/post/phd-internship-in-machine-learning/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/phd-internship-in-machine-learning/</guid>
+      <guid>https://strakaps.github.io/post/phd-internship-in-machine-learning/</guid>
       <description>&lt;p&gt;In the internship, you&amp;rsquo;ll explore the latest machine learning methods such as
 tree ensemble methods, graphical models and neural networks and compare their
 performance to what is the current industry standard. A great opportunity to
@@ -39,10 +170,10 @@ credit risk industry.&lt;/p&gt;
     
     <item>
       <title>Networks of Health Providers</title>
-      <link>/project/gp-networks/</link>
+      <link>https://strakaps.github.io/project/gp-networks/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
-      <guid>/project/gp-networks/</guid>
+      <guid>https://strakaps.github.io/project/gp-networks/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;What is the network structure of healthcare providers and their
 practices/clinics?&lt;/li&gt;
@@ -80,166 +211,28 @@ tackle questions of national importance such as the above.&lt;/p&gt;
     
     <item>
       <title>R package CTRE</title>
-      <link>/project/ctre/</link>
+      <link>https://strakaps.github.io/project/ctre/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
       
-      <guid>/project/ctre/</guid>
+      <guid>https://strakaps.github.io/project/ctre/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R package CTRE: thresholding bursty time series</title>
-      <link>/post/ctre-package/</link>
-      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/ctre-package/</guid>
-      <description>&lt;p&gt;The new &lt;a href=&#34;https://strakaps.github.io/CTRE/&#34;&gt;R package &lt;code&gt;CTRE&lt;/code&gt;&lt;/a&gt; is now
-available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”,
-which is a model for extreme values of bursty time series.
-The theory is desribed in another paper
-(&lt;a href=&#34;https://strakaps.github.io/bursty-POT/&#34;&gt;html&lt;/a&gt;|&lt;a href=&#34;https://arxiv.org/pdf/1802.05218.pdf&#34;&gt;pdf&lt;/a&gt;).&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(CTRE)
-flares_ctre &amp;lt;- ctre(flares)
-plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ctre-package_files/figure-html/data-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The above time series are measurements of solar flare magnitudes by NASA&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.
-Which observations are considered extreme is defined by a variable threshold &lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt;
-(dashed line, &lt;span class=&#34;math inline&#34;&gt;\(&amp;lt; 5\%\)&lt;/span&gt; of observations).
-The exceedances of this threshold (red) follow (asymptotically for high &lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt;)
-a
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Generalized_Pareto_distribution&#34;&gt;Generalized Pareto distribution&lt;/a&gt;.
-This type of modelling of extremes is standard in Extreme Value Theory,
-and known as the
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Extreme_value_theory#Data_analysis&#34;&gt;Peaks Over Threshold&lt;/a&gt;
-(POT) method.
-To date,
-&lt;a href=&#34;https://cran.r-project.org/web/views/ExtremeValue.html&#34;&gt;&lt;em&gt;18 R packages&lt;/em&gt;&lt;/a&gt;
-have been developed for POT!&lt;/p&gt;
-&lt;div id=&#34;whats-new-about-ctre&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;What’s new about &lt;code&gt;CTRE&lt;/code&gt;?&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;CTRE&lt;/code&gt; provides a new way to model the &lt;strong&gt;bursty timing&lt;/strong&gt; of the threshold
-crossings. In complex systems, &lt;em&gt;inter-event times&lt;/em&gt; are typically
-heavy-tailed&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, and thus highly heterogeneous
-(think income distributions).
-The bulk of inter-event times is short, corresponding to bursts of events.
-A few very long inter-event times represent quiet periods.&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&#34;https://strakaps.github.io/MittagLeffleR/&#34;&gt;Mittag-Leffler distribution&lt;/a&gt;
-is universal for times between threshold crossings, see the
-&lt;a href=&#34;https://strakaps.github.io/bursty-POT/&#34;&gt;companion paper&lt;/a&gt;.
-&lt;code&gt;CTRE&lt;/code&gt; fits a Mittag-Leffler distribution to a range of threshold values:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flares_ctre &amp;lt;- thin(flares_ctre, k = 700)
-par(mfrow = c(1,2))
-MLestimates(flares_ctre, tail = 0.9, scale = 3E7)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ctre-package_files/figure-html/stability-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Above, the threshold is varied from the 5th to the 700th largest magnitude
-(as you move right along the x-axes)
-and the parameters estimates are plotted on the y-axis.
-For both panels, towards the left (exceedances=5), only few data are available,
-and the estimate has a high variance.
-Towards the right (exceedances = 700), the threshold is low, and the
-Mittag-Leffler fit degrades (high bias).
-In between is where we want to read off our (hopefully stable) parameter
-estimates. The above plots are hence called “stability plots”.&lt;/p&gt;
-&lt;dl&gt;
-&lt;dt&gt;Important:&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;The scale parameter is proportional to &lt;span class=&#34;math inline&#34;&gt;\(k^{-1/\beta}\)&lt;/span&gt;.
-The parameter &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; is hence used to rescale the y-values of the
-right-hand plot, in order to make the estimates constant, and needs to
-estimated from the left-hand plot first.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ctre-applied-to-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;code&gt;CTRE&lt;/code&gt; applied to data&lt;/h2&gt;
-&lt;p&gt;For the solar flare data, we read off
-&lt;span class=&#34;math display&#34;&gt;\[
-\beta \approx 0.9, \quad \sigma \approx 3 \times 10^7.
-\]&lt;/span&gt;
-This means that the inter-arrival time &lt;span class=&#34;math inline&#34;&gt;\(T(k)\)&lt;/span&gt; for magnitudes as high as the
-&lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-th magnitude is distributed as
-&lt;span class=&#34;math display&#34;&gt;\[
-T(k) \sim {\rm ML}\left(0.9, \frac{3 \times 10^7 {\rm sec}}{k^{1/0.9}} \right).
-\]&lt;/span&gt;
-For example, let’s assume the magnitude (peak rate) &lt;span class=&#34;math inline&#34;&gt;\(10,000\)&lt;/span&gt;. How many
-magnitudes exceed it?&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magrittr)
-(flares_ctre %&amp;gt;% magnitudes() %&amp;gt;% sort(decreasing=TRUE) &amp;gt; 10000) %&amp;gt;% sum()&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 24&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;So substitute &lt;span class=&#34;math inline&#34;&gt;\(k = 24\)&lt;/span&gt;. The model thus predicts inter-arrival times drawn from the
-distribution
-&lt;span class=&#34;math display&#34;&gt;\[
-{\rm ML}\left(0.9, 8.8\times 10^{5} {\rm sec} \right)
-= {\rm ML}\left(0.9, 10 {\rm days} \right).
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Here’s the plot of this distribution, on a logarithmic scale:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/ctre-package_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Compared to the Exponential distribution, the Mittag-Leffler distribution
-puts more probability mass on both tiny values (bursts) and
-values in the tails (quiet periods).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;shiny-app&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Shiny app&lt;/h2&gt;
-&lt;p&gt;Running&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;CTRE::runCTREshiny()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;opens a Shiny app that that lets you do the above manipulations via sliders.
-It is / should be loading below:&lt;/p&gt;
-&lt;iframe src=&#34;https://strakaps.shinyapps.io/ctre-app/&#34; style=&#34;border: none; width: 800px; height: 900px&#34;&gt;
-&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;div id=&#34;what-about-clustering-of-extremes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;What about “clustering of extremes”?&lt;/h2&gt;
-&lt;p&gt;The main other appraoch in Extreme Value Theory which addresses irregular
-(non-Poissonian) threshold crossing times goes under the name
-“clustering of extremes”.&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; It assumes that the underlying
-process is stationary, and conflates each excursion of the process
-above the threshold as one cluster of events.&lt;/p&gt;
-&lt;p&gt;CTREs and clustering of extremes both generalize the standard
-assumption of independent events, but in
-different directions. They are hence complementary, and it needs to be
-investigated how they should be compared meaningfully.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;feedback&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Feedback&lt;/h2&gt;
-&lt;p&gt;Do you think CTREs are a useful model? Please comment below.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The &lt;a href=&#34;https://ntrs.nasa.gov/search.jsp?R=19920006736&#34;&gt;“complete Hard X Ray Burst Spectrometer event list”&lt;/a&gt;
-is a comprehensive reference for all measurements of the Hard X
-Ray Burst Spectrometer on NASA’s Solar Maximum Mission from the time of
-launch on Feb 14, 1980 to the end of the mission in Dec 1989. 12,776
-events were detected, with the “vast
-majority being solar flares”. The list includes the start time, peak time,
-duration, and peak rate of each event. We have used “start time” as the
-variable for event times, and “peak rate” as the variable for event
-magnitudes.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;See the Introduction of
-&lt;a href=&#34;http://iopscience.iop.org/article/10.1088/1367-2630/15/10/103023&#34;&gt;“Modelling bursty time series”&lt;/a&gt; by Vajna, Tóth &amp;amp; Kertész, for a list of complex systems with heavy-tailed
-inter-event times.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;See e.g. Chapter 3 in the textbook
-&lt;a href=&#34;https://books.google.com.ph/books/about/Extremes_and_Related_Properties_of_Rando.html?id=-ofTBwAAQBAJ&amp;amp;redir_esc=y&#34;&gt;&lt;em&gt;Extremes and Related Properties of Random Sequences and Processes&lt;/em&gt;&lt;/a&gt;
-by Leadbetter, Lindgren &amp;amp; Rootzén.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Peaks Over Threshold for Bursty Time Series</title>
-      <link>/publication/bursty-pot/</link>
+      <link>https://strakaps.github.io/publication/bursty-pot/</link>
       <pubDate>Sat, 28 Apr 2018 00:00:00 +0800</pubDate>
       
-      <guid>/publication/bursty-pot/</guid>
+      <guid>https://strakaps.github.io/publication/bursty-pot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fractional Diffusion where &#34;fractional&#34; varies in space</title>
-      <link>/post/voffpe/</link>
+      <link>https://strakaps.github.io/post/voffpe/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/voffpe/</guid>
+      <guid>https://strakaps.github.io/post/voffpe/</guid>
       <description>&lt;p&gt;The new paper
 (&lt;a href=&#34;http://arxiv.org/abs/1712.06767&#34;&gt;arxiv.org/abs/1712.06767&lt;/a&gt;)&lt;/p&gt;
 &lt;blockquote&gt;
@@ -258,7 +251,7 @@ p(x,t).\]&lt;/span&gt;&lt;/p&gt;
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation&#34;&gt;&lt;strong&gt;Fokker-Planck equation&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;(FPE)&lt;/strong&gt;.
 It describes the spreading of probability via a random walk:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;/img/spreading.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/img/spreading.gif&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Adding in the
 &lt;a href=&#34;https://en.wikipedia.org/wiki/Fractional_calculus&#34;&gt;fractional derivative&lt;/a&gt;
@@ -278,9 +271,9 @@ this solution is the probability distribution of a Continuous Time
 Random Walk (CTRW)&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.
 CTRWs are random walks with random waiting times between
 jumps:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/CTRW.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/img/CTRW.png&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The fractional derivative in time is tightly linked with
-&lt;a href=&#34;/post/mittag-leffler/&#34;&gt;Mittag-Leffler distributed&lt;/a&gt; waiting times.&lt;/p&gt;
+&lt;a href=&#34;https://strakaps.github.io/post/mittag-leffler/&#34;&gt;Mittag-Leffler distributed&lt;/a&gt; waiting times.&lt;/p&gt;
 &lt;p&gt;Of course CTRWs can be simulated, and &lt;span class=&#34;math inline&#34;&gt;\(p(x,t)\)&lt;/span&gt; may be computed via
 Monte Carlo simulations (or
 “&lt;a href=&#34;https://en.wikipedia.org/wiki/Single-particle_tracking&#34;&gt;particle tracking&lt;/a&gt;”).
@@ -309,10 +302,10 @@ extend these benefits to the variable order setting (to be continued).&lt;/p&gt;
     
     <item>
       <title>R package MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
-      <link>/post/mittag-leffler/</link>
+      <link>https://strakaps.github.io/post/mittag-leffler/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/mittag-leffler/</guid>
+      <guid>https://strakaps.github.io/post/mittag-leffler/</guid>
       <description>&lt;p&gt;Ricky Gill and I have created the R package MittagLeffleR,
 documented at
 &lt;a href=&#34;../../MittagLeffleR/index.html&#34;&gt;strakaps.github.io/MittagLeffleR/&lt;/a&gt;.
@@ -403,7 +396,7 @@ h &amp;lt;- dml(x=u, tail=tail, scale=1, second.type=TRUE)
 N &amp;lt;- outer(x,u,function(x,u){dnorm(x=x, mean=u, sd=sqrt(u))})
 p &amp;lt;- N %*% h * dx
 plot(x,p, type=&amp;#39;l&amp;#39;, main=&amp;quot;Fractional diffusion with drift at t=1&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/MittagLeffleR_files/figure-html/scary-shark-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/post/MittagLeffleR_files/figure-html/scary-shark-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;bugs-and-issues&#34; class=&#34;section level2&#34;&gt;
@@ -417,10 +410,10 @@ Thanks!&lt;/p&gt;
     
     <item>
       <title>Prestigious Scientia PhD Scholarship available</title>
-      <link>/post/scientia-phd/</link>
+      <link>https://strakaps.github.io/post/scientia-phd/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
       
-      <guid>/post/scientia-phd/</guid>
+      <guid>https://strakaps.github.io/post/scientia-phd/</guid>
       <description>
 
 &lt;p&gt;It is my pleasure to announce that applications for the prestigious UNSW Scientia Ph.D. Scholarship Scheme on the project &amp;ldquo;Using Big Data to Redesign the Health System&amp;rdquo; are now open.&lt;/p&gt;
@@ -458,47 +451,47 @@ Please contact either of us for more details.&lt;/p&gt;
     
     <item>
       <title>R package MittagLeffleR</title>
-      <link>/project/mittagleffler/</link>
+      <link>https://strakaps.github.io/project/mittagleffler/</link>
       <pubDate>Thu, 27 Apr 2017 00:00:00 +0800</pubDate>
       
-      <guid>/project/mittagleffler/</guid>
+      <guid>https://strakaps.github.io/project/mittagleffler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A semi-markov algorithm for continuous time random walk limit distributions</title>
-      <link>/publication/semi-markov-algo/</link>
+      <link>https://strakaps.github.io/publication/semi-markov-algo/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
-      <guid>/publication/semi-markov-algo/</guid>
+      <guid>https://strakaps.github.io/publication/semi-markov-algo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Example Talk</title>
-      <link>/talk/example-talk/</link>
+      <link>https://strakaps.github.io/talk/example-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
-      <guid>/talk/example-talk/</guid>
+      <guid>https://strakaps.github.io/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Fokker–Planck and Kolmogorov backward equations for continuous time random walk scaling limits</title>
-      <link>/publication/forward-backward-ffpe/</link>
+      <link>https://strakaps.github.io/publication/forward-backward-ffpe/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
       
-      <guid>/publication/forward-backward-ffpe/</guid>
+      <guid>https://strakaps.github.io/publication/forward-backward-ffpe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Continuous Time Random Walks</title>
-      <link>/project/anomalous-diffusion/</link>
+      <link>https://strakaps.github.io/project/anomalous-diffusion/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
-      <guid>/project/anomalous-diffusion/</guid>
+      <guid>https://strakaps.github.io/project/anomalous-diffusion/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Diffusion&lt;/strong&gt; is the net movement of molecules or atoms from a region of high
 concentration to a region of low concentration
 as a result of &lt;em&gt;random motion&lt;/em&gt; of the molecules or atoms
@@ -535,10 +528,10 @@ among other fields.&lt;/p&gt;
     
     <item>
       <title>Extremes of Bursty Time Series</title>
-      <link>/project/bursts/</link>
+      <link>https://strakaps.github.io/project/bursts/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
       
-      <guid>/project/bursts/</guid>
+      <guid>https://strakaps.github.io/project/bursts/</guid>
       <description>&lt;p&gt;Extreme value theory is concerned with the modelling and prediction of extremes in a series of observations.
 Accurate estimates of probabilities for the exceedence of extreme levels of temperature, financial loss, the
 number of defective nodes in a network etc. are crucial for the control of risk in a great number of societal
@@ -562,6 +555,27 @@ fractional Poisson process representation holds. This project derives the
 theoretical model behind the timings of bursty threshold crossings,
 statistical methods for the fitting of the model, and R software packages for
 applications to data.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Identifying antidepressant users with depression</title>
+      <link>https://strakaps.github.io/project/antidepressants/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      
+      <guid>https://strakaps.github.io/project/antidepressants/</guid>
+      <description>&lt;p&gt;Records of antidepressant dispensings are often used in public health research
+as a surrogate measure of depression.  In &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; to &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; of cases however,
+antidepressants are prescribed for indications other than depression,
+which results in misclassification.&lt;/p&gt;
+
+&lt;p&gt;Medicare Benefits Schedule (MBS) data contain the dispensings of antidepressants
+and other pharmaceuticals, and data from the 45 and Up Study provide a gold
+standard response variable
+(a yes/no answer to &amp;ldquo;Have you been treated for depression?&amp;rdquo;).&lt;/p&gt;
+
+&lt;p&gt;How can these data be used to design a predictive algorithm identifying
+antidepressant users &lt;em&gt;with&lt;/em&gt; depression?&lt;/p&gt;
 </description>
     </item>
     
