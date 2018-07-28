@@ -11,6 +11,192 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Overcoming the data drought: exploring general practice in Australia by network analysis of big data</title>
+      <link>https://strakaps.github.io/publication/mja/</link>
+      <pubDate>Sun, 29 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://strakaps.github.io/publication/mja/</guid>
+      <description>&lt;p&gt;See my &lt;a href=&#34;https://strakaps.github.io/post/2018-07-mja-paper/&#34;&gt;blog post for this publication&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Big Networks in Healthcare</title>
+      <link>https://strakaps.github.io/post/2018-07-mja-paper/</link>
+      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/post/2018-07-mja-paper/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;See also the
+&lt;a href=&#34;https://www.mja.com.au/podcast/209/2/mja-podcasts-2018-episode-57-big-gp-data-research-prof-louisa-jorm-and-dr-michael&#34; target=&#34;_blank&#34;&gt;MJA podcast episode&lt;/a&gt;
+accompanying this article.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Our joint work
+(&lt;a href=&#34;https://cbdrh.med.unsw.edu.au/&#34; target=&#34;_blank&#34;&gt;UNSW CBDRH&lt;/a&gt; and
+&lt;a href=&#34;https://www.maths.unsw.edu.au/about/statistics&#34; target=&#34;_blank&#34;&gt;Statistics&lt;/a&gt;)
+which analyses Australian patient claim data using big network algorithms
+is now available on the
+&lt;a href=&#34;https://www.mja.com.au/journal/2018/209/2/overcoming-data-drought-exploring-general-practice-australia-network-analysis&#34; target=&#34;_blank&#34;&gt;MJA website&lt;/a&gt;.
+We have processed
+&lt;a href=&#34;http://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/Home&#34; target=&#34;_blank&#34;&gt;MBS&lt;/a&gt;
+claims data of 10% of Australians over the years 1994-2014, trying to shed light
+on the following research questions:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;What is the patient sharing behaviour of general practitioners (GPs): are there any
+meaningful clusters (called &amp;ldquo;Provider Practice Communities, PPC&amp;rdquo;)
+of GPs which collaborate and share patients? How have these
+clusters changed in the course of 20 years?&lt;/li&gt;
+&lt;li&gt;How does Continuity of Care (CoC&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;) differ between large and small
+PPCs?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Datasets such as provided by
+&lt;a href=&#34;http://sydney.edu.au/medicine/public-health/research/beach.php&#34; target=&#34;_blank&#34;&gt;BEACH&lt;/a&gt;
+(Bettering the Evaluation And Care of Health, USYD)
+would be ideal to tackle these questions, but were
+&lt;a href=&#34;http://sydney.edu.au/medicine/fmrc/media/FMRC-closure-2016-06.php&#34; target=&#34;_blank&#34;&gt;discontinued&lt;/a&gt;
+due to lack of funding, and it may take several years until Australia&amp;rsquo;s
+&lt;a href=&#34;https://www.myhealthrecord.gov.au/&#34; target=&#34;_blank&#34;&gt;My Health Record&lt;/a&gt;
+is adopted by enough Australians to generate useful datasets.&lt;/p&gt;
+
+&lt;p&gt;Question 1 really is about the structure of information sharing in the Australian
+health system. We believe we&amp;rsquo;ve found evidence of information sharing within clusters
+of GPs (PPCs) which resemble the typical sizes of practices of GPs.
+CoC is a proxy for the sharing of important patient information sharing,
+which is believed to lead to better health outcomes;
+but information sharing can also mean that GPs
+have similar behaviour when referring to specialists or pathology
+services, among which there may be low-value services such as unwarranted
+surgical interventions and blood tests.&lt;/p&gt;
+
+&lt;p&gt;Based on the PPCs which we have identified,
+&lt;strong&gt;it is now possible to discover unwarranted variation of good and bad outcomes
+on the level of PPCs (practices)&lt;/strong&gt;.
+There are many interesting questions that can be tackled now, and
+as a first step into this direction, we redefined &amp;ldquo;Continuity of Care&amp;rdquo;
+on the PPC level, creating an indicator which is high if a patient is loyal
+to the same practice, rather than the same GP.
+It seems that the larger a practice, the less loyal patients are to individual
+GPs; but if loyalty to the same practice is measured, small and large
+practices seem to fare alike.&lt;/p&gt;
+
+&lt;h1 id=&#34;big-networks&#34;&gt;Big Networks&lt;/h1&gt;
+
+&lt;p&gt;The usual approach in network clustering
+(which was seemingly taken by &lt;em&gt;all&lt;/em&gt; previous papers on this topic in the
+medical literature)
+is as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Create a network of GPs only&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, where patients only appear as weights
+on the edges
+(i.e. &lt;a href=&#34;https://en.wikipedia.org/wiki/Bipartite_network_projection&#34; target=&#34;_blank&#34;&gt;project from bipartite to unipartite&lt;/a&gt;):
+&lt;img src=&#34;https://strakaps.github.io/img/Bipartite_network_projection.png&#34; alt=&#34;projection&#34; /&gt;
+&lt;small&gt; (source: &lt;a href=&#34;https://en.wikipedia.org/wiki/Bipartite_network_projection#/media/File:Bipartite_network_projection.png&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt;) &lt;/small&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Cluster the GP nodes by maximizing&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Modularity_(networks)&#34; target=&#34;_blank&#34;&gt;modularity&lt;/a&gt;:
+&lt;img src=&#34;https://strakaps.github.io/img/modularity.jpg&#34; width=&#34;300&#34;&gt;
+&lt;small&gt; (source: &lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S1053811916306449&#34; target=&#34;_blank&#34;&gt;sciencedirect&lt;/a&gt;) &lt;/small&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The main flaws with this approach are:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;There is no good way to construct edge weights between GPs.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;The
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Modularity_(networks)#Resolution_limit&#34; target=&#34;_blank&#34;&gt;resolution limit problem&lt;/a&gt;
+of modularity:
+The minimum size of discoverable communities grows with the number of nodes
+$N$ in the network, roughly like $\sqrt N$. Since we study thousands of GPs,
+this problem is prohibitive.&lt;/li&gt;
+&lt;li&gt;Modularity assumes that all block structure is assortative, which can be
+dangerous; moreover even
+&lt;a href=&#34;https://journals.aps.org/pre/abstract/10.1103/PhysRevE.70.025101&#34; target=&#34;_blank&#34;&gt;completely random networks can have high modularity&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Using the Python package
+&lt;a href=&#34;http://dx.doi.org/10.6084/m9.figshare.1164194&#34; target=&#34;_blank&#34;&gt;graph-tool&lt;/a&gt;,
+we were able to:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Avoid the bipartite projection, even though this meant dealing with millions
+of nodes (patients and doctors) instead of thousands (doctors only).&lt;/li&gt;
+&lt;li&gt;Fit a
+&lt;a href=&#34;https://journals.aps.org/prx/abstract/10.1103/PhysRevX.4.011047&#34; target=&#34;_blank&#34;&gt;hierarchical stochastic blockmodel&lt;/a&gt;,
+which allows detecting much smaller communities.
+Moreover, the block structure respected bipartiteness, meaning that each block
+was made up of either doctors only or patients only.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;computations&#34;&gt;Computations&lt;/h1&gt;
+
+&lt;p&gt;The main challenges were:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Installing graph-tool:&lt;/strong&gt; pip and conda are not an option, you have to compile
+it from source, or install the native Linux / MacOS X packages.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAM usage:&lt;/strong&gt; graph-tool needed up to 64GB of RAM.
+We&amp;rsquo;ve used the
+&lt;a href=&#34;https://www.hpc.science.unsw.edu.au/&#34; target=&#34;_blank&#34;&gt;Katana computational cluster&lt;/a&gt;
+at UNSW and got excellent support along the way.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Numerous runs:&lt;/strong&gt; The hierarchical blockmodelling algorithm converges to
+a different solution every time; to be somewhat confident to have found a
+good minimum of the description length, we needed 4 runs of up to 6 hours
+each, for each of 5 regions.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;github-repository&#34;&gt;GitHub Repository&lt;/h1&gt;
+
+&lt;p&gt;The full Python code used for this project, as well as more details on the
+blockmodelling approach, can be found on the
+&lt;a href=&#34;https://github.com/CBDRH/GP-networks&#34; target=&#34;_blank&#34;&gt;CBDRH GitHub page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Using hierarchical stochastic blockmodelling, it is possible to use data
+which is routinely collected by GPs to monitor characteristics of Australian
+general practices. Future research will clarify how these characteristics affect
+patient care.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;&lt;p&gt;A patient typically seeing the same GP, or GP clinic, experiences high CoC:
+$${\rm CoC} = \frac{\max \left\lbrace n_k \right \rbrace}{\sum_k n_k}$$
+where $n_k$ are the numbers of visits made to different PPCs.&lt;/p&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li id=&#34;fn:3&#34;&gt;&lt;p&gt;In the graph shown, suppose X are the patients and Y the doctors; then the
+Y-projection is a network of doctors only, with edge weights computed from
+the number of shared patients.&lt;/p&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:3&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li id=&#34;fn:4&#34;&gt;&lt;p&gt;The picture shows the adjacency matrix, where each row and column
+corresponds to one node, and a black dot means there is an edge.
+The red squares represent a grouping of nodes.
+Modularity, in a nutshell, is the gain in the
+number of within-group edges achieved by the grouping,
+compared to the expected number if all edges were
+reassigned at random.&lt;/p&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:4&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li id=&#34;fn:2&#34;&gt;&lt;p&gt;If you go by the number of shared patients,
+this discards all patients which have
+only seen one GP, and makes it impossible to find single GPs.
+If you go by &lt;a href=&#34;https://en.wikipedia.org/wiki/Jaccard_index&#34; target=&#34;_blank&#34;&gt;Jaccard index&lt;/a&gt;,
+this leads to weights between 0 and 1, which is not useful for most
+community detection algorithms.&lt;/p&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>NUS-MIT Datathon</title>
       <link>https://strakaps.github.io/post/nus-mit-datathon/</link>
       <pubDate>Tue, 10 Jul 2018 00:00:00 +0000</pubDate>
@@ -523,59 +709,6 @@ there has been a fruitful exchange
 between statistical physics, experimental physics, pure mathematics and
 computational mathematics, which has significantly advanced biophysics,
 among other fields.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Extremes of Bursty Time Series</title>
-      <link>https://strakaps.github.io/project/bursts/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
-      
-      <guid>https://strakaps.github.io/project/bursts/</guid>
-      <description>&lt;p&gt;Extreme value theory is concerned with the modelling and prediction of extremes in a series of observations.
-Accurate estimates of probabilities for the exceedence of extreme levels of temperature, financial loss, the
-number of defective nodes in a network etc. are crucial for the control of risk in a great number of societal
-systems.
-&amp;ldquo;Mainstream&amp;rdquo; extreme value theory assumes that events happen uniformly, e.g. yearly, daily, or every second,
-or that events occur at a certain rate (Poisson process). In fact, however, a great number of systems violates this
-assumption: Events occur in bursts, intermittent with quiescent periods drawn from a heavy-tailed distribution.
-This phenomenon is ubiquitous for human-created events, and is deemed to occur for any type of action
-resulting from a dynamic list of priorities.&lt;/p&gt;
-
-&lt;p&gt;Often a magnitude, or mark can be assigned to each event in the renewal
-process, such as for earthquakes, solar flares, neuron voltages etc. The
-Peaks-Over-Threshold model (POT, see e.g. Coles 2001) applies a threshold to
-the magnitudes, and fits a Generalized Pareto distribution to the threshold
-exceedances. The timing of the threshold exceedances fits well with a
-&amp;ldquo;Poisson process&amp;rdquo;, i.e. the threshold crossing times are distributed
-completely randomly on the given time interval.&lt;/p&gt;
-
-&lt;p&gt;For bursty data, the Poisson process representation is no long valid, but a
-fractional Poisson process representation holds. This project derives the
-theoretical model behind the timings of bursty threshold crossings,
-statistical methods for the fitting of the model, and R software packages for
-applications to data.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Identifying antidepressant users with depression</title>
-      <link>https://strakaps.github.io/project/antidepressants/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
-      
-      <guid>https://strakaps.github.io/project/antidepressants/</guid>
-      <description>&lt;p&gt;Records of antidepressant dispensings are often used in public health research
-as a surrogate measure of depression.  In &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; to &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; of cases however,
-antidepressants are prescribed for indications other than depression,
-which results in misclassification.&lt;/p&gt;
-
-&lt;p&gt;Medicare Benefits Schedule (MBS) data contain the dispensings of antidepressants
-and other pharmaceuticals, and data from the 45 and Up Study provide a gold
-standard response variable
-(a yes/no answer to &amp;ldquo;Have you been treated for depression?&amp;rdquo;).&lt;/p&gt;
-
-&lt;p&gt;How can these data be used to design a predictive algorithm identifying
-antidepressant users &lt;em&gt;with&lt;/em&gt; depression?&lt;/p&gt;
 </description>
     </item>
     

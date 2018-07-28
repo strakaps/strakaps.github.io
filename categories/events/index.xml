@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Events on Peter&#39;s Homepage</title>
+    <link>https://strakaps.github.io/categories/events/</link>
+    <description>Recent content in Events on Peter&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 10 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://strakaps.github.io/categories/events/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NUS-MIT Datathon</title>
+      <link>https://strakaps.github.io/post/nus-mit-datathon/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/post/nus-mit-datathon/</guid>
+      <description>Last week I had the privilege to participate in the NUS-NUH-MIT DATATHON and Workshop on applications of AI in healthcare with the UNSW Centre for Big Data Research in Health (CBDRH) team (Tim Churches, Mark Hanly, Oisin Fitzgerald and Oluwadamisola Sotade).
+Thu &amp;amp; Fri: Workshop &amp;amp; Talks In the workshop &amp;ldquo;Deploying AI Solutions in Real Clinical Practices&amp;rdquo; by Dr Ngiam Kee Yuan (CTO, NUHS) we discussed
+ The large NUHS (National University Health System) databases and their storage structure Data security and ownership Applications for access to data The always changing standards of diagnosis codes (ICD9, ICD10, SNOMED, &amp;hellip;) and the problem of matching doctors diagnoses to these codes.</description>
+    </item>
+    
+  </channel>
+</rss>

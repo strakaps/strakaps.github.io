@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.45.1" />
+  <meta name="author" content="Peter Straka">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="See also the MJA podcast episode accompanying this article.
+Our joint work (UNSW CBDRH and Statistics) which analyses Australian patient claim data using big network algorithms is now available on the MJA website. We have processed MBS claims data of 10% of Australians over the years 1994-2014, trying to shed light on the following research questions:
+ What is the patient sharing behaviour of general practitioners (GPs): are there any meaningful clusters (called &ldquo;Provider Practice Communities, PPC&rdquo;) of GPs which collaborate and share patients?">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://strakaps.github.io/post/2018-07-mja-paper/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="https://strakaps.github.io/index.xml" type="application/rss+xml" title="Peter&#39;s Homepage">
+  <link rel="feed" href="https://strakaps.github.io/index.xml" type="application/rss+xml" title="Peter&#39;s Homepage">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://strakaps.github.io/post/2018-07-mja-paper/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@strakaps">
+  <meta property="twitter:creator" content="@strakaps">
+  <meta property="twitter:image" content="">
+  
+  <meta property="og:site_name" content="Peter&#39;s Homepage">
+  <meta property="og:url" content="https://strakaps.github.io/post/2018-07-mja-paper/">
+  <meta property="og:title" content="Big Networks in Healthcare | Peter&#39;s Homepage">
+  <meta property="og:description" content="See also the MJA podcast episode accompanying this article.
+Our joint work (UNSW CBDRH and Statistics) which analyses Australian patient claim data using big network algorithms is now available on the MJA website. We have processed MBS claims data of 10% of Australians over the years 1994-2014, trying to shed light on the following research questions:
+ What is the patient sharing behaviour of general practitioners (GPs): are there any meaningful clusters (called &ldquo;Provider Practice Communities, PPC&rdquo;) of GPs which collaborate and share patients?"><meta property="og:image" content="https://strakaps.github.io/img/headers/big-bipartite-wide.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-07-16T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-07-29T21:03:43&#43;08:00">
+  
+
+  
+
+  
+
+  <title>Big Networks in Healthcare | Peter&#39;s Homepage</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Peter&#39;s Homepage</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  
+  
+    <img src="/img/headers/big-bipartite-wide.png" class="article-banner" itemprop="image">
+  
+
+  <span class="article-header-caption">Hierarchical blockmodel fitted and visualised using graph-tool. Doctors (top) are connected to patients (bottom) via a GP consultation recorded in MBS data.</span>
+</div>
+
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Big Networks in Healthcare</h1>
+
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Peter Straka">
+  </span>
+  
+
+  <span class="article-date">
+    
+        Last updated on
+    
+    <meta content="2018-07-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-07-29 21:03:43 &#43;0800 &#43;08" itemprop="dateModified">
+      Jul 29, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Peter Straka">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="https://strakaps.github.io/post/2018-07-mja-paper/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="https://strakaps.github.io/categories/public-health/">public-health</a>
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Big%20Networks%20in%20Healthcare&amp;url=https%3a%2f%2fstrakaps.github.io%2fpost%2f2018-07-mja-paper%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fstrakaps.github.io%2fpost%2f2018-07-mja-paper%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fstrakaps.github.io%2fpost%2f2018-07-mja-paper%2f&amp;title=Big%20Networks%20in%20Healthcare"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fstrakaps.github.io%2fpost%2f2018-07-mja-paper%2f&amp;title=Big%20Networks%20in%20Healthcare"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Big%20Networks%20in%20Healthcare&amp;body=https%3a%2f%2fstrakaps.github.io%2fpost%2f2018-07-mja-paper%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p><em>See also the
+<a href="https://www.mja.com.au/podcast/209/2/mja-podcasts-2018-episode-57-big-gp-data-research-prof-louisa-jorm-and-dr-michael" target="_blank">MJA podcast episode</a>
+accompanying this article.</em></p>
+
+<p>Our joint work
+(<a href="https://cbdrh.med.unsw.edu.au/" target="_blank">UNSW CBDRH</a> and
+<a href="https://www.maths.unsw.edu.au/about/statistics" target="_blank">Statistics</a>)
+which analyses Australian patient claim data using big network algorithms
+is now available on the
+<a href="https://www.mja.com.au/journal/2018/209/2/overcoming-data-drought-exploring-general-practice-australia-network-analysis" target="_blank">MJA website</a>.
+We have processed
+<a href="http://www.mbsonline.gov.au/internet/mbsonline/publishing.nsf/Content/Home" target="_blank">MBS</a>
+claims data of 10% of Australians over the years 1994-2014, trying to shed light
+on the following research questions:</p>
+
+<ol>
+<li>What is the patient sharing behaviour of general practitioners (GPs): are there any
+meaningful clusters (called &ldquo;Provider Practice Communities, PPC&rdquo;)
+of GPs which collaborate and share patients? How have these
+clusters changed in the course of 20 years?</li>
+<li>How does Continuity of Care (CoC<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>) differ between large and small
+PPCs?</li>
+</ol>
+
+<p>Datasets such as provided by
+<a href="http://sydney.edu.au/medicine/public-health/research/beach.php" target="_blank">BEACH</a>
+(Bettering the Evaluation And Care of Health, USYD)
+would be ideal to tackle these questions, but were
+<a href="http://sydney.edu.au/medicine/fmrc/media/FMRC-closure-2016-06.php" target="_blank">discontinued</a>
+due to lack of funding, and it may take several years until Australia&rsquo;s
+<a href="https://www.myhealthrecord.gov.au/" target="_blank">My Health Record</a>
+is adopted by enough Australians to generate useful datasets.</p>
+
+<p>Question 1 really is about the structure of information sharing in the Australian
+health system. We believe we&rsquo;ve found evidence of information sharing within clusters
+of GPs (PPCs) which resemble the typical sizes of practices of GPs.
+CoC is a proxy for the sharing of important patient information sharing,
+which is believed to lead to better health outcomes;
+but information sharing can also mean that GPs
+have similar behaviour when referring to specialists or pathology
+services, among which there may be low-value services such as unwarranted
+surgical interventions and blood tests.</p>
+
+<p>Based on the PPCs which we have identified,
+<strong>it is now possible to discover unwarranted variation of good and bad outcomes
+on the level of PPCs (practices)</strong>.
+There are many interesting questions that can be tackled now, and
+as a first step into this direction, we redefined &ldquo;Continuity of Care&rdquo;
+on the PPC level, creating an indicator which is high if a patient is loyal
+to the same practice, rather than the same GP.
+It seems that the larger a practice, the less loyal patients are to individual
+GPs; but if loyalty to the same practice is measured, small and large
+practices seem to fare alike.</p>
+
+<h1 id="big-networks">Big Networks</h1>
+
+<p>The usual approach in network clustering
+(which was seemingly taken by <em>all</em> previous papers on this topic in the
+medical literature)
+is as follows:</p>
+
+<ol>
+<li><p>Create a network of GPs only<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">2</a></sup>, where patients only appear as weights
+on the edges
+(i.e. <a href="https://en.wikipedia.org/wiki/Bipartite_network_projection" target="_blank">project from bipartite to unipartite</a>):
+<img src="/img/Bipartite_network_projection.png" alt="projection" />
+<small> (source: <a href="https://en.wikipedia.org/wiki/Bipartite_network_projection#/media/File:Bipartite_network_projection.png" target="_blank">Wikipedia</a>) </small></p></li>
+
+<li><p>Cluster the GP nodes by maximizing<sup class="footnote-ref" id="fnref:4"><a href="#fn:4">3</a></sup>
+<a href="https://en.wikipedia.org/wiki/Modularity_(networks)" target="_blank">modularity</a>:
+<img src="/img/modularity.jpg" width="300">
+<small> (source: <a href="https://www.sciencedirect.com/science/article/pii/S1053811916306449" target="_blank">sciencedirect</a>) </small></p></li>
+</ol>
+
+<p>The main flaws with this approach are:</p>
+
+<ol>
+<li>There is no good way to construct edge weights between GPs.<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">4</a></sup></li>
+<li>The
+<a href="https://en.wikipedia.org/wiki/Modularity_(networks)#Resolution_limit" target="_blank">resolution limit problem</a>
+of modularity:
+The minimum size of discoverable communities grows with the number of nodes
+$N$ in the network, roughly like $\sqrt N$. Since we study thousands of GPs,
+this problem is prohibitive.</li>
+<li>Modularity assumes that all block structure is assortative, which can be
+dangerous; moreover even
+<a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.70.025101" target="_blank">completely random networks can have high modularity</a>.</li>
+</ol>
+
+<p>Using the Python package
+<a href="http://dx.doi.org/10.6084/m9.figshare.1164194" target="_blank">graph-tool</a>,
+we were able to:</p>
+
+<ol>
+<li>Avoid the bipartite projection, even though this meant dealing with millions
+of nodes (patients and doctors) instead of thousands (doctors only).</li>
+<li>Fit a
+<a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.4.011047" target="_blank">hierarchical stochastic blockmodel</a>,
+which allows detecting much smaller communities.
+Moreover, the block structure respected bipartiteness, meaning that each block
+was made up of either doctors only or patients only.</li>
+</ol>
+
+<h1 id="computations">Computations</h1>
+
+<p>The main challenges were:</p>
+
+<ol>
+<li><strong>Installing graph-tool:</strong> pip and conda are not an option, you have to compile
+it from source, or install the native Linux / MacOS X packages.</li>
+<li><strong>RAM usage:</strong> graph-tool needed up to 64GB of RAM.
+We&rsquo;ve used the
+<a href="https://www.hpc.science.unsw.edu.au/" target="_blank">Katana computational cluster</a>
+at UNSW and got excellent support along the way.</li>
+<li><strong>Numerous runs:</strong> The hierarchical blockmodelling algorithm converges to
+a different solution every time; to be somewhat confident to have found a
+good minimum of the description length, we needed 4 runs of up to 6 hours
+each, for each of 5 regions.</li>
+</ol>
+
+<h1 id="github-repository">GitHub Repository</h1>
+
+<p>The full Python code used for this project, as well as more details on the
+blockmodelling approach, can be found on the
+<a href="https://github.com/CBDRH/GP-networks" target="_blank">CBDRH GitHub page</a>.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Using hierarchical stochastic blockmodelling, it is possible to use data
+which is routinely collected by GPs to monitor characteristics of Australian
+general practices. Future research will clarify how these characteristics affect
+patient care.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><p>A patient typically seeing the same GP, or GP clinic, experiences high CoC:
+$${\rm CoC} = \frac{\max \left\lbrace n_k \right \rbrace}{\sum_k n_k}$$
+where $n_k$ are the numbers of visits made to different PPCs.</p>
+ <a class="footnote-return" href="#fnref:1"><sup>^</sup></a></li>
+
+<li id="fn:3"><p>In the graph shown, suppose X are the patients and Y the doctors; then the
+Y-projection is a network of doctors only, with edge weights computed from
+the number of shared patients.</p>
+ <a class="footnote-return" href="#fnref:3"><sup>^</sup></a></li>
+
+<li id="fn:4"><p>The picture shows the adjacency matrix, where each row and column
+corresponds to one node, and a black dot means there is an edge.
+The red squares represent a grouping of nodes.
+Modularity, in a nutshell, is the gain in the
+number of within-group edges achieved by the grouping,
+compared to the expected number if all edges were
+reassigned at random.</p>
+ <a class="footnote-return" href="#fnref:4"><sup>^</sup></a></li>
+
+<li id="fn:2"><p>If you go by the number of shared patients,
+this discards all patients which have
+only seen one GP, and makes it impossible to find single GPs.
+If you go by <a href="https://en.wikipedia.org/wiki/Jaccard_index" target="_blank">Jaccard index</a>,
+this leads to weights between 0 and 1, which is not useful for most
+community detection algorithms.</p>
+ <a class="footnote-return" href="#fnref:2"><sup>^</sup></a></li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="label label-default" href="https://strakaps.github.io/tags/healthcare/">healthcare</a>
+  
+  <a class="label label-default" href="https://strakaps.github.io/tags/data-science/">data-science</a>
+  
+  <a class="label label-default" href="https://strakaps.github.io/tags/publication/">publication</a>
+  
+  <a class="label label-default" href="https://strakaps.github.io/tags/machine-learning/">machine-learning</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/nus-mit-datathon/">NUS-MIT Datathon</a></li>
+        
+        <li><a href="/post/phd-internship-in-machine-learning/">PhD internship in Machine Learning</a></li>
+        
+        <li><a href="/post/voffpe/">Fractional Diffusion where &#34;fractional&#34; varies in space</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "strakaps-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+
+    
+
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        CommonHTML: { linebreaks: { automatic: true } },
+        tex2jax: { inlineMath: [ ['$', '$'], ['\\(','\\)'] ], displayMath: [ ['$$','$$'], ['\\[', '\\]'] ], processEscapes: false },
+        TeX: { noUndefined: { attributes: { mathcolor: 'red', mathbackground: '#FFEEEE', mathsize: '90%' } } },
+        messageStyle: 'none'
+      });
+    </script>
+    
+
+    
+    
+    
+      <script src="/js/vendor/%25!s%28%3cnil%3e%29"></script>
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//strakaps-github-io.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
