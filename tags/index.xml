@@ -7,31 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Jun 2017 00:00:00 +1000</lastBuildDate>
     
 	<atom:link href="https://strakaps.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Content tagged as &#39;Academic&#39;</title>
-      <link>https://strakaps.github.io/tags/academic/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
-      
-      <guid>https://strakaps.github.io/tags/academic/</guid>
-      <description>Here is a list of all the content that has been tagged as academic.</description>
-    </item>
-    
-    <item>
       <title>Announcement</title>
       <link>https://strakaps.github.io/tags/announcement/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/announcement/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Anomalous-diffusion</title>
+      <title>Anomalous Diffusion</title>
       <link>https://strakaps.github.io/tags/anomalous-diffusion/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
@@ -49,9 +40,9 @@
     </item>
     
     <item>
-      <title>Big data</title>
+      <title>Big Data</title>
       <link>https://strakaps.github.io/tags/big-data/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/big-data/</guid>
       <description></description>
@@ -60,14 +51,14 @@
     <item>
       <title>Bursts</title>
       <link>https://strakaps.github.io/tags/bursts/</link>
-      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/bursts/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Credit-risk</title>
+      <title>Credit Risk</title>
       <link>https://strakaps.github.io/tags/credit-risk/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
@@ -76,7 +67,7 @@
     </item>
     
     <item>
-      <title>Data-science</title>
+      <title>Data Science</title>
       <link>https://strakaps.github.io/tags/data-science/</link>
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
@@ -94,15 +85,6 @@
     </item>
     
     <item>
-      <title>Heavy-tails</title>
-      <link>https://strakaps.github.io/tags/heavy-tails/</link>
-      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://strakaps.github.io/tags/heavy-tails/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Internship</title>
       <link>https://strakaps.github.io/tags/internship/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
@@ -112,7 +94,7 @@
     </item>
     
     <item>
-      <title>Machine-learning</title>
+      <title>Machine Learning</title>
       <link>https://strakaps.github.io/tags/machine-learning/</link>
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
@@ -123,7 +105,7 @@
     <item>
       <title>Networks</title>
       <link>https://strakaps.github.io/tags/networks/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/networks/</guid>
       <description></description>
@@ -132,7 +114,7 @@
     <item>
       <title>PhD</title>
       <link>https://strakaps.github.io/tags/phd/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/phd/</guid>
       <description></description>
@@ -148,15 +130,6 @@
     </item>
     
     <item>
-      <title>Public-health</title>
-      <link>https://strakaps.github.io/tags/public-health/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
-      
-      <guid>https://strakaps.github.io/tags/public-health/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Publication</title>
       <link>https://strakaps.github.io/tags/publication/</link>
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
@@ -168,7 +141,7 @@
     <item>
       <title>Python</title>
       <link>https://strakaps.github.io/tags/python/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/python/</guid>
       <description></description>
@@ -177,16 +150,16 @@
     <item>
       <title>R</title>
       <link>https://strakaps.github.io/tags/r/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R-package</title>
+      <title>R package</title>
       <link>https://strakaps.github.io/tags/r-package/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/r-package/</guid>
       <description></description>
@@ -195,7 +168,7 @@
     <item>
       <title>Scholarship</title>
       <link>https://strakaps.github.io/tags/scholarship/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/scholarship/</guid>
       <description></description>
@@ -204,14 +177,14 @@
     <item>
       <title>Software</title>
       <link>https://strakaps.github.io/tags/software/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/software/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Statistical-physics</title>
+      <title>Statistical Physics</title>
       <link>https://strakaps.github.io/tags/statistical-physics/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
@@ -222,14 +195,14 @@
     <item>
       <title>Statistics</title>
       <link>https://strakaps.github.io/tags/statistics/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/tags/statistics/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Stochastic-processes</title>
+      <title>Stochastic Processes</title>
       <link>https://strakaps.github.io/tags/stochastic-processes/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       

@@ -34,5 +34,24 @@ Thu &amp;amp; Fri: Workshop &amp;amp; Talks In the workshop &amp;ldquo;Deploying
  The large NUHS (National University Health System) databases and their storage structure Data security and ownership Applications for access to data The always changing standards of diagnosis codes (ICD9, ICD10, SNOMED, &amp;hellip;) and the problem of matching doctors diagnoses to these codes.</description>
     </item>
     
+    <item>
+      <title>Networks of Health Providers</title>
+      <link>https://strakaps.github.io/project/gp-networks/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/project/gp-networks/</guid>
+      <description>What is the network structure of healthcare providers and their practices/clinics? What is their patient sharing pattern? Does sharing of patient information between providers lead to better health outcomes? Do practice size and patient sharing behaviour influence the quality of healthcare?  Australian Medicare claims data contains data1 on tens of thousands of healthcare providers and millions of patients, such as patient characteristics (age, sex, &amp;hellip;) and provider characteristics (specialty, type and frequency of services delivered, bulk-billing behaviour,</description>
+    </item>
+    
+    <item>
+      <title>Identifying antidepressant users with depression</title>
+      <link>https://strakaps.github.io/project/antidepressants/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/project/antidepressants/</guid>
+      <description>Records of antidepressant dispensings are often used in public health research as a surrogate measure of depression. In 1&amp;frasl;3 to 1&amp;frasl;2 of cases however, antidepressants are prescribed for indications other than depression, which results in misclassification.
+Medicare Benefits Schedule (MBS) data contain the dispensings of antidepressants and other pharmaceuticals, and data from the 45 and Up Study provide a gold standard response variable (a yes/no answer to &amp;ldquo;Have you been treated for depression?</description>
+    </item>
+    
   </channel>
 </rss>

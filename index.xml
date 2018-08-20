@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +1100</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks</title>
+      <link>https://strakaps.github.io/publication/voffpe/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/publication/voffpe/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Overcoming the data drought: exploring general practice in Australia by network analysis of big data</title>
       <link>https://strakaps.github.io/publication/mja/</link>
-      <pubDate>Sun, 29 Jul 2018 00:00:00 +0800</pubDate>
+      <pubDate>Sun, 29 Jul 2018 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/publication/mja/</guid>
       <description>&lt;p&gt;See my &lt;a href=&#34;https://strakaps.github.io/post/2018-07-mja-paper/&#34;&gt;blog post for this publication&lt;/a&gt;.&lt;/p&gt;
@@ -34,7 +43,7 @@ accompanying this article.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Our joint work
 (&lt;a href=&#34;https://cbdrh.med.unsw.edu.au/&#34; target=&#34;_blank&#34;&gt;UNSW CBDRH&lt;/a&gt; and
-&lt;a href=&#34;https://www.maths.unsw.edu.au/about/statistics&#34; target=&#34;_blank&#34;&gt;Statistics&lt;/a&gt;)
+&lt;a href=&#34;https://www.maths.unsw.edu.au/about/Statistics&#34; target=&#34;_blank&#34;&gt;Statistics&lt;/a&gt;)
 which analyses Australian patient claim data using big network algorithms
 is now available on the
 &lt;a href=&#34;https://www.mja.com.au/journal/2018/209/2/overcoming-data-drought-exploring-general-practice-australia-network-analysis&#34; target=&#34;_blank&#34;&gt;MJA website&lt;/a&gt;.
@@ -53,7 +62,7 @@ PPCs?&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Datasets such as provided by
-&lt;a href=&#34;http://sydney.edu.au/medicine/public-health/research/beach.php&#34; target=&#34;_blank&#34;&gt;BEACH&lt;/a&gt;
+&lt;a href=&#34;http://sydney.edu.au/medicine/Public Health/research/beach.php&#34; target=&#34;_blank&#34;&gt;BEACH&lt;/a&gt;
 (Bettering the Evaluation And Care of Health, USYD)
 would be ideal to tackle these questions, but were
 &lt;a href=&#34;http://sydney.edu.au/medicine/fmrc/media/FMRC-closure-2016-06.php&#34; target=&#34;_blank&#34;&gt;discontinued&lt;/a&gt;
@@ -357,7 +366,7 @@ credit risk industry.&lt;/p&gt;
     <item>
       <title>Networks of Health Providers</title>
       <link>https://strakaps.github.io/project/gp-networks/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/project/gp-networks/</guid>
       <description>&lt;ul&gt;
@@ -398,7 +407,7 @@ tackle questions of national importance such as the above.&lt;/p&gt;
     <item>
       <title>R package CTRE</title>
       <link>https://strakaps.github.io/project/ctre/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/project/ctre/</guid>
       <description></description>
@@ -407,7 +416,7 @@ tackle questions of national importance such as the above.&lt;/p&gt;
     <item>
       <title>Peaks Over Threshold for Bursty Time Series</title>
       <link>https://strakaps.github.io/publication/bursty-pot/</link>
-      <pubDate>Sat, 28 Apr 2018 00:00:00 +0800</pubDate>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/publication/bursty-pot/</guid>
       <description></description>
@@ -429,7 +438,7 @@ Equations derived from Continuous Time Random Walks&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The variable order fractional
 Fokker-Planck equation (VOFFPE),
 in simple form&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, is
-&lt;span class=&#34;math display&#34;&gt;\[\frac{\partial}{\partial t} p(x,t) = \frac{\partial^2}{\partial x^2} 
+&lt;span class=&#34;math display&#34;&gt;\[\frac{\partial}{\partial t} p(x,t) = \frac{\partial^2}{\partial x^2}
 \underbrace{D_t^{1-\beta(x)}}_{\text{fractional derivative}}
 p(x,t).\]&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -487,117 +496,9 @@ extend these benefits to the variable order setting (to be continued).&lt;/p&gt;
     </item>
     
     <item>
-      <title>R package MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
-      <link>https://strakaps.github.io/post/mittag-leffler/</link>
-      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://strakaps.github.io/post/mittag-leffler/</guid>
-      <description>&lt;p&gt;Ricky Gill and I have created the R package MittagLeffleR,
-documented at
-&lt;a href=&#34;../../MittagLeffleR/index.html&#34;&gt;strakaps.github.io/MittagLeffleR/&lt;/a&gt;.
-It is available on &lt;a href=&#34;https://cran.r-project.org/web/packages/MittagLeffleR/index.html&#34;&gt;CRAN&lt;/a&gt; (and the latest development version on &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR&#34;&gt;GitHub&lt;/a&gt;).
-MittagLeffleR calculates both Mittag-Leffler
-distributions; i.e. probability density, cumulative distribution function,
-quantile function and fast random variate generation.
-It was made possible by the &lt;a href=&#34;https://au.mathworks.com/matlabcentral/fileexchange/48154-the-mittag-leffler-function&#34;&gt;Laplace inversion algorithm&lt;/a&gt; for the
-Mittag-Leffler function by
-&lt;a href=&#34;https://twitter.com/rgarrappa&#34;&gt;Roberto Garrappa&lt;/a&gt;.
-Install it via&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;MittagLeffleR&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;the-two-mittag-leffler-distributions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;The Two Mittag-Leffler distributions&lt;/h2&gt;
-&lt;p&gt;Various journal articles (including my own) write about “the” Mittag-Leffler
-distribution, but actually there are
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Mittag-Leffler_distribution&#34;&gt;&lt;em&gt;two&lt;/em&gt; such families of distributions&lt;/a&gt;.
-Both have a shape parameter (&lt;code&gt;tail&lt;/code&gt;) taken from the interval
-&lt;span class=&#34;math inline&#34;&gt;\((0,1]\)&lt;/span&gt;, but the first distribution is &lt;em&gt;very heavy-tailed&lt;/em&gt; with infinite
-mean if &lt;code&gt;tail&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\in (0,1)\)&lt;/span&gt;
-(it is equal to the exponential distribution if &lt;code&gt;tail&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(=1\)&lt;/span&gt;)
-whereas the second distribution is light-tailed (has finite moments
-of all orders). The boolean variable &lt;code&gt;second.type&lt;/code&gt; switches between
-these two distributions.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;examples&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Examples&lt;/h2&gt;
-&lt;div id=&#34;first-type-waiting-times-between-events&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;First type = waiting times between events&lt;/h3&gt;
-&lt;p&gt;The first type Mittag-Leffler distribution commonly occurs for the
-&lt;strong&gt;inter-arrival times between events in complex systems&lt;/strong&gt; (e.g. earthquakes, see future post).
-Suppose that for an event to happen, several “tries” are needed,
-and that each try has a duration.
-The number &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; of tries until a success is geometrically distributed,
-and the &lt;em&gt;sum&lt;/em&gt; of &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; durations is well approximated by a Mittag-Leffler (type I) distribution (this is the &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR&#34;&gt;geometric stable&lt;/a&gt; property).&lt;/p&gt;
-&lt;p&gt;As an example, we simulate &lt;code&gt;n=100&lt;/code&gt; Mittag-Leffler (type I) random
-variables,
-and estimate their tail and scale parameters via maximum likelihood:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(MittagLeffleR)
-y = rml(n = 100, tail = 0.9, scale = 2)
-mlml &amp;lt;- function(X) {
-  log_l &amp;lt;- function(theta) {
-    #transform parameters so can do optimization unconstrained
-    theta[1] &amp;lt;- 1/(1+exp(-theta[1]))
-    theta[2] &amp;lt;- exp(theta[2])
-    -sum(log(dml(X,theta[1],theta[2])))
-  }
-  ml_theta &amp;lt;- stats::optim(c(0.5,0.5), fn=log_l)$par
-  #transform back
-  ml_a &amp;lt;- 1/(1 + exp(-ml_theta[1]))
-  ml_d &amp;lt;- exp(ml_theta[2])
-  return(list(&amp;quot;tail&amp;quot; = ml_a, &amp;quot;scale&amp;quot; = ml_d))
-}
-mlml(y)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## $tail
-## [1] 0.9349602
-## 
-## $scale
-## [1] 2.044665&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;second-type-number-of-events&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Second type = number of events&lt;/h3&gt;
-&lt;p&gt;The second type Mittag-Leffler distribution typically occurs for the
-random &lt;strong&gt;number of events in complex systems&lt;/strong&gt;.
-For instance, assume a random walk with heavy-tailed waiting times;
-this has become a widely adopted model for
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Anomalous_diffusion&#34;&gt;anomalous diffusion&lt;/a&gt;.
-For late times, its number of steps
-&lt;a href=&#34;https://doi.org/10.1017/S002190020002043X&#34;&gt;can be well approximated by a Mittag-Leffler (type II) distribution&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The time-change of a random walk by the random number of steps is called
-&lt;em&gt;subordination&lt;/em&gt;; the random number of steps is approximated by the
-&lt;a href=&#34;https://stt.msu.edu/users/mcubed/hittingTime.pdf&#34;&gt;inverse stable subordinator&lt;/a&gt;.
-Below we calculate the probability density of a random walker with
-step size &lt;code&gt;dx=0.01&lt;/code&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the number of steps up to time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; is stored in the vector &lt;span class=&#34;math inline&#34;&gt;\(h\)&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;the matrix &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; stores the probability distribution at the lattice
-sites at consecutive times&lt;/li&gt;
-&lt;li&gt;the “subordination” happens in the matrix product &lt;code&gt;N %*% h&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(MittagLeffleR)
-tail &amp;lt;- 0.65
-dx &amp;lt;- 0.01
-x &amp;lt;- seq(-2,5,dx)
-umax &amp;lt;- qml(p=0.99, tail=tail, scale=1, second.type=TRUE)
-u &amp;lt;- seq(0.01,umax,dx)
-h &amp;lt;- dml(x=u, tail=tail, scale=1, second.type=TRUE)
-N &amp;lt;- outer(x,u,function(x,u){dnorm(x=x, mean=u, sd=sqrt(u))})
-p &amp;lt;- N %*% h * dx
-plot(x,p, type=&amp;#39;l&amp;#39;, main=&amp;quot;Fractional diffusion with drift at t=1&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/post/MittagLeffleR_files/figure-html/scary-shark-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;bugs-and-issues&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Bugs and Issues&lt;/h2&gt;
-&lt;p&gt;Should you run into any bugs or issues, please
-&lt;a href=&#34;https://github.com/strakaps/MittagLeffleR/issues&#34;&gt;let us know&lt;/a&gt;.
-Thanks!&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Prestigious Scientia PhD Scholarship available</title>
       <link>https://strakaps.github.io/post/scientia-phd/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/post/scientia-phd/</guid>
       <description>
@@ -610,7 +511,7 @@ annum tax-free stipend and a travel and development support package of up to &lt
 &lt;p&gt;In addition to this scholarship package, scholars are provided with access to a range of development opportunities across research, teaching and learning and leadership and engagement.&lt;/p&gt;
 
 &lt;p&gt;Applicants should submit their expression of interest at&lt;br /&gt;
-&lt;a href=&#34;http://www.2025.unsw.edu.au/apply/scientia-phd-scholarships/using-big-data-redesign-health-system&#34; target=&#34;_blank&#34;&gt;http://www.2025.unsw.edu.au/apply/scientia-phd-scholarships/using-big-data-redesign-health-system&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.2025.unsw.edu.au/apply/scientia-phd-scholarships/using-Big Data-redesign-health-system&#34; target=&#34;_blank&#34;&gt;http://www.2025.unsw.edu.au/apply/scientia-phd-scholarships/using-Big Data-redesign-health-system&lt;/a&gt;&lt;br /&gt;
 by 21st July 2017 but are encouraged to do so as early as possible.&lt;/p&gt;
 
 &lt;p&gt;More information on the UNSW Scientia PhD Scholarship Scheme:&lt;/p&gt;
@@ -638,7 +539,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>R package MittagLeffleR</title>
       <link>https://strakaps.github.io/project/mittagleffler/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/project/mittagleffler/</guid>
       <description></description>
@@ -647,26 +548,16 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>A semi-markov algorithm for continuous time random walk limit distributions</title>
       <link>https://strakaps.github.io/publication/semi-markov-algo/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>https://strakaps.github.io/publication/semi-markov-algo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Example Talk</title>
-      <link>https://strakaps.github.io/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
-      
-      <guid>https://strakaps.github.io/talk/example-talk/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Fokker–Planck and Kolmogorov backward equations for continuous time random walk scaling limits</title>
       <link>https://strakaps.github.io/publication/forward-backward-ffpe/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0800</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>https://strakaps.github.io/publication/forward-backward-ffpe/</guid>
       <description></description>
@@ -675,7 +566,7 @@ Please contact either of us for more details.&lt;/p&gt;
     <item>
       <title>Continuous Time Random Walks</title>
       <link>https://strakaps.github.io/project/anomalous-diffusion/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/project/anomalous-diffusion/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Diffusion&lt;/strong&gt; is the net movement of molecules or atoms from a region of high
@@ -709,6 +600,38 @@ there has been a fruitful exchange
 between statistical physics, experimental physics, pure mathematics and
 computational mathematics, which has significantly advanced biophysics,
 among other fields.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Extremes of Bursty Time Series</title>
+      <link>https://strakaps.github.io/project/bursts/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/project/bursts/</guid>
+      <description>&lt;p&gt;Extreme value theory is concerned with the modelling and prediction of extremes in a series of observations.
+Accurate estimates of probabilities for the exceedence of extreme levels of temperature, financial loss, the
+number of defective nodes in a network etc. are crucial for the control of risk in a great number of societal
+systems.
+&amp;ldquo;Mainstream&amp;rdquo; extreme value theory assumes that events happen uniformly, e.g. yearly, daily, or every second,
+or that events occur at a certain rate (Poisson process). In fact, however, a great number of systems violates this
+assumption: Events occur in Bursts, intermittent with quiescent periods drawn from a heavy-tailed distribution.
+This phenomenon is ubiquitous for human-created events, and is deemed to occur for any type of action
+resulting from a dynamic list of priorities.&lt;/p&gt;
+
+&lt;p&gt;Often a magnitude, or mark can be assigned to each event in the renewal
+process, such as for earthquakes, solar flares, neuron voltages etc. The
+Peaks-Over-Threshold model (POT, see e.g. Coles 2001) applies a threshold to
+the magnitudes, and fits a Generalized Pareto distribution to the threshold
+exceedances. The timing of the threshold exceedances fits well with a
+&amp;ldquo;Poisson process&amp;rdquo;, i.e. the threshold crossing times are distributed
+completely randomly on the given time interval.&lt;/p&gt;
+
+&lt;p&gt;For bursty data, the Poisson process representation is no long valid, but a
+fractional Poisson process representation holds. This project derives the
+theoretical model behind the timings of bursty threshold crossings,
+statistical methods for the fitting of the model, and R software packages for
+applications to data.&lt;/p&gt;
 </description>
     </item>
     
