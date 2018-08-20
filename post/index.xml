@@ -46,6 +46,16 @@ Apply here: https://aprintern.org.au/2018/05/21/int-0431/</description>
     </item>
     
     <item>
+      <title>R package CTRE: thresholding bursty time series</title>
+      <link>https://strakaps.github.io/post/ctre-package/</link>
+      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/post/ctre-package/</guid>
+      <description>The new R package CTRE is now available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series. The theory is desribed in another paper (html|pdf).
+library(CTRE) flares_ctre &amp;lt;- ctre(flares) plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;) The above time series are measurements of solar flare magnitudes by NASA1. Which observations are considered extreme is defined by a variable threshold \(u\) (dashed line, \(&amp;lt; 5\%\) of observations).</description>
+    </item>
+    
+    <item>
       <title>Fractional Diffusion where &#34;fractional&#34; varies in space</title>
       <link>https://strakaps.github.io/post/voffpe/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
@@ -55,7 +65,17 @@ Apply here: https://aprintern.org.au/2018/05/21/int-0431/</description>
  Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks
  is currently under review.
 The variable order fractional Fokker-Planck equation (VOFFPE), in simple form1, is \[\frac{\partial}{\partial t} p(x,t) = \frac{\partial^2}{\partial x^2} \underbrace{D_t^{1-\beta(x)}}_{\text{fractional derivative}} p(x,t).\]
- If you take out the fractional derivative operator, you get the Fokker-Planck equation (FPE). It describes the spreading of probability via a random walk:   Adding in the fractional derivative \[D_t^{1-\beta} p(x,t) = \int_0^t p(x,t-s) \frac{s^{-\beta}}{\Gamma(1-\beta)}\,ds\] results in the “fractional FPE”.</description>
+ If you take out the fractional derivative operator, you get the Fokker-Planck equation (FPE). It describes the spreading of probability via a random walk:    Adding in the fractional derivative \[D_t^{1-\beta} p(x,t) = \int_0^t p(x,t-s) \frac{s^{-\beta}}{\Gamma(1-\beta)}\,ds\] results in the “fractional FPE”.</description>
+    </item>
+    
+    <item>
+      <title>R package MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
+      <link>https://strakaps.github.io/post/mittag-leffler/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/post/mittag-leffler/</guid>
+      <description>Ricky Gill and I have created the R package MittagLeffleR, documented at strakaps.github.io/MittagLeffleR/. It is available on CRAN (and the latest development version on GitHub). MittagLeffleR calculates both Mittag-Leffler distributions; i.e. probability density, cumulative distribution function, quantile function and fast random variate generation. It was made possible by the Laplace inversion algorithm for the Mittag-Leffler function by Roberto Garrappa. Install it via
+install.packages(&amp;quot;MittagLeffleR&amp;quot;) The Two Mittag-Leffler distributions Various journal articles (including my own) write about “the” Mittag-Leffler distribution, but actually there are two such families of distributions.</description>
     </item>
     
     <item>
@@ -66,24 +86,6 @@ The variable order fractional Fokker-Planck equation (VOFFPE), in simple form1, 
       <guid>https://strakaps.github.io/post/scientia-phd/</guid>
       <description>It is my pleasure to announce that applications for the prestigious UNSW Scientia Ph.D. Scholarship Scheme on the project &amp;ldquo;Using Big Data to Redesign the Health System&amp;rdquo; are now open.
 The UNSW Scientia Ph.D. Scholarship Scheme is the most prestigious and generous scholarship scheme at UNSW and it aims to attract the best and brightest people into strategic research areas. Awardees receive a $50,000 scholarship package for four years, comprising a $40,000 per annum tax-free stipend and a travel and development support package of up to $10,000 per annum.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://strakaps.github.io/post/mittagleffler/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://strakaps.github.io/post/mittagleffler/</guid>
-      <description>R package MittagLeffleR: Using the Mittag-Leffler distributions in R       code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs) { hljs.configure({languages: []}); hljs.initHighlightingOnLoad(); if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); } }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://strakaps.github.io/post/ctre-package/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://strakaps.github.io/post/ctre-package/</guid>
-      <description>R package CTRE: thresholding bursty time series       code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs) { hljs.configure({languages: []}); hljs.initHighlightingOnLoad(); if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); } }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
     </item>
     
   </channel>

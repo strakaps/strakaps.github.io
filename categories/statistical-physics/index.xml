@@ -22,7 +22,7 @@
  Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks
  is currently under review.
 The variable order fractional Fokker-Planck equation (VOFFPE), in simple form1, is \[\frac{\partial}{\partial t} p(x,t) = \frac{\partial^2}{\partial x^2} \underbrace{D_t^{1-\beta(x)}}_{\text{fractional derivative}} p(x,t).\]
- If you take out the fractional derivative operator, you get the Fokker-Planck equation (FPE). It describes the spreading of probability via a random walk:   Adding in the fractional derivative \[D_t^{1-\beta} p(x,t) = \int_0^t p(x,t-s) \frac{s^{-\beta}}{\Gamma(1-\beta)}\,ds\] results in the “fractional FPE”.</description>
+ If you take out the fractional derivative operator, you get the Fokker-Planck equation (FPE). It describes the spreading of probability via a random walk:    Adding in the fractional derivative \[D_t^{1-\beta} p(x,t) = \int_0^t p(x,t-s) \frac{s^{-\beta}}{\Gamma(1-\beta)}\,ds\] results in the “fractional FPE”.</description>
     </item>
     
     <item>

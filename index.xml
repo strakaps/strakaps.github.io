@@ -414,6 +414,79 @@ tackle questions of national importance such as the above.&lt;/p&gt;
     </item>
     
     <item>
+      <title>R package CTRE: thresholding bursty time series</title>
+      <link>https://strakaps.github.io/post/ctre-package/</link>
+      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/post/ctre-package/</guid>
+      <description>&lt;p&gt;The new &lt;a href=&#34;https://strakaps.github.io/CTRE/&#34;&gt;R package &lt;code&gt;CTRE&lt;/code&gt;&lt;/a&gt; is now available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series. The theory is desribed in another paper (&lt;a href=&#34;https://strakaps.github.io/bursty-POT/&#34;&gt;html&lt;/a&gt;|&lt;a href=&#34;https://arxiv.org/pdf/1802.05218.pdf&#34;&gt;pdf&lt;/a&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(CTRE)
+flares_ctre &amp;lt;- ctre(flares)
+plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/post/ctre-package_files/figure-html/data-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The above time series are measurements of solar flare magnitudes by NASA&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. Which observations are considered extreme is defined by a variable threshold &lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt; (dashed line, &lt;span class=&#34;math inline&#34;&gt;\(&amp;lt; 5\%\)&lt;/span&gt; of observations). The exceedances of this threshold (red) follow (asymptotically for high &lt;span class=&#34;math inline&#34;&gt;\(u\)&lt;/span&gt;) a &lt;a href=&#34;https://en.wikipedia.org/wiki/Generalized_Pareto_distribution&#34;&gt;Generalized Pareto distribution&lt;/a&gt;. This type of modelling of extremes is standard in Extreme Value Theory, and known as the &lt;a href=&#34;https://en.wikipedia.org/wiki/Extreme_value_theory#Data_analysis&#34;&gt;Peaks Over Threshold&lt;/a&gt; (POT) method. To date, &lt;a href=&#34;https://cran.r-project.org/web/views/ExtremeValue.html&#34;&gt;&lt;em&gt;18 R packages&lt;/em&gt;&lt;/a&gt; have been developed for POT!&lt;/p&gt;
+&lt;div id=&#34;whats-new-about-ctre&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What’s new about &lt;code&gt;CTRE&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;CTRE&lt;/code&gt; provides a new way to model the &lt;strong&gt;bursty timing&lt;/strong&gt; of the threshold crossings. In complex systems, &lt;em&gt;inter-event times&lt;/em&gt; are typically heavy-tailed&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, and thus highly heterogeneous (think income distributions). The bulk of inter-event times is short, corresponding to Bursts of events. A few very long inter-event times represent quiet periods.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://strakaps.github.io/MittagLeffleR/&#34;&gt;Mittag-Leffler distribution&lt;/a&gt; is universal for times between threshold crossings, see the &lt;a href=&#34;https://strakaps.github.io/bursty-POT/&#34;&gt;companion paper&lt;/a&gt;. &lt;code&gt;CTRE&lt;/code&gt; fits a Mittag-Leffler distribution to a range of threshold values:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;flares_ctre &amp;lt;- thin(flares_ctre, k = 700)
+par(mfrow = c(1,2))
+MLestimates(flares_ctre, tail = 0.9, scale = 3E7)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/post/ctre-package_files/figure-html/stability-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Above, the threshold is varied from the 5th to the 700th largest magnitude (as you move right along the x-axes) and the parameters estimates are plotted on the y-axis. For both panels, towards the left (exceedances=5), only few data are available, and the estimate has a high variance. Towards the right (exceedances = 700), the threshold is low, and the Mittag-Leffler fit degrades (high bias). In between is where we want to read off our (hopefully stable) parameter estimates. The above plots are hence called “stability plots”.&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;Important:&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;The scale parameter is proportional to &lt;span class=&#34;math inline&#34;&gt;\(k^{-1/\beta}\)&lt;/span&gt;. The parameter &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt; is hence used to rescale the y-values of the right-hand plot, in order to make the estimates constant, and needs to estimated from the left-hand plot first.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ctre-applied-to-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;code&gt;CTRE&lt;/code&gt; applied to data&lt;/h2&gt;
+&lt;p&gt;For the solar flare data, we read off &lt;span class=&#34;math display&#34;&gt;\[
+\beta \approx 0.9, \quad \sigma \approx 3 \times 10^7.
+\]&lt;/span&gt; This means that the inter-arrival time &lt;span class=&#34;math inline&#34;&gt;\(T(k)\)&lt;/span&gt; for magnitudes as high as the &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt;-th magnitude is distributed as &lt;span class=&#34;math display&#34;&gt;\[
+T(k) \sim {\rm ML}\left(0.9, \frac{3 \times 10^7 {\rm sec}}{k^{1/0.9}} \right).
+\]&lt;/span&gt; For example, let’s assume the magnitude (peak rate) &lt;span class=&#34;math inline&#34;&gt;\(10,000\)&lt;/span&gt;. How many magnitudes exceed it?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magrittr)
+(flares_ctre %&amp;gt;% magnitudes() %&amp;gt;% sort(decreasing=TRUE) &amp;gt; 10000) %&amp;gt;% sum()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 24&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So substitute &lt;span class=&#34;math inline&#34;&gt;\(k = 24\)&lt;/span&gt;. The model thus predicts inter-arrival times drawn from the distribution &lt;span class=&#34;math display&#34;&gt;\[
+{\rm ML}\left(0.9, 8.8\times 10^{5} {\rm sec} \right)
+= {\rm ML}\left(0.9, 10 {\rm days} \right).
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here’s the plot of this distribution, on a logarithmic scale:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/post/ctre-package_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;480&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Compared to the Exponential distribution, the Mittag-Leffler distribution puts more probability mass on both tiny values (Bursts) and values in the tails (quiet periods).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;shiny-app&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Shiny app&lt;/h2&gt;
+&lt;p&gt;Running&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;CTRE::runCTREshiny()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;opens a Shiny app that that lets you do the above manipulations via sliders. It is / should be loading below:&lt;/p&gt;
+&lt;iframe src=&#34;https://strakaps.shinyapps.io/ctre-app/&#34; style=&#34;border: none; width: 800px; height: 900px&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-about-clustering-of-extremes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What about “clustering of extremes”?&lt;/h2&gt;
+&lt;p&gt;The main other appraoch in Extreme Value Theory which addresses irregular (non-Poissonian) threshold crossing times goes under the name “clustering of extremes”.&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; It assumes that the underlying process is stationary, and conflates each excursion of the process above the threshold as one cluster of events.&lt;/p&gt;
+&lt;p&gt;CTREs and clustering of extremes both generalize the standard assumption of independent events, but in different directions. They are hence complementary, and it needs to be investigated how they should be compared meaningfully.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feedback&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Feedback&lt;/h2&gt;
+&lt;p&gt;Do you think CTREs are a useful model? Please comment below.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The &lt;a href=&#34;https://ntrs.nasa.gov/search.jsp?R=19920006736&#34;&gt;“complete Hard X Ray Burst Spectrometer event list”&lt;/a&gt; is a comprehensive reference for all measurements of the Hard X Ray Burst Spectrometer on NASA’s Solar Maximum Mission from the time of launch on Feb 14, 1980 to the end of the mission in Dec 1989. 12,776 events were detected, with the “vast majority being solar flares”. The list includes the start time, peak time, duration, and peak rate of each event. We have used “start time” as the variable for event times, and “peak rate” as the variable for event magnitudes.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;See the Introduction of &lt;a href=&#34;http://iopscience.iop.org/article/10.1088/1367-2630/15/10/103023&#34;&gt;“Modelling bursty time series”&lt;/a&gt; by Vajna, Tóth &amp;amp; Kertész, for a list of complex systems with heavy-tailed inter-event times.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;See e.g. Chapter 3 in the textbook &lt;a href=&#34;https://books.google.com.ph/books/about/Extremes_and_Related_Properties_of_Rando.html?id=-ofTBwAAQBAJ&amp;amp;redir_esc=y&#34;&gt;&lt;em&gt;Extremes and Related Properties of Random Sequences and Processes&lt;/em&gt;&lt;/a&gt; by Leadbetter, Lindgren &amp;amp; Rootzén.&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Peaks Over Threshold for Bursty Time Series</title>
       <link>https://strakaps.github.io/publication/bursty-pot/</link>
       <pubDate>Sat, 28 Apr 2018 00:00:00 +1000</pubDate>
@@ -428,69 +501,110 @@ tackle questions of national importance such as the above.&lt;/p&gt;
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://strakaps.github.io/post/voffpe/</guid>
-      <description>&lt;p&gt;The new paper
-(&lt;a href=&#34;http://arxiv.org/abs/1712.06767&#34;&gt;arxiv.org/abs/1712.06767&lt;/a&gt;)&lt;/p&gt;
+      <description>&lt;p&gt;The new paper (&lt;a href=&#34;http://arxiv.org/abs/1712.06767&#34;&gt;arxiv.org/abs/1712.06767&lt;/a&gt;)&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Variable Order Fractional Fokker-Planck
-Equations derived from Continuous Time Random Walks&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;is currently under review.&lt;/p&gt;
-&lt;p&gt;The variable order fractional
-Fokker-Planck equation (VOFFPE),
-in simple form&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, is
-&lt;span class=&#34;math display&#34;&gt;\[\frac{\partial}{\partial t} p(x,t) = \frac{\partial^2}{\partial x^2}
+&lt;p&gt;The variable order fractional Fokker-Planck equation (VOFFPE), in simple form&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, is &lt;span class=&#34;math display&#34;&gt;\[\frac{\partial}{\partial t} p(x,t) = \frac{\partial^2}{\partial x^2}
 \underbrace{D_t^{1-\beta(x)}}_{\text{fractional derivative}}
 p(x,t).\]&lt;/span&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If you take out the fractional derivative operator, you get the
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation&#34;&gt;&lt;strong&gt;Fokker-Planck equation&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;(FPE)&lt;/strong&gt;.
-It describes the spreading of probability via a random walk:&lt;/li&gt;
+&lt;li&gt;If you take out the fractional derivative operator, you get the &lt;a href=&#34;https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation&#34;&gt;&lt;strong&gt;Fokker-Planck equation&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;(FPE)&lt;/strong&gt;. It describes the spreading of probability via a random walk:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/img/spreading.gif&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://strakaps.github.io/img/spreading.gif&#34; /&gt;
+
+&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Adding in the
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Fractional_calculus&#34;&gt;fractional derivative&lt;/a&gt;
-&lt;span class=&#34;math display&#34;&gt;\[D_t^{1-\beta} p(x,t) = \int_0^t p(x,t-s) \frac{s^{-\beta}}{\Gamma(1-\beta)}\,ds\]&lt;/span&gt;
-results in the “&lt;strong&gt;fractional FPE&lt;/strong&gt;”. The fractional derivative
-corresponds to longs rests of a walker, and slows down the spreading (making the
-dynamics “sub”diffusive).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Here the order &lt;span class=&#34;math inline&#34;&gt;\(1-\beta\)&lt;/span&gt; of the fractional derivative varies with the
-location &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; of the walker, hence the name VOFFPE
-(&lt;strong&gt;variable order fractional FPE&lt;/strong&gt;).
-In some regions, e.g. where the intracellular matrix of a cell is dense&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;,
-the trappingness can be stronger, which is modelled by a smaller &lt;span class=&#34;math inline&#34;&gt;\(\beta(x)\)&lt;/span&gt;
-in that region.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Adding in the &lt;a href=&#34;https://en.wikipedia.org/wiki/Fractional_calculus&#34;&gt;fractional derivative&lt;/a&gt; &lt;span class=&#34;math display&#34;&gt;\[D_t^{1-\beta} p(x,t) = \int_0^t p(x,t-s) \frac{s^{-\beta}}{\Gamma(1-\beta)}\,ds\]&lt;/span&gt; results in the “&lt;strong&gt;fractional FPE&lt;/strong&gt;”. The fractional derivative corresponds to longs rests of a walker, and slows down the spreading (making the dynamics “sub”diffusive).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Here the order &lt;span class=&#34;math inline&#34;&gt;\(1-\beta\)&lt;/span&gt; of the fractional derivative varies with the location &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; of the walker, hence the name VOFFPE (&lt;strong&gt;variable order fractional FPE&lt;/strong&gt;). In some regions, e.g. where the intracellular matrix of a cell is dense&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, the trappingness can be stronger, which is modelled by a smaller &lt;span class=&#34;math inline&#34;&gt;\(\beta(x)\)&lt;/span&gt; in that region.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The paper shows that the equation has a unique solution &lt;span class=&#34;math inline&#34;&gt;\(p(x,t)\)&lt;/span&gt;, and that
-this solution is the probability distribution of a Continuous Time
-Random Walk (CTRW)&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.
-CTRWs are random walks with random waiting times between
-jumps:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/img/CTRW.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The fractional derivative in time is tightly linked with
-&lt;a href=&#34;https://strakaps.github.io/post/mittag-leffler/&#34;&gt;Mittag-Leffler distributed&lt;/a&gt; waiting times.&lt;/p&gt;
-&lt;p&gt;Of course CTRWs can be simulated, and &lt;span class=&#34;math inline&#34;&gt;\(p(x,t)\)&lt;/span&gt; may be computed via
-Monte Carlo simulations (or
-“&lt;a href=&#34;https://en.wikipedia.org/wiki/Single-particle_tracking&#34;&gt;particle tracking&lt;/a&gt;”).
-Thus a consequence of
-the paper is the mathematical certainty that the variable order FFPE
-(VOFFPE) can be solved by simulations.&lt;/p&gt;
-&lt;p&gt;The variable order FFPE can also be solved directly, via clever numerical
-algorithms. The CTRW interpretation of the VOFFPE can be leveraged for
-such a clever numerical algorithm, as our friends over in applied maths
-have done with their
-&lt;a href=&#34;http://dx.doi.org/10.1016/j.jcp.2014.08.003&#34;&gt;Discrete Time Random Walk algorithm&lt;/a&gt;.
-This approach has several great benefits&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, and now we know how to
-extend these benefits to the variable order setting (to be continued).&lt;/p&gt;
+&lt;p&gt;The paper shows that the equation has a unique solution &lt;span class=&#34;math inline&#34;&gt;\(p(x,t)\)&lt;/span&gt;, and that this solution is the probability distribution of a Continuous Time Random Walk (CTRW)&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;. CTRWs are random walks with random waiting times between jumps:&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://strakaps.github.io/img/CTRW.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;The fractional derivative in time is tightly linked with &lt;a href=&#34;https://strakaps.github.io/post/mittag-leffler/&#34;&gt;Mittag-Leffler distributed&lt;/a&gt; waiting times.&lt;/p&gt;
+&lt;p&gt;Of course CTRWs can be simulated, and &lt;span class=&#34;math inline&#34;&gt;\(p(x,t)\)&lt;/span&gt; may be computed via Monte Carlo simulations (or “&lt;a href=&#34;https://en.wikipedia.org/wiki/Single-particle_tracking&#34;&gt;particle tracking&lt;/a&gt;”). Thus a consequence of the paper is the mathematical certainty that the variable order FFPE (VOFFPE) can be solved by simulations.&lt;/p&gt;
+&lt;p&gt;The variable order FFPE can also be solved directly, via clever numerical algorithms. The CTRW interpretation of the VOFFPE can be leveraged for such a clever numerical algorithm, as our friends over in applied maths have done with their &lt;a href=&#34;http://dx.doi.org/10.1016/j.jcp.2014.08.003&#34;&gt;Discrete Time Random Walk algorithm&lt;/a&gt;. This approach has several great benefits&lt;a href=&#34;#fn4&#34; class=&#34;footnoteRef&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, and now we know how to extend these benefits to the variable order setting (to be continued).&lt;/p&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Drift and diffusivity are left out here, but they may be any
-(Lipschitz-) continuous functions.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Wong et. al, &lt;a href=&#34;http://www.physics.emory.edu/faculty/weeks/lab/papers/Wong_04.pdf&#34;&gt;PRL 2004&lt;/a&gt;&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Strictly speaking, a scaling limit of a CTRW.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;E.g. conservation of mass and non-negative solutions.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Drift and diffusivity are left out here, but they may be any (Lipschitz-) continuous functions.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Wong et. al, &lt;a href=&#34;http://www.physics.emory.edu/faculty/weeks/lab/papers/Wong_04.pdf&#34;&gt;PRL 2004&lt;/a&gt;&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Strictly speaking, a scaling limit of a CTRW.&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;E.g. conservation of mass and non-negative solutions.&lt;a href=&#34;#fnref4&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R package MittagLeffleR: Using the Mittag-Leffler distributions in R</title>
+      <link>https://strakaps.github.io/post/mittag-leffler/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/post/mittag-leffler/</guid>
+      <description>&lt;p&gt;Ricky Gill and I have created the R package MittagLeffleR, documented at &lt;a href=&#34;../../MittagLeffleR/index.html&#34;&gt;strakaps.github.io/MittagLeffleR/&lt;/a&gt;. It is available on &lt;a href=&#34;https://cran.r-project.org/web/packages/MittagLeffleR/index.html&#34;&gt;CRAN&lt;/a&gt; (and the latest development version on &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR&#34;&gt;GitHub&lt;/a&gt;). MittagLeffleR calculates both Mittag-Leffler distributions; i.e. probability density, cumulative distribution function, quantile function and fast random variate generation. It was made possible by the &lt;a href=&#34;https://au.mathworks.com/matlabcentral/fileexchange/48154-the-mittag-leffler-function&#34;&gt;Laplace inversion algorithm&lt;/a&gt; for the Mittag-Leffler function by &lt;a href=&#34;https://twitter.com/rgarrappa&#34;&gt;Roberto Garrappa&lt;/a&gt;. Install it via&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;MittagLeffleR&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;the-two-mittag-leffler-distributions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Two Mittag-Leffler distributions&lt;/h2&gt;
+&lt;p&gt;Various journal articles (including my own) write about “the” Mittag-Leffler distribution, but actually there are &lt;a href=&#34;https://en.wikipedia.org/wiki/Mittag-Leffler_distribution&#34;&gt;&lt;em&gt;two&lt;/em&gt; such families of distributions&lt;/a&gt;. Both have a shape parameter (&lt;code&gt;tail&lt;/code&gt;) taken from the interval &lt;span class=&#34;math inline&#34;&gt;\((0,1]\)&lt;/span&gt;, but the first distribution is &lt;em&gt;very heavy-tailed&lt;/em&gt; with infinite mean if &lt;code&gt;tail&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(\in (0,1)\)&lt;/span&gt; (it is equal to the exponential distribution if &lt;code&gt;tail&lt;/code&gt; &lt;span class=&#34;math inline&#34;&gt;\(=1\)&lt;/span&gt;) whereas the second distribution is light-tailed (has finite moments of all orders). The boolean variable &lt;code&gt;second.type&lt;/code&gt; switches between these two distributions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;examples&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Examples&lt;/h2&gt;
+&lt;div id=&#34;first-type-waiting-times-between-events&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;First type = waiting times between events&lt;/h3&gt;
+&lt;p&gt;The first type Mittag-Leffler distribution commonly occurs for the &lt;strong&gt;inter-arrival times between events in complex systems&lt;/strong&gt; (e.g. earthquakes, see future post). Suppose that for an event to happen, several “tries” are needed, and that each try has a duration. The number &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; of tries until a success is geometrically distributed, and the &lt;em&gt;sum&lt;/em&gt; of &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; durations is well approximated by a Mittag-Leffler (type I) distribution (this is the &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR&#34;&gt;geometric stable&lt;/a&gt; property).&lt;/p&gt;
+&lt;p&gt;As an example, we simulate &lt;code&gt;n=100&lt;/code&gt; Mittag-Leffler (type I) random variables, and estimate their tail and scale parameters via maximum likelihood:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(MittagLeffleR)
+y = rml(n = 100, tail = 0.9, scale = 2)
+mlml &amp;lt;- function(X) {
+  log_l &amp;lt;- function(theta) {
+    #transform parameters so can do optimization unconstrained
+    theta[1] &amp;lt;- 1/(1+exp(-theta[1]))
+    theta[2] &amp;lt;- exp(theta[2])
+    -sum(log(dml(X,theta[1],theta[2])))
+  }
+  ml_theta &amp;lt;- stats::optim(c(0.5,0.5), fn=log_l)$par
+  #transform back
+  ml_a &amp;lt;- 1/(1 + exp(-ml_theta[1]))
+  ml_d &amp;lt;- exp(ml_theta[2])
+  return(list(&amp;quot;tail&amp;quot; = ml_a, &amp;quot;scale&amp;quot; = ml_d))
+}
+mlml(y)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## $tail
+## [1] 0.9390633
+## 
+## $scale
+## [1] 1.600294&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;second-type-number-of-events&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Second type = number of events&lt;/h3&gt;
+&lt;p&gt;The second type Mittag-Leffler distribution typically occurs for the random &lt;strong&gt;number of events in complex systems&lt;/strong&gt;. For instance, assume a random walk with heavy-tailed waiting times; this has become a widely adopted model for &lt;a href=&#34;https://en.wikipedia.org/wiki/Anomalous_diffusion&#34;&gt;anomalous diffusion&lt;/a&gt;. For late times, its number of steps &lt;a href=&#34;https://doi.org/10.1017/S002190020002043X&#34;&gt;can be well approximated by a Mittag-Leffler (type II) distribution&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The time-change of a random walk by the random number of steps is called &lt;em&gt;subordination&lt;/em&gt;; the random number of steps is approximated by the &lt;a href=&#34;https://stt.msu.edu/users/mcubed/hittingTime.pdf&#34;&gt;inverse stable subordinator&lt;/a&gt;. Below we calculate the probability density of a random walker with step size &lt;code&gt;dx=0.01&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the number of steps up to time &lt;span class=&#34;math inline&#34;&gt;\(t\)&lt;/span&gt; is stored in the vector &lt;span class=&#34;math inline&#34;&gt;\(h\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;the matrix &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; stores the probability distribution at the lattice sites at consecutive times&lt;/li&gt;
+&lt;li&gt;the “subordination” happens in the matrix product &lt;code&gt;N %*% h&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(MittagLeffleR)
+tail &amp;lt;- 0.65
+dx &amp;lt;- 0.01
+x &amp;lt;- seq(-2,5,dx)
+umax &amp;lt;- qml(p=0.99, tail=tail, scale=1, second.type=TRUE)
+u &amp;lt;- seq(0.01,umax,dx)
+h &amp;lt;- dml(x=u, tail=tail, scale=1, second.type=TRUE)
+N &amp;lt;- outer(x,u,function(x,u){dnorm(x=x, mean=u, sd=sqrt(u))})
+p &amp;lt;- N %*% h * dx
+plot(x,p, type=&amp;#39;l&amp;#39;, main=&amp;quot;Fractional diffusion with drift at t=1&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/post/MittagLeffleR_files/figure-html/scary-shark-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bugs-and-issues&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Bugs and Issues&lt;/h2&gt;
+&lt;p&gt;Should you run into any bugs or issues, please &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR/issues&#34;&gt;let us know&lt;/a&gt;. Thanks!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -561,78 +675,6 @@ Please contact either of us for more details.&lt;/p&gt;
       
       <guid>https://strakaps.github.io/publication/forward-backward-ffpe/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Continuous Time Random Walks</title>
-      <link>https://strakaps.github.io/project/anomalous-diffusion/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
-      
-      <guid>https://strakaps.github.io/project/anomalous-diffusion/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Diffusion&lt;/strong&gt; is the net movement of molecules or atoms from a region of high
-concentration to a region of low concentration
-as a result of &lt;em&gt;random motion&lt;/em&gt; of the molecules or atoms
-(&lt;a href=&#34;https://en.wikipedia.org/wiki/Diffusion&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Due to a discovery by
-&lt;a href=&#34;https://doi.org/10.1002/andp.19053220806&#34; target=&#34;_blank&#34;&gt;Einstein (1905)&lt;/a&gt;,
-a universal model for the &lt;em&gt;random motion&lt;/em&gt; of microscopic particles
-is Brownian motion, whose
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Mean_squared_displacement&#34; target=&#34;_blank&#34;&gt;mean-squared displacement&lt;/a&gt;
-increases linearly with time.&lt;/p&gt;
-
-&lt;p&gt;In many system with particles more complex than tiny molecules which interact
-with their environment
-(e.g. proteins, self-propelled bacteria or cells, stock market prices, &amp;hellip;)
-the growth of the mean-squared displacement is no longer linear:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/e/e6/Msd_anomalous_diffusion.svg&#34; alt=&#34;anomalous-MSD&#34; /&gt; (Image credit Wikipedia).&lt;/p&gt;
-
-&lt;p&gt;The &lt;strong&gt;Continuous Time Random Walk (CTRW)&lt;/strong&gt; is a model for anomalous diffusion:
-it can model subdiffusion with long (heavy-tailed) waiting times between
-steps, and superdiffusion with long (heavy-tailed) steps, and even a
-mixture of both.&lt;/p&gt;
-
-&lt;p&gt;Scientists are interested in extending the CTRW model to allow for interactions
-between walkers, and need tools for the computation of concentrations of
-random walkers. Since the beginning of the century,
-there has been a fruitful exchange
-between statistical physics, experimental physics, pure mathematics and
-computational mathematics, which has significantly advanced biophysics,
-among other fields.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Extremes of Bursty Time Series</title>
-      <link>https://strakaps.github.io/project/bursts/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
-      
-      <guid>https://strakaps.github.io/project/bursts/</guid>
-      <description>&lt;p&gt;Extreme value theory is concerned with the modelling and prediction of extremes in a series of observations.
-Accurate estimates of probabilities for the exceedence of extreme levels of temperature, financial loss, the
-number of defective nodes in a network etc. are crucial for the control of risk in a great number of societal
-systems.
-&amp;ldquo;Mainstream&amp;rdquo; extreme value theory assumes that events happen uniformly, e.g. yearly, daily, or every second,
-or that events occur at a certain rate (Poisson process). In fact, however, a great number of systems violates this
-assumption: Events occur in Bursts, intermittent with quiescent periods drawn from a heavy-tailed distribution.
-This phenomenon is ubiquitous for human-created events, and is deemed to occur for any type of action
-resulting from a dynamic list of priorities.&lt;/p&gt;
-
-&lt;p&gt;Often a magnitude, or mark can be assigned to each event in the renewal
-process, such as for earthquakes, solar flares, neuron voltages etc. The
-Peaks-Over-Threshold model (POT, see e.g. Coles 2001) applies a threshold to
-the magnitudes, and fits a Generalized Pareto distribution to the threshold
-exceedances. The timing of the threshold exceedances fits well with a
-&amp;ldquo;Poisson process&amp;rdquo;, i.e. the threshold crossing times are distributed
-completely randomly on the given time interval.&lt;/p&gt;
-
-&lt;p&gt;For bursty data, the Poisson process representation is no long valid, but a
-fractional Poisson process representation holds. This project derives the
-theoretical model behind the timings of bursty threshold crossings,
-statistical methods for the fitting of the model, and R software packages for
-applications to data.&lt;/p&gt;
-</description>
     </item>
     
   </channel>
