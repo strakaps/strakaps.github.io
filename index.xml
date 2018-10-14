@@ -11,6 +11,195 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Add Interactions to Regularized Regression</title>
+      <link>https://strakaps.github.io/post/glinternet/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/post/glinternet/</guid>
+      <description>&lt;div id=&#34;lasso-glinternet&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Lasso &amp;amp; glinternet&lt;/h3&gt;
+&lt;p&gt;Every Data Scientist and her dog know linear and logistic regression. The majority will probably also know that these models have regularized versions, which increase predictive performance by reducing variance (at the cost of a small increase in bias). Choosing L1-regularization (Lasso) even gets you variable selection for free. The theory behind these models is covered expertly in &lt;a href=&#34;https://web.stanford.edu/~hastie/ElemStatLearn/&#34;&gt;&lt;em&gt;The Elements of Statistical Learning&lt;/em&gt;&lt;/a&gt; (for an easier version, see &lt;a href=&#34;https://www-bcf.usc.edu/~gareth/ISL/&#34;&gt;&lt;em&gt;An Introduction to Statistical Learning&lt;/em&gt;&lt;/a&gt;), and implemented nicely in the packages &lt;code&gt;glmnet&lt;/code&gt; for R and &lt;a href=&#34;http://scikit-learn.org/stable/modules/linear_model.html#lasso&#34;&gt;&lt;code&gt;scikitlearn&lt;/code&gt;&lt;/a&gt; for Python.&lt;/p&gt;
+&lt;p&gt;Few people, however, have heard about &lt;code&gt;glinternet&lt;/code&gt;, which is a powerful extension of the Lasso model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;glinternet&lt;/code&gt; adds pairwise variable interactions into the Lasso model, and selects these automatically.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It’s a &lt;strong&gt;linear model&lt;/strong&gt;, and thus easily interpretable. Its computational complexity is the same as penalized regression: &lt;span class=&#34;math inline&#34;&gt;\(\mathcal O(Nm)\)&lt;/span&gt; where there are &lt;span class=&#34;math inline&#34;&gt;\(N\)&lt;/span&gt; rows and &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; variables&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. Thus it handles problems of the same size as (deep) neural networks, potentially with tens of thousands of variables. It should be stressed here that for a thousand variables there are almost 500,000 pairwise interactions that glinternet checks! For structured data, logistic regression is a very useful benchmark model, which can be &lt;a href=&#34;https://twitter.com/ShalitUri/status/1009534668880928769&#34;&gt;on par with sophisticated deep learning models&lt;/a&gt; even for huge datasets. The glinternet model is more flexible than logistic regression, and is just as interpretable.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-glinternet-tutorial&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;A glinternet tutorial&lt;/h1&gt;
+&lt;p&gt;Let’s look at the &lt;code&gt;car90&lt;/code&gt; dataset in the &lt;code&gt;rpart&lt;/code&gt; package. It has 25 categorical and 8 continuous predictors, and a continuous outcome (Price). We fit a glinternet model to it, which is a linear model containing all possible pairwise interactions.&lt;/p&gt;
+&lt;div id=&#34;interactions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Interactions&lt;/h3&gt;
+&lt;p&gt;A linear model &lt;em&gt;without&lt;/em&gt; interactions is usually written as&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[y = \beta_0 + \sum_k \beta_k X_k + \varepsilon\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&#34;math inline&#34;&gt;\(\beta_0\)&lt;/span&gt; is the intercept, &lt;span class=&#34;math inline&#34;&gt;\(X_k\)&lt;/span&gt; are predictor variables, &lt;span class=&#34;math inline&#34;&gt;\(\beta_k\)&lt;/span&gt; the coefficients and &lt;span class=&#34;math inline&#34;&gt;\(\varepsilon\)&lt;/span&gt; a model error. We will use categorical variables, so we need to group the variables and coefficients with their categories:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[y = \beta_0 + \sum_{i=1}^m \sum_{l=1}^{L_i} \beta_{i,l} X_{i,l} + \varepsilon\]&lt;/span&gt; where&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; is the number of predictors &lt;span class=&#34;math inline&#34;&gt;\(X_1, \ldots, X_m\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(L_i\)&lt;/span&gt; is the number of levels of &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; if &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; is categorical, and &lt;code&gt;1&lt;/code&gt; otherwise&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\((X_{i,1}, \ldots, X_{i,L_i})\)&lt;/span&gt; are 0-1 dummy variables representing the categories of &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; (one-hot encoded)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A pairwise interaction model contains all possible pairwise products of the predictors:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[y = \beta_0 + \sum_{l=1}^{L_i} \sum_{i=1}^m \beta_{i,l}, X_{i,l} 
++ \sum_{1 \le i&amp;lt;j \le m} \sum_{l=1}^{L_i} \sum_{k=1}^{L_j} \theta_{i,j,l,k} X_{i,l} X_{j,k}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Interactions, e.g. between variables &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(X_j\)&lt;/span&gt;, occur when the effect of &lt;span class=&#34;math inline&#34;&gt;\(X_j\)&lt;/span&gt; on &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; will vary depending on the level (or value) of &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt;. In that case, some of the values &lt;span class=&#34;math inline&#34;&gt;\(\theta_{i,j, \cdot, \cdot}\)&lt;/span&gt; will be non-zero.&lt;/p&gt;
+&lt;div id=&#34;selection-of-variables-and-interactions&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Selection of variables and interactions&lt;/h4&gt;
+&lt;p&gt;The L1 regularization is known as the lasso and produces sparsity. glinternet uses a &lt;em&gt;group&lt;/em&gt; lasso for the variables and variable interactions, which introduces the following &lt;em&gt;strong hierarchy&lt;/em&gt;: An interaction between &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(X_j\)&lt;/span&gt; can only be picked by the model if both &lt;span class=&#34;math inline&#34;&gt;\(X_i\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(X_j\)&lt;/span&gt; are also picked. In other words, interactions between two predictors are not considered unless both predictors have non-zero coefficients in the model. The details are in the original &lt;a href=&#34;https://doi.org/10.1080/10618600.2014.938812&#34;&gt;paper&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fitting-glinternet&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Fitting glinternet&lt;/h3&gt;
+&lt;p&gt;Unfortunately, &lt;code&gt;glinternet&lt;/code&gt;’s “API” is not super user friendly… the first challenge is to bring the data into a form that glinternet accepts: The categorical variables need to be (somewhat un-R-like) coded as integers starting from 0. We also need to construct a &lt;code&gt;numLevels&lt;/code&gt; vector containing the number of levels &lt;span class=&#34;math inline&#34;&gt;\(L_1, \ldots, L_m\)&lt;/span&gt; in each column if the column is categorical, and &lt;code&gt;1&lt;/code&gt; else:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+
+# Model2 contains model names, which aren&amp;#39;t useful here
+df &amp;lt;- rpart::car90 %&amp;gt;% select(-Model2)
+
+# drop rows with empty outcomes
+df &amp;lt;- df[!is.na(df$Price), ]
+y &amp;lt;- df$Price
+df &amp;lt;- df %&amp;gt;% select(-Price)
+
+# impute the median for the continuous variables
+i_num &amp;lt;- sapply(df, is.numeric)
+df[, i_num] &amp;lt;- apply(df[, i_num], 2, function(x) ifelse(is.na(x), median(x, na.rm=T), x))
+
+# impute empty categories
+df[, !i_num] &amp;lt;- apply(df[, !i_num], 2, function(x) {
+  x[x==&amp;quot;&amp;quot;] &amp;lt;- &amp;quot;empty&amp;quot;
+  x[is.na(x)] &amp;lt;- &amp;quot;missing&amp;quot;
+  x
+})
+
+# get the numLevels vector containing the number of categories
+X &amp;lt;- df
+X[, !i_num] &amp;lt;- apply(X[, !i_num], 2, factor) %&amp;gt;% as.data.frame()
+numLevels &amp;lt;- X %&amp;gt;% sapply(nlevels)
+numLevels[numLevels==0] &amp;lt;- 1
+
+# make the categorical variables take integer values starting from 0
+X[, !i_num] &amp;lt;- apply(X[, !i_num], 2, function(col) as.integer(as.factor(col)) - 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A single glinternet model is fitted with the function &lt;code&gt;glinternet&lt;/code&gt;; here, we directly fit a 10-fold Cross-Validated model:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(glinternet)
+set.seed(1001)
+cv_fit &amp;lt;- glinternet.cv(X, y, numLevels)
+plot(cv_fit)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/post/2018-10-13-glinternet_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We see the MSE plotted against the decreasing values of regularization parameter &lt;code&gt;lambda&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;i_1Std &amp;lt;- which(cv_fit$lambdaHat1Std == cv_fit$lambda)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It is common &lt;em&gt;not&lt;/em&gt; to pick the lambda corresponding to the lowest estimate of cross-validation error, but to err on the side of more regularization. So we are happy with a larger lambda with CV error estimate below the minimum plus one standard deviation. This lambda has index &lt;code&gt;i_1Std&lt;/code&gt; = 22. Its coefficients &lt;span class=&#34;math inline&#34;&gt;\(\beta_{i,l}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\theta_{i,j,l,k}\)&lt;/span&gt; can be extracted by running&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;coefs &amp;lt;- coef(cv_fit$glinternetFit)[[i_1Std]]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;coefs&lt;/code&gt; is a list of 4 items: &lt;code&gt;mainEffects&lt;/code&gt;, &lt;code&gt;mainEffectsCoef&lt;/code&gt;, &lt;code&gt;interactions&lt;/code&gt; and &lt;code&gt;interactionsCoef&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s look at the part without interactions first: The main effects identified are&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;coefs$mainEffects&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## $cat
+## [1] 3
+## 
+## $cont
+## [1]  5  7  9 12 20 22 11&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;which are the indices of the categorical variables and the continuous variables, in order as they occur in the data. We get the indices via&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;idx_num &amp;lt;- (1:length(i_num))[i_num]
+idx_cat &amp;lt;- (1:length(i_num))[!i_num]
+names(numLevels)[idx_cat[coefs$mainEffects$cat]]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Rim&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;names(numLevels)[idx_num[coefs$mainEffects$cont]]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Frt.Leg.Room&amp;quot; &amp;quot;Gear.Ratio&amp;quot;   &amp;quot;HP&amp;quot;           &amp;quot;Length&amp;quot;      
+## [5] &amp;quot;Tank&amp;quot;         &amp;quot;Weight&amp;quot;       &amp;quot;Height&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The coefficients for these variables are:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;coefs$mainEffectsCoef&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## $cat
+## $cat[[1]]
+## [1]    357.6320  -8221.4669   6589.1535 -36595.3391    118.0856   -920.4584
+## 
+## 
+## $cont
+## $cont[[1]]
+## [1] 35.48628
+## 
+## $cont[[2]]
+## [1] 314.3327
+## 
+## $cont[[3]]
+## [1] -477.2347
+## 
+## $cont[[4]]
+## [1] 9.059015
+## 
+## $cont[[5]]
+## [1] 507.8227
+## 
+## $cont[[6]]
+## [1] 1.366189
+## 
+## $cont[[7]]
+## [1] 104.6502&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(I would have expected all of these to be positive; one should check why &lt;code&gt;HP&lt;/code&gt; has a negative coefficient.)&lt;/p&gt;
+&lt;p&gt;Now for the interaction pairs:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;coefs$interactions&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## $catcat
+## NULL
+## 
+## $contcont
+##      [,1] [,2]
+## [1,]    5    9
+## [2,]   11   20
+## 
+## $catcont
+##      [,1] [,2]
+## [1,]    3    5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There is no interaction between the categorical variables (unsurprising because we only identified one. If there was an interaction pair, we would access it via &lt;code&gt;coefs$interactionsCoef$catcat&lt;/code&gt;, giving a list of matrices, one matrix of dimension &lt;span class=&#34;math inline&#34;&gt;\(L_i \times L_j\)&lt;/span&gt; for each pair.)&lt;/li&gt;
+&lt;li&gt;Two pairs of continuous variables have interactions: (5,9) and (11,20), which are (Frt.Leg.Room, HP) and (Height, Tank). The coefficients for these interactions are&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;coefs$interactionsCoef$contcont&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [[1]]
+## [1] 13.66277
+## 
+## [[2]]
+## [1] -6.634724&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;There is one interaction between categorical variable 3 and continuous variable 5, which are Rim and Frt.Leg.Room. The coefficients for this interaction are:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;coefs$interactionsCoef$catcont&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [[1]]
+## [1] -164.0751   37.7502 -324.6745  741.9752 -158.0835 -132.8923&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Our simple interaction network looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://strakaps.github.io/post/2018-10-13-glinternet_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The model has a root mean squared error (RMSE) on validation data of&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sqrt(cv_fit$cvErr[[i_1Std]])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 3411.904&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;compare-to-linear-regression&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Compare to linear regression&lt;/h3&gt;
+&lt;p&gt;To quantify how much interactions have contributed to predictive power, we now fit a glmnet model. The best CV mean-squared error for the glmnet model is higher than the mean-squared error for glinternet:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df$Price &amp;lt;- y
+X &amp;lt;- model.matrix(Price ~ . - 1, df)
+library(glmnet)
+cv_glmnet &amp;lt;- cv.glmnet(X,y)
+sqrt(min(cv_glmnet$cvm))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 4238.202&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;take-home-message&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Take-home message&lt;/h2&gt;
+&lt;p&gt;When you’re using logistic or linear regression with Lasso regularization as a baseline, and your next step is to see if adding interactions improve predictive power: try glinternet!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.1080/10618600.2014.938812&#34;&gt;Learning Interactions via Hierarchical Group-Lasso Regularization&lt;/a&gt;. Michael Lim &amp;amp; Trevor Hastie&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Though for this to be true, I believe you have to limit the “interaction search space” via the &lt;code&gt;screenLimit&lt;/code&gt; parameter.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks</title>
       <link>https://strakaps.github.io/publication/voffpe/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +1000</pubDate>
@@ -665,15 +854,6 @@ Please contact either of us for more details.&lt;/p&gt;
       <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
       <guid>https://strakaps.github.io/publication/semi-markov-algo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fokker–Planck and Kolmogorov backward equations for continuous time random walk scaling limits</title>
-      <link>https://strakaps.github.io/publication/forward-backward-ffpe/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
-      
-      <guid>https://strakaps.github.io/publication/forward-backward-ffpe/</guid>
       <description></description>
     </item>
     

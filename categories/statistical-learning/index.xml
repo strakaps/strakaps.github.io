@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistical learning on Peter&#39;s Homepage</title>
+    <link>https://strakaps.github.io/categories/statistical-learning/</link>
+    <description>Recent content in Statistical learning on Peter&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://strakaps.github.io/categories/statistical-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Add Interactions to Regularized Regression</title>
+      <link>https://strakaps.github.io/post/glinternet/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/post/glinternet/</guid>
+      <description>Lasso &amp;amp; glinternet Every Data Scientist and her dog know linear and logistic regression. The majority will probably also know that these models have regularized versions, which increase predictive performance by reducing variance (at the cost of a small increase in bias). Choosing L1-regularization (Lasso) even gets you variable selection for free. The theory behind these models is covered expertly in The Elements of Statistical Learning (for an easier version, see An Introduction to Statistical Learning), and implemented nicely in the packages glmnet for R and scikitlearn for Python.</description>
+    </item>
+    
+  </channel>
+</rss>

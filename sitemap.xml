@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>https://strakaps.github.io/post/glinternet/</loc>
+      <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://strakaps.github.io/publication/voffpe/</loc>
       <lastmod>2018-08-01T00:00:00+10:00</lastmod>
     </url>
@@ -448,7 +456,7 @@
     <url>
     
       <loc>https://strakaps.github.io/tags/machine-learning/</loc>
-      <lastmod>2018-07-16T00:00:00+00:00</lastmod>
+      <lastmod>2018-10-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -538,7 +546,7 @@
     <url>
     
       <loc>https://strakaps.github.io/tags/r/</loc>
-      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
+      <lastmod>2018-10-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -629,6 +637,15 @@
     
       <loc>https://strakaps.github.io/categories/statistical-physics/</loc>
       <lastmod>2017-12-18T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/categories/statistical-learning/</loc>
+      <lastmod>2018-10-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
