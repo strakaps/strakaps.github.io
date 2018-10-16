@@ -14,163 +14,181 @@
     
     <item>
       <title>Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks</title>
-      <link>https://strakaps.github.io/publication/voffpe/</link>
+      <link>https://strakaps.github.io/publication/2018-voffpe/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +1000</pubDate>
       
-      <guid>https://strakaps.github.io/publication/voffpe/</guid>
+      <guid>https://strakaps.github.io/publication/2018-voffpe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identification of pollutant source for super-diffusion in aquifers and rivers with bounded domains</title>
+      <link>https://strakaps.github.io/publication/2018-wrr/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/publication/2018-wrr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Overcoming the data drought: exploring general practice in Australia by network analysis of big data</title>
-      <link>https://strakaps.github.io/publication/mja/</link>
+      <link>https://strakaps.github.io/publication/2018-mja/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +1000</pubDate>
       
-      <guid>https://strakaps.github.io/publication/mja/</guid>
+      <guid>https://strakaps.github.io/publication/2018-mja/</guid>
       <description>See my blog post for this publication.</description>
     </item>
     
     <item>
-      <title>Peaks Over Threshold for Bursty Time Series</title>
-      <link>https://strakaps.github.io/publication/bursty-pot/</link>
+      <title>A Universal Algorithm for Continuous Time Random Walks Limit Distributions</title>
+      <link>https://strakaps.github.io/publication/2018-universal/</link>
       <pubDate>Sat, 28 Apr 2018 00:00:00 +1000</pubDate>
       
-      <guid>https://strakaps.github.io/publication/bursty-pot/</guid>
+      <guid>https://strakaps.github.io/publication/2018-universal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peaks Over Threshold for Bursty Time Series</title>
+      <link>https://strakaps.github.io/publication/2018-bursty-pot/</link>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/publication/2018-bursty-pot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A semi-markov algorithm for continuous time random walk limit distributions</title>
-      <link>https://strakaps.github.io/publication/semi-markov-algo/</link>
+      <link>https://strakaps.github.io/publication/2017-semi-markov-algo/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/semi-markov-algo/</guid>
+      <guid>https://strakaps.github.io/publication/2017-semi-markov-algo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fokker–Planck and Kolmogorov backward equations for continuous time random walk scaling limits</title>
-      <link>https://strakaps.github.io/publication/forward-backward-ffpe/</link>
+      <link>https://strakaps.github.io/publication/2017-forward-backward-ffpe/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/forward-backward-ffpe/</guid>
+      <guid>https://strakaps.github.io/publication/2017-forward-backward-ffpe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reflected spectrally negative stable processes and their governing equations</title>
-      <link>https://strakaps.github.io/publication/reflected-stable/</link>
+      <link>https://strakaps.github.io/publication/2016-reflected-stable/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/reflected-stable/</guid>
+      <guid>https://strakaps.github.io/publication/2016-reflected-stable/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Limit theorems and governing equations for Lévy walks</title>
-      <link>https://strakaps.github.io/publication/levy-walk/</link>
+      <link>https://strakaps.github.io/publication/2015-levy-walk/</link>
       <pubDate>Sun, 01 Nov 2015 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/levy-walk/</guid>
+      <guid>https://strakaps.github.io/publication/2015-levy-walk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Estimation of fractal dimension and fractal curvatures from digital images</title>
-      <link>https://strakaps.github.io/publication/frac-curv/</link>
+      <link>https://strakaps.github.io/publication/2015-frac-curv/</link>
       <pubDate>Mon, 01 Jun 2015 00:00:00 +1000</pubDate>
       
-      <guid>https://strakaps.github.io/publication/frac-curv/</guid>
+      <guid>https://strakaps.github.io/publication/2015-frac-curv/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Transport equations for subdiffusion with nonlinear particle interaction</title>
-      <link>https://strakaps.github.io/publication/subdiffusion-interaction/</link>
+      <link>https://strakaps.github.io/publication/2015-subdiffusion-interaction/</link>
       <pubDate>Sat, 07 Feb 2015 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/subdiffusion-interaction/</guid>
+      <guid>https://strakaps.github.io/publication/2015-subdiffusion-interaction/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Generalized Continuous Time Random Walks, Master Equations, and Fractional Fokker--Planck Equations</title>
-      <link>https://strakaps.github.io/publication/ctrw-timing/</link>
+      <link>https://strakaps.github.io/publication/2015-ctrw-timing/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/ctrw-timing/</guid>
+      <guid>https://strakaps.github.io/publication/2015-ctrw-timing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Semi-Markov approach to continuous time random walk limit processes</title>
-      <link>https://strakaps.github.io/publication/semi-markov-ctrw/</link>
+      <link>https://strakaps.github.io/publication/2014-semi-markov-ctrw/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/semi-markov-ctrw/</guid>
+      <guid>https://strakaps.github.io/publication/2014-semi-markov-ctrw/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Inverse stable subordinators</title>
-      <link>https://strakaps.github.io/publication/inv-stable-subord/</link>
+      <link>https://strakaps.github.io/publication/2013-inv-stable-subord/</link>
       <pubDate>Wed, 24 Apr 2013 00:00:00 +1000</pubDate>
       
-      <guid>https://strakaps.github.io/publication/inv-stable-subord/</guid>
+      <guid>https://strakaps.github.io/publication/2013-inv-stable-subord/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fractional wave equations with attenuation</title>
-      <link>https://strakaps.github.io/publication/wave-attenuation/</link>
+      <link>https://strakaps.github.io/publication/2013-wave-attenuation/</link>
       <pubDate>Fri, 01 Mar 2013 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/wave-attenuation/</guid>
+      <guid>https://strakaps.github.io/publication/2013-wave-attenuation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fractional Dynamics at Multiple Times</title>
-      <link>https://strakaps.github.io/publication/ctrw-fdd/</link>
+      <link>https://strakaps.github.io/publication/2012-ctrw-fdd/</link>
       <pubDate>Thu, 01 Nov 2012 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/ctrw-fdd/</guid>
+      <guid>https://strakaps.github.io/publication/2012-ctrw-fdd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stochastic solution to a time-fractional attenuated wave equation</title>
-      <link>https://strakaps.github.io/publication/frac-wave/</link>
+      <link>https://strakaps.github.io/publication/2012-frac-wave/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +1000</pubDate>
       
-      <guid>https://strakaps.github.io/publication/frac-wave/</guid>
+      <guid>https://strakaps.github.io/publication/2012-frac-wave/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fractional Fokker-Planck Equations for Subdiffusion with Space- and Time-Dependent Forces</title>
-      <link>https://strakaps.github.io/publication/hls-prl/</link>
+      <link>https://strakaps.github.io/publication/2011-hls-prl/</link>
       <pubDate>Tue, 01 Feb 2011 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/hls-prl/</guid>
+      <guid>https://strakaps.github.io/publication/2011-hls-prl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lagging and leading coupled continuous time random walks, renewal times and their joint limits</title>
-      <link>https://strakaps.github.io/publication/lagging-leading-ctrw/</link>
+      <link>https://strakaps.github.io/publication/2011-lagging-leading-ctrw/</link>
       <pubDate>Tue, 01 Feb 2011 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/lagging-leading-ctrw/</guid>
+      <guid>https://strakaps.github.io/publication/2011-lagging-leading-ctrw/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An introduction to fractional diffusion</title>
-      <link>https://strakaps.github.io/publication/hls-intro/</link>
+      <link>https://strakaps.github.io/publication/2010-hls-intro/</link>
       <pubDate>Fri, 01 Jan 2010 00:00:00 +1100</pubDate>
       
-      <guid>https://strakaps.github.io/publication/hls-intro/</guid>
+      <guid>https://strakaps.github.io/publication/2010-hls-intro/</guid>
       <description></description>
     </item>
     

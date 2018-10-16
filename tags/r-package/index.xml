@@ -23,4 +23,18 @@ library(CTRE) flares_ctre &amp;lt;- ctre(flares) plot(flares_ctre, log = &amp;qu
     </item>
     
   </channel>
+</rss>unction and fast random variate generation. It was made possible by the Laplace inversion algorithm for the Mittag-Leffler function by Roberto Garrappa. Install it via
+install.packages(&amp;quot;MittagLeffleR&amp;quot;) The Two Mittag-Leffler distributions Various journal articles (including my own) write about “the” Mittag-Leffler distribution, but actually there are two such families of distributions.</description>
+    </item>
+    
+    <item>
+      <title>R package MittagLeffleR</title>
+      <link>https://strakaps.github.io/project/mittagleffler/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/project/mittagleffler/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
 </rss>

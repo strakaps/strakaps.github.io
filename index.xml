@@ -201,19 +201,28 @@ sqrt(min(cv_glmnet$cvm))&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks</title>
-      <link>https://strakaps.github.io/publication/voffpe/</link>
+      <link>https://strakaps.github.io/publication/2018-voffpe/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +1000</pubDate>
       
-      <guid>https://strakaps.github.io/publication/voffpe/</guid>
+      <guid>https://strakaps.github.io/publication/2018-voffpe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identification of pollutant source for super-diffusion in aquifers and rivers with bounded domains</title>
+      <link>https://strakaps.github.io/publication/2018-wrr/</link>
+      <pubDate>Tue, 31 Jul 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/publication/2018-wrr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Overcoming the data drought: exploring general practice in Australia by network analysis of big data</title>
-      <link>https://strakaps.github.io/publication/mja/</link>
+      <link>https://strakaps.github.io/publication/2018-mja/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +1000</pubDate>
       
-      <guid>https://strakaps.github.io/publication/mja/</guid>
+      <guid>https://strakaps.github.io/publication/2018-mja/</guid>
       <description>&lt;p&gt;See my &lt;a href=&#34;https://strakaps.github.io/post/2018-07-mja-paper/&#34;&gt;blog post for this publication&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
@@ -676,11 +685,20 @@ T(k) \sim {\rm ML}\left(0.9, \frac{3 \times 10^7 {\rm sec}}{k^{1/0.9}} \right).
     </item>
     
     <item>
-      <title>Peaks Over Threshold for Bursty Time Series</title>
-      <link>https://strakaps.github.io/publication/bursty-pot/</link>
+      <title>A Universal Algorithm for Continuous Time Random Walks Limit Distributions</title>
+      <link>https://strakaps.github.io/publication/2018-universal/</link>
       <pubDate>Sat, 28 Apr 2018 00:00:00 +1000</pubDate>
       
-      <guid>https://strakaps.github.io/publication/bursty-pot/</guid>
+      <guid>https://strakaps.github.io/publication/2018-universal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peaks Over Threshold for Bursty Time Series</title>
+      <link>https://strakaps.github.io/publication/2018-bursty-pot/</link>
+      <pubDate>Sat, 28 Apr 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/publication/2018-bursty-pot/</guid>
       <description></description>
     </item>
     
@@ -805,56 +823,6 @@ plot(x,p, type=&amp;#39;l&amp;#39;, main=&amp;quot;Fractional diffusion with dri
 &lt;p&gt;Should you run into any bugs or issues, please &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR/issues&#34;&gt;let us know&lt;/a&gt;. Thanks!&lt;/p&gt;
 &lt;/div&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Prestigious Scientia PhD Scholarship available</title>
-      <link>https://strakaps.github.io/post/scientia-phd/</link>
-      <pubDate>Mon, 12 Jun 2017 00:00:00 +1000</pubDate>
-      
-      <guid>https://strakaps.github.io/post/scientia-phd/</guid>
-      <description>
-
-&lt;p&gt;It is my pleasure to announce that applications for the prestigious UNSW Scientia Ph.D. Scholarship Scheme on the project &amp;ldquo;Using Big Data to Redesign the Health System&amp;rdquo; are now open.&lt;/p&gt;
-
-&lt;p&gt;The UNSW Scientia Ph.D. Scholarship Scheme is the most prestigious and generous scholarship scheme at UNSW and it aims to attract the best and brightest people into strategic research areas. Awardees receive a &lt;code&gt;$&lt;/code&gt;50,000 scholarship package for four years, comprising a &lt;code&gt;$&lt;/code&gt;40,000 per
-annum tax-free stipend and a travel and development support package of up to &lt;code&gt;$&lt;/code&gt;10,000 per annum. International students also receive a tuition fee scholarship.&lt;/p&gt;
-
-&lt;p&gt;In addition to this scholarship package, scholars are provided with access to a range of development opportunities across research, teaching and learning and leadership and engagement.&lt;/p&gt;
-
-&lt;p&gt;Applicants should submit their expression of interest at&lt;br /&gt;
-&lt;a href=&#34;http://www.2025.unsw.edu.au/apply/scientia-phd-scholarships/using-Big Data-redesign-health-system&#34; target=&#34;_blank&#34;&gt;http://www.2025.unsw.edu.au/apply/scientia-phd-scholarships/using-Big Data-redesign-health-system&lt;/a&gt;&lt;br /&gt;
-by 21st July 2017 but are encouraged to do so as early as possible.&lt;/p&gt;
-
-&lt;p&gt;More information on the UNSW Scientia PhD Scholarship Scheme:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;General info: &lt;a href=&#34;http://www.2025.unsw.edu.au/apply/&#34; target=&#34;_blank&#34;&gt;http://www.2025.unsw.edu.au/apply/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Guidelines: &lt;a href=&#34;http://www.2025.unsw.edu.au/apply/node/69/&#34; target=&#34;_blank&#34;&gt;http://www.2025.unsw.edu.au/apply/node/69/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;FAQs: &lt;a href=&#34;http://www.2025.unsw.edu.au/apply/unsw-scientia-phd-scholarships-faqs&#34; target=&#34;_blank&#34;&gt;http://www.2025.unsw.edu.au/apply/unsw-scientia-phd-scholarships-faqs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;the-project&#34;&gt;The Project:&lt;/h4&gt;
-
-&lt;p&gt;Health services are working to develop new models for care that keep people out of hospital, such as community outreach, daily outpatient assessment and hospital in the home. Identifying patient subgroups (&amp;lsquo;phenotypes&amp;rsquo;) with distinct characteristics that are predictive of their subsequent outcomes (e.g. admission, complications) is key to designing these new models. Machine learning (ML) techniques are data-driven approaches that can discover statistical patterns in
-high-dimensional, multivariate data sets. This project will apply ML techniques to health &amp;lsquo;big data&amp;rsquo; to identify patient phenotypes that will support the design and implementation of new tailored care
-pathways for patients with chronic disease.&lt;/p&gt;
-
-&lt;h4 id=&#34;supervisory-team&#34;&gt;Supervisory Team&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://cbdrh.med.unsw.edu.au/people/professor-louisa-jorm&#34; target=&#34;_blank&#34;&gt;Prof Louisa Jorm&lt;/a&gt; (Director, Centre for Big Data Research in Health)
-and myself.
-Please contact either of us for more details.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>R package MittagLeffleR</title>
-      <link>https://strakaps.github.io/project/mittagleffler/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +1000</pubDate>
-      
-      <guid>https://strakaps.github.io/project/mittagleffler/</guid>
-      <description></description>
     </item>
     
   </channel>
