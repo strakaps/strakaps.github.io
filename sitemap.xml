@@ -92,6 +92,14 @@
     
     <url>
     
+      <loc>https://strakaps.github.io/talk/asnac2018/</loc>
+      <lastmod>2017-11-27T08:00:00+11:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://strakaps.github.io/post/mittag-leffler/</loc>
       <lastmod>2017-06-26T00:00:00+00:00</lastmod>
     </url>
@@ -319,8 +327,8 @@
     
     <url>
     
-      <loc>https://strakaps.github.io/categories/anomalous-diffusion/</loc>
-      <lastmod>2016-04-27T00:00:00+10:00</lastmod>
+      <loc>https://strakaps.github.io/tags/anomalous-diffusion/</loc>
+      <lastmod>2017-12-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -328,8 +336,8 @@
     
     <url>
     
-      <loc>https://strakaps.github.io/tags/anomalous-diffusion/</loc>
-      <lastmod>2017-12-18T00:00:00+00:00</lastmod>
+      <loc>https://strakaps.github.io/categories/anomalous-diffusion/</loc>
+      <lastmod>2016-04-27T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -418,8 +426,8 @@
     
     <url>
     
-      <loc>https://strakaps.github.io/categories/healthcare/</loc>
-      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
+      <loc>https://strakaps.github.io/tags/healthcare/</loc>
+      <lastmod>2018-07-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -427,8 +435,8 @@
     
     <url>
     
-      <loc>https://strakaps.github.io/tags/healthcare/</loc>
-      <lastmod>2018-07-16T00:00:00+00:00</lastmod>
+      <loc>https://strakaps.github.io/categories/healthcare/</loc>
+      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -465,6 +473,15 @@
     
       <loc>https://strakaps.github.io/tags/machine-learning/</loc>
       <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/tags/networks/</loc>
+      <lastmod>2017-11-27T08:00:00+11:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -598,24 +615,6 @@
     
     <url>
     
-      <loc>https://strakaps.github.io/categories/software/</loc>
-      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://strakaps.github.io/categories/software/</loc>
-      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://strakaps.github.io/tags/software/</loc>
       <lastmod>2018-05-14T00:00:00+10:00</lastmod>
       <priority>0</priority>
@@ -634,8 +633,17 @@
     
     <url>
     
-      <loc>https://strakaps.github.io/categories/statistical-physics/</loc>
-      <lastmod>2017-12-18T00:00:00+00:00</lastmod>
+      <loc>https://strakaps.github.io/categories/software/</loc>
+      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/categories/software/</loc>
+      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -652,8 +660,26 @@
     
     <url>
     
+      <loc>https://strakaps.github.io/categories/statistical-physics/</loc>
+      <lastmod>2017-12-18T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://strakaps.github.io/categories/statistical-learning/</loc>
       <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/tags/statistics/</loc>
+      <lastmod>2016-04-27T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
     

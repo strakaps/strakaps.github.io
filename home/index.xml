@@ -94,13 +94,20 @@
     </item>
     
     <item>
-      <title>Custom Section</title>
+      <title>Teaching</title>
       <link>https://strakaps.github.io/home/teaching/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +1000</pubDate>
       
       <guid>https://strakaps.github.io/home/teaching/</guid>
-      <description>This is an example of using the custom widget to create your own homepage section.
-To remove this section, either delete content/home/teaching.md or edit the frontmatter of the file to deactivate the widget by setting active = false.</description>
+      <description>2018 T2 Introduction to Data Science and Decisions - DATA1001
+2017 T2 Introduction to Data Science and Decisions - DATA1001
+2015 T1 Applied Regression Analysis - MATH5806
+Numerical Methods and Statistics - MATH2089
+Probability and Stochastic Processes - MATH3801
+2015 T2 Data Mining and its Business Applications - MATH5836
+Probability, Statistics and Information - MATH2859
+2014 T2 Measure, Integration and Probability - MATH5825
+Engineering Computations for Civil Engineers - CVEN2002</description>
     </item>
     
     <item>
