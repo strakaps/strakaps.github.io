@@ -58,15 +58,6 @@
     </item>
     
     <item>
-      <title>Bursts</title>
-      <link>https://strakaps.github.io/tags/bursts/</link>
-      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://strakaps.github.io/tags/bursts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Credit Risk</title>
       <link>https://strakaps.github.io/tags/credit-risk/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
@@ -81,15 +72,6 @@
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://strakaps.github.io/tags/data-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Extremes</title>
-      <link>https://strakaps.github.io/tags/extremes/</link>
-      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://strakaps.github.io/tags/extremes/</guid>
       <description></description>
     </item>
     
@@ -112,15 +94,6 @@
     </item>
     
     <item>
-      <title>Heavy-tails</title>
-      <link>https://strakaps.github.io/tags/heavy-tails/</link>
-      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://strakaps.github.io/tags/heavy-tails/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Internship</title>
       <link>https://strakaps.github.io/tags/internship/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
@@ -135,15 +108,6 @@
       <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://strakaps.github.io/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Networks</title>
-      <link>https://strakaps.github.io/tags/networks/</link>
-      <pubDate>Mon, 27 Nov 2017 08:00:00 +1100</pubDate>
-      
-      <guid>https://strakaps.github.io/tags/networks/</guid>
       <description></description>
     </item>
     
@@ -238,15 +202,6 @@
     </item>
     
     <item>
-      <title>Software</title>
-      <link>https://strakaps.github.io/tags/software/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
-      
-      <guid>https://strakaps.github.io/tags/software/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Statistical Physics</title>
       <link>https://strakaps.github.io/tags/statistical-physics/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
@@ -265,20 +220,65 @@
     </item>
     
     <item>
-      <title>Statistics</title>
-      <link>https://strakaps.github.io/tags/statistics/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
-      
-      <guid>https://strakaps.github.io/tags/statistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Stochastic Processes</title>
       <link>https://strakaps.github.io/tags/stochastic-processes/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://strakaps.github.io/tags/stochastic-processes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bursts</title>
+      <link>https://strakaps.github.io/tags/bursts/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/tags/bursts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>extremes</title>
+      <link>https://strakaps.github.io/tags/extremes/</link>
+      <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/tags/extremes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>heavy-tails</title>
+      <link>https://strakaps.github.io/tags/heavy-tails/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/tags/heavy-tails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>networks</title>
+      <link>https://strakaps.github.io/tags/networks/</link>
+      <pubDate>Mon, 27 Nov 2017 08:00:00 +1100</pubDate>
+      
+      <guid>https://strakaps.github.io/tags/networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://strakaps.github.io/tags/software/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistics</title>
+      <link>https://strakaps.github.io/tags/statistics/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/tags/statistics/</guid>
       <description></description>
     </item>
     

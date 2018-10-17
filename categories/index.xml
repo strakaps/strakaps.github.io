@@ -22,15 +22,6 @@
     </item>
     
     <item>
-      <title>Events</title>
-      <link>https://strakaps.github.io/categories/events/</link>
-      <pubDate>Tue, 10 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://strakaps.github.io/categories/events/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Healthcare</title>
       <link>https://strakaps.github.io/categories/healthcare/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
@@ -45,24 +36,6 @@
       <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://strakaps.github.io/categories/public-health/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recruitment</title>
-      <link>https://strakaps.github.io/categories/recruitment/</link>
-      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://strakaps.github.io/categories/recruitment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Software</title>
-      <link>https://strakaps.github.io/categories/software/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
-      
-      <guid>https://strakaps.github.io/categories/software/</guid>
       <description></description>
     </item>
     
@@ -85,7 +58,34 @@
     </item>
     
     <item>
-      <title>Statistical learning</title>
+      <title>events</title>
+      <link>https://strakaps.github.io/categories/events/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/categories/events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recruitment</title>
+      <link>https://strakaps.github.io/categories/recruitment/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://strakaps.github.io/categories/recruitment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://strakaps.github.io/categories/software/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +1000</pubDate>
+      
+      <guid>https://strakaps.github.io/categories/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistical learning</title>
       <link>https://strakaps.github.io/categories/statistical-learning/</link>
       <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
       

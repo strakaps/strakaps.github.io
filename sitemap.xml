@@ -388,15 +388,6 @@
     
     <url>
     
-      <loc>https://strakaps.github.io/tags/bursts/</loc>
-      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://strakaps.github.io/categories/</loc>
       <lastmod>2016-04-27T00:00:00+10:00</lastmod>
       <priority>0</priority>
@@ -417,24 +408,6 @@
     
       <loc>https://strakaps.github.io/tags/data-science/</loc>
       <lastmod>2018-07-16T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://strakaps.github.io/categories/events/</loc>
-      <lastmod>2018-07-10T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://strakaps.github.io/tags/extremes/</loc>
-      <lastmod>2018-05-11T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -469,15 +442,6 @@
     
     <url>
     
-      <loc>https://strakaps.github.io/tags/heavy-tails/</loc>
-      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://strakaps.github.io/tags/internship/</loc>
       <lastmod>2018-05-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -489,15 +453,6 @@
     
       <loc>https://strakaps.github.io/tags/machine-learning/</loc>
       <lastmod>2018-10-13T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://strakaps.github.io/tags/networks/</loc>
-      <lastmod>2017-11-27T08:00:00+11:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -613,15 +568,6 @@
     
     <url>
     
-      <loc>https://strakaps.github.io/categories/recruitment/</loc>
-      <lastmod>2018-05-29T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://strakaps.github.io/tags/scholarship/</loc>
       <lastmod>2017-06-12T00:00:00+10:00</lastmod>
       <priority>0</priority>
@@ -632,24 +578,6 @@
     <url>
     
       <loc>https://strakaps.github.io/tags/software/</loc>
-      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://strakaps.github.io/tags/software/</loc>
-      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://strakaps.github.io/categories/software/</loc>
       <lastmod>2018-05-14T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
@@ -685,24 +613,6 @@
     
     <url>
     
-      <loc>https://strakaps.github.io/categories/statistical-learning/</loc>
-      <lastmod>2018-10-13T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://strakaps.github.io/tags/statistics/</loc>
-      <lastmod>2016-04-27T00:00:00+10:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>https://strakaps.github.io/tags/statistics/</loc>
       <lastmod>2016-04-27T00:00:00+10:00</lastmod>
       <priority>0</priority>
@@ -723,6 +633,96 @@
     
       <loc>https://strakaps.github.io/tags/</loc>
       <lastmod>2017-06-12T00:00:00+10:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/tags/bursts/</loc>
+      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/categories/events/</loc>
+      <lastmod>2018-07-10T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/tags/extremes/</loc>
+      <lastmod>2018-05-11T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/tags/heavy-tails/</loc>
+      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/tags/networks/</loc>
+      <lastmod>2017-11-27T08:00:00+11:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/categories/recruitment/</loc>
+      <lastmod>2018-05-29T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/tags/software/</loc>
+      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/categories/software/</loc>
+      <lastmod>2018-05-14T00:00:00+10:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/categories/statistical-learning/</loc>
+      <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://strakaps.github.io/tags/statistics/</loc>
+      <lastmod>2016-04-27T00:00:00+10:00</lastmod>
       <priority>0</priority>
     </url>
     
