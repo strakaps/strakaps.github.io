@@ -16,7 +16,10 @@
       <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://strakaps.github.io/post/glinternet/</guid>
-      <description>&lt;div id=&#34;lasso-glinternet&#34; class=&#34;section level3&#34;&gt;
+      <description>
+
+
+&lt;div id=&#34;lasso-glinternet&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Lasso &amp;amp; glinternet&lt;/h3&gt;
 &lt;p&gt;Every Data Scientist and her dog know linear and logistic regression. The majority will probably also know that these models have regularized versions, which increase predictive performance by reducing variance (at the cost of a small increase in bias). Choosing L1-regularization (Lasso) even gets you variable selection for free. The theory behind these models is covered expertly in &lt;a href=&#34;https://web.stanford.edu/~hastie/ElemStatLearn/&#34;&gt;&lt;em&gt;The Elements of Statistical Learning&lt;/em&gt;&lt;/a&gt; (for an easier version, see &lt;a href=&#34;https://www-bcf.usc.edu/~gareth/ISL/&#34;&gt;&lt;em&gt;An Introduction to Statistical Learning&lt;/em&gt;&lt;/a&gt;), and implemented nicely in the packages &lt;code&gt;glmnet&lt;/code&gt; for R and &lt;a href=&#34;http://scikit-learn.org/stable/modules/linear_model.html#lasso&#34;&gt;&lt;code&gt;scikitlearn&lt;/code&gt;&lt;/a&gt; for Python.&lt;/p&gt;
 &lt;p&gt;Few people, however, have heard about &lt;code&gt;glinternet&lt;/code&gt;, which is a powerful extension of the Lasso model:&lt;/p&gt;
@@ -617,7 +620,10 @@ tackle questions of national importance such as the above.&lt;/p&gt;
       <pubDate>Fri, 11 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://strakaps.github.io/post/ctre-package/</guid>
-      <description>&lt;p&gt;The new &lt;a href=&#34;https://strakaps.github.io/CTRE/&#34;&gt;R package &lt;code&gt;CTRE&lt;/code&gt;&lt;/a&gt; is now available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series. The theory is desribed in another paper (&lt;a href=&#34;https://strakaps.github.io/bursty-POT/&#34;&gt;html&lt;/a&gt;|&lt;a href=&#34;https://arxiv.org/pdf/1802.05218.pdf&#34;&gt;pdf&lt;/a&gt;).&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;The new &lt;a href=&#34;https://strakaps.github.io/CTRE/&#34;&gt;R package &lt;code&gt;CTRE&lt;/code&gt;&lt;/a&gt; is now available on CRAN. “CTRE” stands for “Continuous Time Random Exceedances”, which is a model for extreme values of bursty time series. The theory is desribed in another paper (&lt;a href=&#34;https://strakaps.github.io/bursty-POT/&#34;&gt;html&lt;/a&gt;|&lt;a href=&#34;https://arxiv.org/pdf/1802.05218.pdf&#34;&gt;pdf&lt;/a&gt;).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(CTRE)
 flares_ctre &amp;lt;- ctre(flares)
 plot(flares_ctre, log = &amp;quot;y&amp;quot;, main = &amp;quot;Solar Flares&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -708,7 +714,10 @@ T(k) \sim {\rm ML}\left(0.9, \frac{3 \times 10^7 {\rm sec}}{k^{1/0.9}} \right).
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://strakaps.github.io/post/voffpe/</guid>
-      <description>&lt;p&gt;The new paper (&lt;a href=&#34;http://arxiv.org/abs/1712.06767&#34;&gt;arxiv.org/abs/1712.06767&lt;/a&gt;)&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;The new paper (&lt;a href=&#34;http://arxiv.org/abs/1712.06767&#34;&gt;arxiv.org/abs/1712.06767&lt;/a&gt;)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Variable Order Fractional Fokker-Planck Equations derived from Continuous Time Random Walks&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -753,7 +762,8 @@ p(x,t).\]&lt;/span&gt;&lt;/p&gt;
       <pubDate>Mon, 27 Nov 2017 08:00:00 +1100</pubDate>
       
       <guid>https://strakaps.github.io/talk/asnac2018/</guid>
-      <description></description>
+      <description>&lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vSz9I5S64w7u_uYLHwS_y0NSmSANRsJDGtvO4Ul-uFo_mN5B9pBJXzWsgiLXgesCRxl597EzspV0hT6/embed?start=true&amp;loop=false&amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;800&#34; height=&#34;479&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+</description>
     </item>
     
     <item>
@@ -762,7 +772,10 @@ p(x,t).\]&lt;/span&gt;&lt;/p&gt;
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://strakaps.github.io/post/mittag-leffler/</guid>
-      <description>&lt;p&gt;Ricky Gill and I have created the R package MittagLeffleR, documented at &lt;a href=&#34;../../MittagLeffleR/index.html&#34;&gt;strakaps.github.io/MittagLeffleR/&lt;/a&gt;. It is available on &lt;a href=&#34;https://cran.r-project.org/web/packages/MittagLeffleR/index.html&#34;&gt;CRAN&lt;/a&gt; (and the latest development version on &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR&#34;&gt;GitHub&lt;/a&gt;). MittagLeffleR calculates both Mittag-Leffler distributions; i.e. probability density, cumulative distribution function, quantile function and fast random variate generation. It was made possible by the &lt;a href=&#34;https://au.mathworks.com/matlabcentral/fileexchange/48154-the-mittag-leffler-function&#34;&gt;Laplace inversion algorithm&lt;/a&gt; for the Mittag-Leffler function by &lt;a href=&#34;https://twitter.com/rgarrappa&#34;&gt;Roberto Garrappa&lt;/a&gt;. Install it via&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;Ricky Gill and I have created the R package MittagLeffleR, documented at &lt;a href=&#34;../../MittagLeffleR/index.html&#34;&gt;strakaps.github.io/MittagLeffleR/&lt;/a&gt;. It is available on &lt;a href=&#34;https://cran.r-project.org/web/packages/MittagLeffleR/index.html&#34;&gt;CRAN&lt;/a&gt; (and the latest development version on &lt;a href=&#34;https://github.com/strakaps/MittagLeffleR&#34;&gt;GitHub&lt;/a&gt;). MittagLeffleR calculates both Mittag-Leffler distributions; i.e. probability density, cumulative distribution function, quantile function and fast random variate generation. It was made possible by the &lt;a href=&#34;https://au.mathworks.com/matlabcentral/fileexchange/48154-the-mittag-leffler-function&#34;&gt;Laplace inversion algorithm&lt;/a&gt; for the Mittag-Leffler function by &lt;a href=&#34;https://twitter.com/rgarrappa&#34;&gt;Roberto Garrappa&lt;/a&gt;. Install it via&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;MittagLeffleR&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;the-two-mittag-leffler-distributions&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The Two Mittag-Leffler distributions&lt;/h2&gt;
